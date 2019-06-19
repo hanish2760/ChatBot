@@ -1,0 +1,50 @@
+stopWords=""
+
+file4=open('./data/stopWords.txt','r')
+
+for line in file4:
+    line=line.lower()
+    stopWords+=line
+
+file4.close()
+
+dictOfWords =dict()
+
+file=open('./data/wordcountCheque.txt','r')
+
+file3=open('./data/stopWords.txt','a')
+
+for line in file:
+    temp=line.split(' ')
+    word=str(temp[0]).lower()
+    freq=int(temp[1])
+    flag='0'
+    if(stopWords.__contains__(word)):
+        flag='1'
+    else:
+        flag='0'
+    if(flag is '0'):
+        print('Is **--'+word+'--**  a stop word ? n freq is = ' +str(freq))
+        flag=input()
+
+    if(flag!='1'):
+        dictOfWords[str(temp[0])]=freq
+    else :
+        file3.write(word+',')
+
+import operator
+
+sorted_dictOfWord=sorted(dictOfWords.items(),key=operator.itemgetter(1))
+
+print(sorted_dictOfWord)
+
+file2=open('./data/sortedwordcountCheque.txt','w')
+
+for tup in sorted_dictOfWord:
+    file2.write(str(tup[0])+' '+str(tup[1])+'\n')
+
+file.close()
+
+file3.close()
+
+file2.close()

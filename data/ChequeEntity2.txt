@@ -1,0 +1,231 @@
+ï»¿- scpm - [imagemark](key0) creates the detail for [retracted](key1) cheques also when we do the [transaction](key2) with accept and reject cheques together
+- scpm - it [build](key3) 13 : the images of returned [cheques](key4) are not printed on the [receipt](key5)
+- scpm: trans request [message](key6) needs to send the total amount of individual [cheques](key7) when using the single cheque message [interface](key8)
+- [memory](key9) [leak](key10) in [transaction](key11) request data for bunch cheque accept data
+- scpm: cheque at exit/sensor [blocked](key12) at accept state when the [bunchchequeacceptservice](key13) is in [chequesleft](key14) state does not report any unsol
+- bunchchqaccptsrv: [cheques](key15) [jam](key16) during [scancheques](key17) operation without service recovery action.
+- scpm: wrong unsol message is sent when [shutter](key18) is [jammed](key19) open after bunch inserted and cheques still in [infeed](key20) transport
+- out of range [testing](key21) for bunch [cheque](key22) state table parameters
+- scpm: [powerfail](key23) - reset not done when cheques in [stacker](key24) at [sod](key25) and reset was done during transaction
+- when alphanumeric state entry is enabled, [cheque](key26) detail display state [goes](key27) to default close from any of its exits
+- scpm: receipt [contains](key28) [pathname](key29) to incorrect cheque [bmp](key30) instead of cheque image
+- chequemanagement.h doesnt include a [preprocessor](key31) definition to protect against multiple includes, resulting in the [redifinition](key32) of symbols
+- [statedata](key33) [debug](key34) [log](key35) for bunch cheque accept state does not match fs
+- [cheque](key36) depositing to bin1 when [left](key37) in transport
+- [ueh](key38) on start-up on a cpm4 ( and also seen ueh on start-up on a single [cheque](key39) [scpm](key40) )
+- c07 in resrvd.def does not [reflect](key41) the change of [path](key42) for [cheque](key43) images
+- potential [memory](key44) [leak](key45) in bunchchequeid, executereset()
+- application [crash](key46) when tried to get amount using [managed](key47) [cpp](key48) cheque details wrapper
+- when bunch [cheque](key49) accept state [enable](key50) image processing parameter is set to any value other than 000, an exception occurs
+- proceed key in the cheque detail display state does not exit the state in operation [modes](key51) 2&3 if more [cheques](key52) can be displayed and [zero](key53) amount is allowed
+- [scpm](key54) it7 - amount entry in [cheque](key55) detail display state does not function correctly
+- wrong [unsolicited](key56) [message](key57) is sent to host when cheque is inserted with wrong [orientation](key58) in dpm.
+- an access [violation](key59) occurs when ssdsndcdata.dll and ssdsndcfield.dlls use [new](key60) .net [ssdschequeacceptmanagement](key61) dll
+- accept state to support [marking](key62) cheques to be returned at the end of the transaction, based on [failing](key63) codeline [validation](key64)
+- scpm: when [cheque](key65) accept state takes device error exit no error [unsol](key66) is sent
+- scpm: after [retract](key67) from exit [slot](key68) all [cheques](key69) reported in bin 1 even if some were taken
+- scpm: [temporary](key70) cheque images for [receipt](key71) [printing](key72) are not being deleted in the close state
+- [memory](key73) [leaks](key74) found in cheque details [wrapper](key75)
+- scpm: when all [cheques](key76) are marked to be returned a trans reply specifying a [chequeid](key77) moves no cheques but sends ready9
+- cheque image display with full [path](key78) to [picture](key79) [file](key80) does not display correctly.
+- scpm it4 - [modify](key81) init depos & [supv](key82) exit initialisation to ensure the [bunchchequeacceptservice](key83) is not left in a bad state
+- scpm: address code [review](key84) comments on cheque accept [status](key85) [handling](key86)
+- scpm: [timeout](key87) exit taken from [cheque](key88) accept state when no [pressed](key89) on timeout screen
+- scpm: [retract](key90) [message](key91) not sent for rejected [cheques](key92)
+- scpm: q6j [unsol](key93) sent after bunch entered with one [refused](key94) [cheque](key95) being expelled or taken
+- scpm: summarystate, to allow [cyclical](key96) [navigation](key97) if there are more cheques to display than will [fit](key98) on a single screen.
+- scpm it5 - when cancel [mask](key99) = 000 in bunch cheque accept state, cancel key on [pinpad](key100) is not [enabled](key101)
+- [scpm](key102) it5 - numeric key 1-9 active when cancel [mask](key103) (& display) in bunch [cheque](key104) accept state
+- scpm: bunch [cheque](key105) [flows](key106) are [journalling](key107) u0058 screen without dynamic data.
+- bunchchequehandling flow unit [test](key108) [fails](key109) using [payment](key110) processor. 
+- scpm - issue with image [printing](key111) of [cheques](key112) returned in [transaction](key113) reply function
+- [scpm](key114) it5 - [unexpected](key115) behaviour when returned cheque taken just as it is being [retracted](key116)
+- q3n [unsol](key117) is not [observed](key118) on [reboot](key119) when cheque is still in transport
+- scpm: when jam occurs [clearing](key120) cheques at [sod](key121), unsol msg is not clear that it is a sod [scenario](key122)
+- scpm: for [pci](key123) compliance the bunchchequeacceptservice and [imagemarkdepositrecorder](key124) archive/backup directories need to be [encrypted](key125)
+- scpm: re-work clearing the [scannedcheques](key126) [array](key127) for better synchronisation with [statushandler](key128)
+- [scpm](key129) fxcop issues in [bunchchequetransactionreply](key130) code
+- scpm - cheque id 000 is [accepted](key131) even when it is present in the second cheque [group](key132) in [buffer](key133) b
+- [scpm](key134) it4 - cheque at exit/sensor [blocked](key135) at accept state does not report any [unsol](key136)
+- scpm: status [handler](key137) does not send retract unsol from close state in case when cheques are [retained](key138) from [stacker](key139)
+- [scpm](key140) it - [timeout](key141) and cancel [unsols](key142) are only reported in bunch cheque accept state
+- ensure that [retracted](key143) [cheques](key144) are stored into bin2 by default
+- scpm: [status](key145) [handler](key146) to include [journalling](key147) for cheque capture with u0058/u0059 screens
+- issue with customer entered amount [field](key148) in [cheque](key149) details [wrapper](key150)
+- scpm: c11 reject [message](key151) sent after every [cheque](key152) related trans reply
+- scpm: update the [displaychequesummarystate](key153) to support display based on screen [paging](key154)
+- scpm: [suppress](key155) cheque unsol [messages](key156) for offline cheque deposit [transactions](key157)
+- scpm: add [timeout](key158) exit to bunch cheque [handling](key159) [flow](key160) for cheques not taken and not retracted.
+- wrong screen displayed when [retracting](key161) cheques in bunch cheque [handling](key162) state with [media](key163) control set to 000
+- next and previous screens are displayed in cheque [summary](key164) display state when [fdk](key165) [masks](key166) are 000 and more cheques than can be displayed is entered 
+- expose more [via](key167) the [chequedetails](key168) [wrapper](key169)
+- scpm:  [handling](key170) and close [states](key171) need to be able to exit the state in the case when [cheques](key172) are configured to be returned and not retracted, but the cheques are not taken
+- [cheque](key173) accept state - cancel key not [enabled](key174) when device re-enabled for cheque input
+- bunch [cheque](key175) accept - [enable](key176) image processing state parameter ignored.
+- scpm close state - does not [operate](key177) correctly when cheques [left](key178) in exit [slot](key179) in previous operation
+- [cheque](key180) depositing to bin1 when [left](key181) in transport
+- setting endorse data directly on a cheque [item](key182) incorrectly copies the [internal](key183) cheque objects rather than referencing the [real](key184) objects
+- [reference](key185) [manul](key186) should provide detail on cheque accept state codeline [validation](key187)
+- double beep in bunch [cheque](key188) [states](key189) when [pressing](key190) keys
+- [cheque](key191) index set during a cheque detail display state doesn't seem to be initialised between cheque deposit transactions.
+- bunch [cheque](key192) accept state - rejected cheque reasons functionality missing
+- [scpm](key193) & cpm: for [pci](key194) compliance, [mask](key195) the codeline when the cheque is displayed
+- scpm: change the [summary](key196) display state to support the display of only up to 9 [cheque](key197) details
+- scpm: update the detail display state, [summary](key198) display state and [ndcrenderer](key199) to support [visual](key200) indication to cardholders when a cheque is going to be returned
+- scpm: update all bunch cheque [states](key201) to [handle](key202) the situation where there may be no [cheques](key203) inserted into the device.
+- add support for the [timeout](key204) state to the bunch [cheque](key205) [states](key206)
+- bunch [cheque](key207) accept state - [refused](key208) reasons [dictionary](key209) not displayed
+- [bunchchequehandling](key210) state [endorses](key211) with the screen number instead of screen [contents](key212)
+- imagemark - bunch cheque handling [exports](key213) imagemark file [irrespective](key214) of the [registry](key215) value that is used to configure it
+- express recovery - 24v [reset](key216) for [cheque](key217) processing
+- bunch cheque [summary](key218) state - when more than 'max [items'](key219) [cheques](key220) are entered the cheque summary state displays a 'phantom' cheque
+- bunch [cheque](key221) accept state - 'escrow full error screen' displayed when number of [cheques](key222) entered is same as 'max [items'](key223) 
+- bunch [cheque](key224) close state - [cheques](key225) [retracted](key226) regardless of cheque retain/return flag.
+- scpm: integrate [imagemarkrecorder](key227) into andc [bunchchequehandlingstate](key228) for cheque deposit [recording](key229) - linkage with payment system solutions (passport)
+- bunch [cheque](key230) accept state - please wait for device screen '000' results in 'more time' screen being displayed.
+- scpm: support for [printing](key231) multiple cheque images in a [transaction](key232) receipt, in [native](key233) ndc bunch cheque deposit sol
+- pci-dss - where a [electronic](key234) [payments](key235) system is used ensure cheque images are stored [encrypted](key236)
+- scpm: make information available to be used in [dbs](key237) exception reports, for [offline](key238) bunch [cheque](key239) deposit
+- scpm: provide ability for an exit to rotate/scale a [cheque](key240) image for subsequently [printing](key241) on a [receipt](key242)
+- scpm: support for [printing](key243) a [transaction](key244) receipt, in [offline](key245) bunch cheque deposit
+- scpm: [bunchchequehandling](key246) state
+- second cheque image is printing as [garbage](key247) via a [rawdata](key248) print on [universal](key249) machines with 203dpi (there is no issue on a personas printer)
+- [second](key250) cheque image is [printing](key251) with very bigger size using [forms](key252) when trying to print two cheque images on the receipt
+- first cheque image [printing](key253) as [blackended](key254) with [transaction](key255) reply has p01 followed by p00.
+- cpm deposit with [vg](key256) enabled-when i [pressed](key257)  1on [pinpad](key258)  to select deposit cheque option the orientation is going to amount entry state.
+- quality of cheque image print [via](key259) a [receipt](key260) [forms](key261) print is poor
+- (st1) [cheque](key262) image shown [vertically](key263) on cheque confirmation screen
+- the same cheque image are printing on [journal](key264) printer when [forms](key265) printing [feature](key266) and  ej with hard copy option are enabled
+- ''alwaysprintchequesonback'' and ''codelineheight'' [registry](key267) keys are not available in universalprinters.reg
+- [picture](key268) is not taken in the [cheque](key269) capture [flow](key270) point by camera.
+- screen displyed after [clrdepos](key271) and [clrbins](key272) is still showing the [cheques](key273) deposited counters not the 0's
+- (st1- cpm) q2e ( device error) [status](key274) [message](key275) is received for every successful cheque [transaction](key276)
+- (st1 - [cpm](key277) ): [cheque](key278) is not getting [endorsed](key279)
+- (st1 - cpm) [cheque](key280) is not getting captured
+- [receipt](key281) is not delivered for some values of chequesizenormal/chequesizerotated (dynamic [forms](key282) = 1)
+- when chequesizerotated/chequesizenormal are set to 10, no image is printed on [receipt](key283) for codeline 1 and 2 (dynamicforms = 0)
+- by default, [cheque](key284) image is [printing](key285) on [journal](key286)
+- (cpm):cheque is getting deposited when we send the cpm_r13a ( invalid message)
+- [cpm](key287) [forms](key288) installed in the wrong [place](key289) (endorse data is not getting printed on the cheque)
+- tar 378972: aa-ndc : add information for [printing](key290) cheque image on [receipt](key291) to ref [manual](key292)
+- [application](key293) getting closed after inserting the [cheque](key294)
+- tar 376710 : init depos clears a [cheque](key295) jam, but [leaves](key296) device [status](key297) as fatal
+- tar 373126: cheque image is [unreadable](key298) on [usb](key299) receipt [printer](key300)
+- scpm: full bunch [cheque](key301) [message](key302) [interface](key303) with host change (ndc host control)
+- scpm: [displaychequesummary](key304) state
+- scpm: [chequedetaildisplay](key305) state
+- scpm: [bunchchequeaccept](key306) state
+- quality of cheque image print on [legacy](key307) [personas](key308) thermal [printers](key309) is not as good as in aandc 3.2
+- re-evaluate the [limit](key310) of [chequesizerotated](key311) for [vertical](key312) cheque image printing
+- request for option on [cheque](key313) accept to never accept cheque without valid [micr](key314)
+- add a possibility to [cpm](key315) close state to [leave](key316) returned [cheque](key317) in the ejected position
+- [scpm](key318) - multiple [cheque](key319) [application](key320) changes
+- [vertical](key321) [printing](key322) of a more readable cheque image on [receipt](key323) as a configurable option in addition to the current horizontal printing
+- amount entry on same screen as [cheque](key324) image display
+- 2st - 2 [sided](key325) [thermal](key326) - support cheque image printing on the [reverse](key327) - local configuration
+- support for image based cheque [clearing](key328) systems - [linkage](key329) with [payment](key330) system solutions (passport)
+- there is no documentation regarding the [new](key331) [cheque](key332) print functionality
+- cpm: b20 reject due to no [endorse](key333) data is sent only when the [cheque](key334) is sent to a bin
+- cpm - cheque accept state retries also [decremented](key335) when [internal](key336) [timeout](key337) occurs
+- [cpm](key338) - no error [message](key339) is sent when there is a [cheque](key340) already in the device
+- [cpm](key341) - when cheque [jammed](key342) inside (no access), incorrect device [status](key343) returned
+- cpm - when cheque not taken after eject timeout, [flow](key344) [continues](key345) [wrongly](key346)
+- [cpm](key347) - after [hardware](key348) [timer](key349) expires, the cheque acceptor worker re-enables the cheque entry
+- cpm  - the cheque registry value missing in the receipt printer [section](key350) of the printer [registy](key351) configuration [files](key352)
+- tar 332741 - require the [beeping](key353) for upon [cheque](key354) insertion to be disabled earlier
+- tar 347289 - [cpm](key355) no longer accepting [cheques](key356) with no [micr](key357) after final retry
+- tar 347293: aa-ndc docs state exception state to be taken when accepting non-micr [cheques](key358)
+- support [cpm](key359) [cheque](key360) image print (including [rear](key361) image)
+- when [cheque](key362) is captured, [local](key363) [endorse](key364) is required
+- tar 255036 - support [cpm](key365) [cheque](key366) image print
+- tar 177235 - incorrectly inserted [cheques](key367) are [accepted](key368)
+- capture the [cheque](key369) if it [fails](key370) to be returned to the cardholder, and print a [receipt](key371) for the cardholder
+- [test](key372) case 5.6.2.2 : [cpm](key373) [transaction](key374) doesnot show the cheque image
+- option for [cheque](key375) image print to be added to [cpm](key376) cheque accept state
+- andc 4.01.01: bunch cheque [status](key377) reporting to [journal](key378) with single digit transaction [serial](key379) number
+- [chequeacceptstatushandler](key380) reports q2j(refused [cheques](key381) are accessible to the customer) instead of q6j( (jam no customer access).) at " cheques [jammed](key382) in transport on entry â¿ no access" scenario.
+- [endorse](key383) [cheques](key384) which are being [retracted](key385) on scpm
+- ci583612: ndc display [manager](key386) [frontchequeimage](key387) path value not [passed](key388) through dmitrdata
+- [cheque](key389): identify whether cheque is [face](key390) up or down 
+- bunch [cheque](key391) components: improve pd according [new](key392) pd collection [guidelines](key393)
+- [voice](key394) [guidance](key395) transaction reply data not processed by [bna](key396) and cheque deposit replies
+- [application](key397) escaping at close state, while doing a bunch cheque transaction with bins missing and [pramote](key398) [enabled](key399)
+- ci583612: ndc display [manager](key400) [frontchequeimage](key401) path value not [passed](key402) through dmitrdata
+- tar 438634 - request to improve quality of [scpm](key403) [cheque](key404) image displayed by aandc
+- ci 583612  ndc display [manager](key405) [frontchequeimage](key406) path value not [passed](key407) through dmitrdata
+- add support for [endorsing](key408) returned [[cheque](key410)s](key409) (scpm) - single cheque processor
+- add support for [endorsing](key411) returned [[cheque](key413)s](key412) (scpm) - bunch cheque processor
+- improve scaling of displayed [cheque](key414) images
+- request for bunch [cheque](key415) amount display to be more configurable
+- tar 574600: [cheque](key416) amount display control [sequences](key417) do not provide [consistent](key418) results
+- tar 574600: [cheque](key419) amount display control [sequences](key420) do not provide [consistent](key421) results
+- tar 469338 - [cheque](key422) detail display state [transparent](key423) background code issue for amount entry
+- tar 466954:  [cheque](key424) details [overlay](key425) screen not displayed correctly if screen number < 100
+- [cheques](key426) [jammed](key427) in transport and [sdm](key428) reports q4j only
+- [application](key429) is getting hang in [cheques](key430) accept state
+- bunch cheque should generate unsolicited [messages](key431) for wfs_sys [events](key432) generated due to operations in other processes even though there is no [outstanding](key433) wfs command in aandc
+- [sdm](key434) - cash in [aer](key435) needs to be called before cheque aer to avoid clearing of [notes](key436) during cheque recovery
+- sdm - cheque [aer](key437) might clear [notes](key438) in device when sdm is configured for cheque and cash [transactions](key439)
+- scaling the cheque image before [passing](key440) the image to [parascript](key441) [engine](key442) for better recoginition of amount declared on the cheque
+- ip tar 463167: state z004 number of [cheques](key443) [refused](key444) can't be displayed.
+- [application](key445) is getting crash/ giving [hardware](key446) error when try to deposit cheque with [scpm](key447)
+- tar 462108 - exception raised when [nested](key448) screen in bunch [cheque](key449) accept state
+- tar 462108 - exception raised when [nested](key450) screen in bunch [cheque](key451) accept state
+- displays - bunch [cheque](key452) detail display doesn't [handle](key453) [transparent](key454) text when entering amount.
+- pa-dss - [cheque](key455) processing - ensure cheque images in the upload directory are [securely](key456) deleted at the end of the [transaction](key457)
+- in [cheque](key458) detail display state entered amount is not echoed on the screen
+- [scalable](key459) [cheque](key460) image display [fails](key461)
+- the [application](key462) is waiting infinite time after taking the [cheques](key463) into [scpm](key464) device in bunch cheque acceptance state, with alpha numeric states.
+- [scpm](key465) : [cheques](key466) with valid codeline also getting rejected when 'refusenonvalidcheques' [property](key467) is set to 'true' in advancendc.accfg file.
+- [sst](key468) config: itemprocessing1 should be used as [bunchcheque](key469) [axfs](key470) alias 
+- [scpm](key471) - [cheque](key472) images remain in folder after a powerfail/reset
+- tar 444775:  [cheque](key473) [retract](key474) causes two conflicting entries in [journal](key475)
+- ip tar 430376 - ip [states](key476) that return [cheque](key477) key can be [toggled](key478) where it cannot
+- tar 444775:  [cheque](key479) [retract](key480) causes two conflicting entries in [journal](key481)
+- tar 444775:  [cheque](key482) [retract](key483) causes two conflicting entries in [journal](key484)
+- tar 423770 - add more screen not being displayed on [cheque](key485) [summary](key486) screen
+- tar423770 - add more screen not being displayed on [cheque](key487) [summary](key488) screen
+- [cpm](key489) - [opteva](key490) - [cheque](key491) processor functionality not working ( also wn ccdm)
+- ip gr1t: andc ref man [states](key492) that return [cheque](key493) key can be [toggled](key494) where it cannot
+- tar 422692:  aa-ndc : [cpm](key495) [cheque](key496) [jam](key497) reported as fatal with no error recovery attempted
+- update the [tracing](key498) of bunchchequeacceptstate next state numbers in [stdata](key499) window of [debuglog](key500)
+- bunch cheque accept state: add a [new](key501) next state parameter to the [bunchchequeacceptstate](key502) to distinguish between accepting all [cheques](key503) and where some cheques have been returned
+- scpm and [cic](key504) - any data [objects](key505) i.e. [chequedetail](key506) - should be available cross process not just in aandc process
+- [unsole](key507) message are not coming while [last](key508) transaction are [failed](key509) and still cheque are in the dpm.
+- provide support for [offline](key510) single [cheque](key511) deposit in advance ndc
+- add [promote](key512) [flowpoints](key513) for cpm/scpm [chequeinserted](key514) and chequedeposited
+- bunch [cheque](key515) [auto](key516) recovery [hangs](key517) where no service provider.
+- scpm: [bunchchequeflows](key518) [dispose](key519) [implementation](key520) in bunchchequeacceptflow does not free resources.
+- wrong unsol message is being sent to host when [unacceptable](key521) cheque was [jammed](key522) during [retract](key523)
+- additional config detail required regarding support for single [cheque](key524) [scpm](key525) - tar 404360 
+- scpm: [imagemark](key526) can store front image twice (before and after endorse) if [cheque](key527) inserted [upside](key528) down
+- scpm: no capture [journalling](key529) when [cheques](key530) are cleared using [auto](key531) error recovery
+- scpm: screen for wait for [cheques](key532) not shown when multiple [bunches](key533) returned in close state
+- bunch [cheque](key534) [handling](key535) state screen 'wait for more returned [cheques'](key536) screen not displayed
+- scpm: when no is selected on the [timeout](key537) screen, [propose](key538) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key539)
+- [siu](key540) [session](key541) being opened even though there is no bunch [cheque](key542) device
+- scpm: close state can be improved in the way it [retains](key543) cheques to allow status [handler](key544) to be [simplified](key545)
+- [scpm](key546) - [cheque](key547) images remain in folder after a powerfail/reset
+- scpm & cpm: for [pci](key548) compliance, consider [masking](key549) even other [areas](key550) on the cheque
+- scpm: update the return [cheque](key551) [fdk](key552) option to behave as a [toggle](key553)
+- [cheque](key554) accept fault display only supports up to 3 bins.
+- wrong [unsol](key555) reported when error occurs while [retracting](key556) an [unacceptable](key557) cheque
+- require scpm sp update to allow cheques to be [endorsed](key558) during [retract](key559) while doing [transaction](key560) if there are cheques in the escrow/transport
+- scpm: support [uniquely](key561) [endorsing](key562) each cheque in a bunch in the [bunchchequehandling](key563) state, for offline bunch cheque deposit
+- scpm: support for [printing](key564) multiple cheque images in a [transaction](key565) receipt, in [offline](key566) bunch cheque deposit
+- [unsole](key567) message are not coming while [last](key568) transaction are [failed](key569) and still cheque are in the dpm.
+- correct  [unsol](key570) [message](key571) is not reporting to the host when do transaction on [dpm](key572) with short cheque
+- p00 data is not [printing](key573) on the [receipt](key574) when the cheque deposit [transaction](key575) without image lifting.
+- tar 376710 : init depos clears a [cheque](key576) jam, but [leaves](key577) device [status](key578) as fatal
+- tar 373126: cheque image is [unreadable](key579) on [usb](key580) receipt [printer](key581)
+- [cheque](key582) image scaling - current scaling function in aandc seems to lose significant cheque detail. [ricardo](key583) has customization that [performs](key584) a better job.
+- [supervisor](key585) -  [cheque](key586) processor clear bins display show pre-clear counts.
+- [opteva](key587) - [cheque](key588) processor functionality not working ( also wn ccdm)
+- no beep to [warn](key589) the customer that a [cheque](key590) has been returned after cancel
+- scpm & cin: when no is selected on the [timeout](key591) screen, [propose](key592) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key593)
+- [ichqaccptsrv aimodule]: need a [property](key594) for [endorsement](key595) while [retracting](key596) the cheques.
+- bunchchequeacceptservice: [endorse](key597) [cheques](key598) which are being [retracted](key599) on scpm
+- [itemacceptservice](key600) component should support equivalent functionality as was provided with [bunchcheque](key601) and cash accept services
+- [iitemacceptservice](key602) interface should support equivalent functionality as was provided with [bunchcheque](key603) and cash accept service [interfaces](key604)
+- bunchchqaccptsrv: [cheques](key605) [jam](key606) during [scancheques](key607) operation without service recovery action.
+- scpm: [imagemark](key608) can store front image twice (before and after endorse) if [cheque](key609) inserted [upside](key610) down

@@ -1,0 +1,231 @@
+﻿- SCPM - ImageMark creates the detail for retracted cheques also when we do the transaction with accept and reject cheques together
+- SCPM - IT build 13 : The images of returned cheques are not printed on the receipt
+- SCPM: Trans Request Message needs to send the total amount of individual cheques when using the Single Cheque message interface
+- Memory leak in transaction request data for bunch cheque accept data
+- SCPM: Cheque at Exit/Sensor Blocked at Accept State when the BunchChequeAcceptService is in ChequesLeft state does not Report any Unsol
+- BunchChqAccptSrv: Cheques jam during ScanCheques operation without service recovery action.
+- SCPM: Wrong Unsol message is sent when shutter is jammed open after bunch inserted and cheques still in infeed transport
+- Out of Range testing for Bunch Cheque State Table Parameters
+- SCPM: Powerfail - Reset not done when cheques in stacker at SoD and reset was done during transaction
+- When Alphanumeric State entry is enabled, Cheque Detail Display State goes to Default Close from any of its exits
+- SCPM: Receipt contains pathname to incorrect cheque bmp instead of cheque image
+- ChequeManagement.H doesnt include a preprocessor definition to protect against multiple includes, resulting in the redifinition of symbols
+- STATEDATA debug log for Bunch Cheque Accept State does not match FS
+- cheque depositing to bin1 when left in transport
+- UEH on start-up on a CPM4 ( and also seen UEH on start-up on a single cheque SCPM )
+- C07 in resrvd.def does not reflect the change of path for Cheque Images
+- Potential memory leak in BunchChequeID, ExecuteReset()
+- Application crash when tried to get amount using managed cpp cheque details wrapper
+- When Bunch Cheque Accept State Enable Image Processing parameter is set to any value other than 000, an exception occurs
+- Proceed Key in the Cheque Detail Display State does not exit the state in Operation Modes 2&3 if more cheques can be displayed and Zero Amount is allowed
+- SCPM IT7 - Amount Entry in Cheque Detail Display State does not function correctly
+- Wrong unsolicited message is sent to host when cheque is inserted with wrong orientation in DPM.
+- An access violation occurs when SSDSNDCDATA.DLL and SSDSNDCFIELD.DLLs use new .NET ssdsChequeAcceptManagement Dll
+- Accept state to support marking cheques to be returned at the end of the transaction, based on failing codeline validation
+- SCPM: When Cheque Accept state takes device error exit no error unsol is sent
+- SCPM: After retract from exit slot all cheques reported in Bin 1 even if some were taken
+- SCPM: Temporary cheque images for receipt printing are not being deleted in the Close state
+- Memory leaks found in cheque details wrapper
+- SCPM: When all cheques are marked to be Returned a trans reply specifying a chequeID moves no cheques but sends Ready9
+- Cheque image display with full path to picture file does not display correctly.
+- SCPM IT4 - Modify INIT DEPOS & Supv exit initialisation to ensure the BunchChequeAcceptService is not left in a bad state
+- SCPM: address code review comments on cheque accept status handling
+- SCPM: timeout exit taken from cheque accept state when No pressed on timeout screen
+- SCPM: retract message not sent for rejected cheques
+- SCPM: q6J unsol sent after bunch entered with one Refused cheque being expelled or taken
+- SCPM: SummaryState, to allow cyclical navigation if there are more cheques to display than will fit on a single screen.
+- SCPM IT5 - When Cancel Mask = 000 in Bunch Cheque Accept State, Cancel Key on Pinpad is not Enabled
+- SCPM IT5 - Numeric Key 1-9 Active When Cancel Mask (& Display) in Bunch Cheque Accept State
+- SCPM: Bunch Cheque flows are journalling U0058 screen without dynamic data.
+- BunchChequeHandling flow unit test fails using payment processor. 
+- SCPM - Issue with image printing of cheques returned in transaction reply function
+- SCPM IT5 - Unexpected Behaviour when Returned Cheque Taken Just as it is being Retracted
+- q3N Unsol is not observed on reboot when cheque is still in transport
+- SCPM: when jam occurs clearing cheques at SoD, unsol msg is not clear that it is a SoD scenario
+- SCPM: For PCI compliance the BunchChequeAcceptService and ImageMarkDepositRecorder archive/backup directories need to be encrypted
+- SCPM: Re-work clearing the ScannedCheques array for better synchronisation with StatusHandler
+- SCPM FxCop issues in BunchChequeTransactionReply code
+- SCPM - cheque ID 000 is accepted even when it is present in the second cheque group in buffer B
+- SCPM IT4 - Cheque at Exit/Sensor Blocked at Accept State Does not Report any Unsol
+- SCPM: Status Handler does not send Retract unsol from Close State in case when cheques are retained from stacker
+- SCPM IT - Timeout and Cancel Unsols are Only Reported in Bunch Cheque Accept State
+- Ensure that retracted cheques are stored into Bin2 by default
+- SCPM: Status Handler to include journalling for cheque capture with U0058/U0059 screens
+- Issue with Customer Entered Amount field in Cheque Details wrapper
+- SCPM: C11 Reject message sent after every cheque related Trans Reply
+- SCPM: Update the DisplayChequeSummaryState to support display based on screen paging
+- SCPM: Suppress cheque unsol messages for offline cheque deposit transactions
+- SCPM: Add timeout exit to bunch cheque handling flow for cheques not taken and not retracted.
+- Wrong Screen Displayed when Retracting Cheques in Bunch Cheque Handling State with Media Control set to 000
+- NEXT and PREVIOUS Screens are displayed in Cheque Summary Display State when FDK Masks are 000 and more cheques than can be displayed is entered 
+- Expose more via the ChequeDetails Wrapper
+- SCPM:  Handling and Close States need to be able to exit the state in the case when cheques are configured to be returned and not retracted, but the cheques are not taken
+- Cheque Accept State - Cancel key not enabled when device re-enabled for cheque input
+- Bunch Cheque Accept - Enable Image Processing state parameter ignored.
+- SCPM Close State - does not operate correctly when cheques left in exit slot in previous operation
+- cheque depositing to bin1 when left in transport
+- Setting endorse data directly on a cheque item incorrectly copies the internal cheque objects rather than referencing the real objects
+- Reference Manul should provide detail on Cheque Accept State codeline validation
+- Double Beep in Bunch Cheque States when pressing keys
+- Cheque Index set during a Cheque Detail Display State doesn't seem to be Initialised between cheque deposit transactions.
+- Bunch Cheque Accept State - Rejected cheque reasons functionality missing
+- SCPM & CPM: For PCI compliance, mask the codeline when the cheque is displayed
+- SCPM: Change the Summary Display State to support the display of only up to 9 cheque details
+- SCPM: Update the Detail Display state, Summary Display state and NDCRenderer to support visual indication to cardholders when a cheque is going to be Returned
+- SCPM: Update all bunch cheque states to handle the situation where there may be no cheques inserted into the device.
+- Add support for the Timeout state to the bunch cheque states
+- Bunch Cheque Accept State - Refused reasons dictionary not displayed
+- BunchChequeHandling state endorses with the screen number instead of screen contents
+- ImageMark - Bunch Cheque Handling exports ImageMark file irrespective of the registry value that is used to configure it
+- Express Recovery - 24v Reset for cheque processing
+- Bunch Cheque Summary State - When more than 'Max Items' cheques are entered the Cheque Summary State displays a 'Phantom' cheque
+- Bunch Cheque Accept State - 'Escrow Full Error Screen' displayed when number of cheques entered is same as 'Max Items' 
+- Bunch Cheque Close State - Cheques Retracted regardless of Cheque Retain/Return flag.
+- SCPM: Integrate ImageMarkRecorder into ANDC BunchChequeHandlingState for cheque deposit recording - Linkage with payment system solutions (Passport)
+- Bunch Cheque Accept State - Please Wait For Device Screen '000' results in 'More Time' screen being displayed.
+- SCPM: Support for printing multiple cheque images in a transaction receipt, in native NDC bunch cheque deposit sol
+- PCI-DSS - where a electronic Payments system is used ensure cheque images are stored encrypted
+- SCPM: Make information available to be used in DBS Exception Reports, for offline bunch cheque deposit
+- SCPM: Provide ability for an Exit to rotate/scale a cheque image for subsequently printing on a receipt
+- SCPM: Support for printing a transaction receipt, in offline bunch cheque deposit
+- SCPM: BunchChequeHandling State
+- Second Cheque image is printing as garbage via a Rawdata print on Universal machines with 203dpi (there is no issue on a Personas printer)
+- Second Cheque image is printing with very bigger size using Forms when trying to print two cheque images on the receipt
+- First cheque image printing as blackended with Transaction Reply has P01 followed by P00.
+- CPM Deposit with VG enabled-When i pressed  1on pinpad  to select deposit Cheque option the orientation is going to Amount entry state.
+- Quality of cheque image print via a receipt forms print is poor
+- (ST1) Cheque image shown vertically on Cheque confirmation screen
+- The same cheque Image are printing on Journal Printer when Forms Printing feature and  EJ with Hard Copy option are enabled
+- ''AlwaysPrintChequesOnBack'' and ''CodeLineHeight'' registry keys are not available in UniversalPrinters.reg
+- Picture is not taken in the cheque capture flow point by camera.
+- Screen displyed after CLRDEPOS and CLRBINS is still showing the cheques deposited counters not the 0's
+- (ST1- CPM) q2E ( Device Error) Status message is received for every successful cheque transaction
+- (ST1 - CPM ): Cheque is not getting Endorsed
+- (ST1 - CPM) Cheque is not Getting captured
+- Receipt is not delivered for some values of ChequeSizeNormal/ChequeSizeRotated (Dynamic Forms = 1)
+- When ChequeSizeRotated/ChequeSizeNormal are set to 10, no image is printed on receipt for codeline 1 and 2 (DynamicForms = 0)
+- By default, Cheque image is printing on journal
+- (CPM):Cheque is getting deposited when we send the CPM_R13A ( invalid message)
+- CPM Forms Installed in the wrong place (ENDORSE data is not getting printed on the Cheque)
+- TAR 378972: AA-NDC : add information for printing cheque image on receipt to ref manual
+- Application getting closed after inserting the Cheque
+- TAR 376710 : INIT DEPOS clears a cheque jam, but leaves device status as fatal
+- TAR 373126: Cheque Image is unreadable on USB Receipt Printer
+- SCPM: Full bunch cheque message interface with host change (NDC Host Control)
+- SCPM: DisplayChequeSummary State
+- SCPM: ChequeDetailDisplay State
+- SCPM: BunchChequeAccept State
+- Quality of cheque image print on legacy Personas thermal printers is not as good as in AANDC 3.2
+- Re-Evaluate the limit of ChequeSizeRotated for vertical cheque image printing
+- Request for option on cheque accept to never accept cheque without valid MICR
+- Add a possibility to CPM Close State to leave returned cheque in the ejected position
+- SCPM - Multiple Cheque Application Changes
+- Vertical printing of a more readable cheque image on receipt as a configurable option in addition to the current horizontal printing
+- Amount entry on same screen as cheque image display
+- 2ST - 2 Sided Thermal - Support cheque image printing on the reverse - local configuration
+- Support for image based cheque clearing systems - Linkage with payment system solutions (Passport)
+- There is no documentation regarding the new cheque print functionality
+- CPM: B20 reject due to no endorse data is sent only when the cheque is sent to a bin
+- CPM - Cheque accept state retries also decremented when internal timeout occurs
+- CPM - no error message is sent when there is a cheque already in the device
+- CPM - when cheque jammed inside (no access), incorrect device status returned
+- CPM - when cheque not taken after eject timeout, flow continues wrongly
+- CPM - after hardware timer expires, the Cheque Acceptor worker re-enables the cheque entry
+- CPM  - The CHEQUE registry value missing in the receipt printer section of the printer registy configuration files
+- TAR 332741 - Require the beeping for upon cheque insertion to be disabled earlier
+- TAR 347289 - CPM no longer accepting cheques with no MICR after final retry
+- TAR 347293: AA-NDC Docs state exception state to be taken when accepting non-MICR cheques
+- Support CPM Cheque Image Print (Including rear image)
+- When cheque is captured, local endorse is required
+- TAR 255036 - Support CPM Cheque Image Print
+- TAR 177235 - Incorrectly inserted cheques are accepted
+- Capture the cheque if it fails to be returned to the cardholder, and print a receipt for the cardholder
+- Test Case 5.6.2.2 : CPM transaction doesnot show the cheque image
+- Option for cheque image print to be added to CPM cheque accept state
+- ANDC 4.01.01: Bunch cheque status reporting to journal with single digit transaction serial number
+- ChequeAcceptStatusHandler reports q2J(refused cheques are accessible to the customer) instead of q6J( (Jam no customer access).) at " Cheques jammed in transport on entry ¿ no access" scenario.
+- Endorse cheques which are being retracted on SCPM
+- CI583612: NDC Display Manager FrontChequeImage path value not passed through DMITRData
+- Cheque: Identify whether cheque is face up or down 
+- Bunch cheque components: improve PD according new PD Collection guidelines
+- Voice Guidance Transaction Reply Data not processed by BNA and Cheque Deposit Replies
+- Application escaping at close state, while doing a Bunch Cheque Transaction with Bins Missing and Pramote enabled
+- CI583612: NDC Display Manager FrontChequeImage path value not passed through DMITRData
+- TAR 438634 - Request to improve quality of scpm cheque image displayed by AANDC
+- CI 583612  NDC Display Manager FrontChequeImage path value not passed through DMITRData
+- Add Support for Endorsing returned cheques (SCPM) - Single Cheque Processor
+- Add Support for Endorsing returned cheques (SCPM) - Bunch Cheque Processor
+- Improve scaling of displayed cheque images
+- Request for bunch cheque amount display to be more configurable
+- TAR 574600: Cheque Amount Display control sequences do not provide consistent results
+- TAR 574600: Cheque Amount Display control sequences do not provide consistent results
+- TAR 469338 - Cheque Detail Display State transparent background code issue for Amount Entry
+- TAR 466954:  Cheque Details Overlay Screen not displayed correctly if screen number < 100
+- cheques jammed in transport and SDM reports q4J only
+- Application is getting hang in cheques accept state
+- Bunch Cheque should generate unsolicited messages for WFS_SYS events generated due to operations in other processes even though there is no outstanding WFS command in AANDC
+- SDM - Cash In AER needs to be called before Cheque AER to avoid clearing of notes during cheque recovery
+- SDM - Cheque AER might clear notes in device when SDM is configured for cheque and cash transactions
+- Scaling the Cheque Image Before Passing the image to Parascript Engine for better recoginition of Amount Declared on the cheque
+- IP TAR 463167: State z004 number of cheques refused can't be displayed.
+- Application is getting crash/ giving hardware error when try to Deposit cheque with SCPM
+- TAR 462108 - Exception raised when nested screen in Bunch Cheque Accept state
+- TAR 462108 - Exception raised when nested screen in Bunch Cheque Accept state
+- Displays - Bunch Cheque Detail Display doesn't handle transparent text when entering amount.
+- PA-DSS - cheque processing - ensure cheque images in the upload directory are securely deleted at the end of the transaction
+- In Cheque Detail Display state entered amount is not echoed on the screen
+- Scalable Cheque Image Display Fails
+- The application is waiting infinite time after taking the cheques into SCPM device in Bunch Cheque Acceptance State, With Alpha Numeric States.
+- SCPM : Cheques with valid codeline also getting rejected when 'RefuseNonValidCheques' property is set to 'True' in AdvanceNDC.accfg file.
+- SST Config: ItemProcessing1 should be used as BunchCheque AXFS Alias 
+- SCPM - Cheque Images remain in folder after a Powerfail/Reset
+- TAR 444775:  Cheque retract causes two conflicting entries in journal
+- IP TAR 430376 - IP states that return cheque key can be toggled where it cannot
+- TAR 444775:  Cheque retract causes two conflicting entries in journal
+- TAR 444775:  Cheque retract causes two conflicting entries in journal
+- TAR 423770 - Add more screen not being displayed on cheque summary screen
+- TAR423770 - Add more screen not being displayed on cheque summary screen
+- CPM - Opteva - Cheque processor functionality not working ( also WN CCDM)
+- IP GR1T: ANDC Ref Man states that return cheque key can be toggled where it cannot
+- TAR 422692:  AA-NDC : CPM cheque jam reported as Fatal with no error recovery attempted
+- Update the tracing of BunchChequeAcceptState Next State Numbers in STDATA window of DebugLog
+- Bunch Cheque Accept State: Add a new next state parameter to the BunchChequeAcceptState to distinguish between accepting all cheques and where some cheques have been returned
+- SCPM and CIC - Any data objects i.e. ChequeDetail - should be available cross process not just in AANDC Process
+- Unsole message are not coming while last transaction are failed and still cheque are in the DPM.
+- Provide Support for Offline Single Cheque Deposit in Advance NDC
+- Add Promote flowpoints for CPM/SCPM ChequeInserted and ChequeDeposited
+- Bunch cheque Auto recovery hangs where no Service provider.
+- SCPM: BunchChequeFlows Dispose implementation in BunchChequeAcceptFlow does not free resources.
+- Wrong unsol message is being sent to host when unacceptable cheque was jammed during Retract
+- Additional config detail required regarding support for single cheque SCPM - Tar 404360 
+- SCPM: ImageMark can store front image twice (before and after endorse) if cheque inserted upside down
+- SCPM: No capture journalling when cheques are cleared using Auto Error Recovery
+- SCPM: Screen for Wait for Cheques not shown when multiple bunches returned in Close State
+- Bunch Cheque Handling State screen 'Wait for More Returned Cheques' Screen not displayed
+- SCPM: When No is selected on the Timeout screen, propose the Cancel exit is taken (instead of the Timeout exit) from the BunchChequeAcceptState
+- SIU Session being opened even though there is no Bunch cheque device
+- SCPM: close state can be improved in the way it retains cheques to allow status handler to be simplified
+- SCPM - Cheque Images remain in folder after a Powerfail/Reset
+- SCPM & CPM: For PCI compliance, consider masking even other areas on the cheque
+- SCPM: Update the Return Cheque FDK option to behave as a toggle
+- Cheque Accept Fault Display only supports up to 3 bins.
+- Wrong unsol reported when error occurs while retracting an unacceptable cheque
+- Require SCPM SP update to allow cheques to be endorsed during retract while doing transaction if there are cheques in the escrow/transport
+- SCPM: Support uniquely endorsing each cheque in a bunch in the BunchChequeHandling State, for offline bunch cheque deposit
+- SCPM: Support for printing multiple cheque images in a transaction receipt, in offline bunch cheque deposit
+- Unsole message are not coming while last transaction are failed and still cheque are in the DPM.
+- Correct  unsol message is not reporting to the host when do transaction on DPM with Short cheque
+- p00 data is not printing on the receipt when the cheque deposit transaction without image lifting.
+- TAR 376710 : INIT DEPOS clears a cheque jam, but leaves device status as fatal
+- TAR 373126: Cheque Image is unreadable on USB Receipt Printer
+- Cheque Image Scaling - Current scaling function in AANDC seems to lose significant cheque detail. Ricardo has customization that performs a better job.
+- Supervisor -  Cheque processor clear bins display show pre-clear counts.
+- Opteva - Cheque processor functionality not working ( also WN CCDM)
+- No Beep to warn the customer that a cheque has been returned after cancel
+- SCPM & CIN: When No is selected on the Timeout screen, propose the Cancel exit is taken (instead of the Timeout exit) from the BunchChequeAcceptState
+- [IChqAccptSrv AIModule]: Need a property for Endorsement while retracting the cheques.
+- BunchChequeAcceptService: Endorse cheques which are being retracted on SCPM
+- ItemAcceptService component should support equivalent functionality as was provided with BunchCheque and Cash Accept Services
+- IItemAcceptService interface should support equivalent functionality as was provided with BunchCheque and Cash Accept Service interfaces
+- BunchChqAccptSrv: Cheques jam during ScanCheques operation without service recovery action.
+- SCPM: ImageMark can store front image twice (before and after endorse) if cheque inserted upside down

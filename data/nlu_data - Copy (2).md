@@ -1,0 +1,975 @@
+<!--- Make sure to update this training data file with more training examples from https://forum.rasa.com/t/rasa-starter-pack/704 --> 
+
+## intent:badbye <!--- The label of the intent -->
+- Bye 			<!--- Training examples for intent 'bye'--> 
+- Goodbye
+- See you later
+- Bye bot
+- Goodbye friend
+- bye
+- bye for now
+- catch you later
+- gotta go
+- See you
+- goodnight
+- have a nice day
+- i'm off
+- see you later alligator
+- we'll speak soon
+
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+
+## intent:card
+- TAR 360974:  BEEPER DOES NOT SOUND WHEN CARD IS RETURNED ON CARD READ STATE.
+- TAR 387838 - Incorrect card capture bin status reported on exit from suspend
+- TAR 399521 - Bad card read loops to suspend before ejecting card
+- WINCOR:  On card jam/card left in reader or card eject/card jam/card left in reader, the ATM does not try and capture the card after 5 minutes.
+- Card before Parallel Dispense and Print incorrectly described print timing - Tar 393580
+- Implement Option 39 for mag/non-mag card acceptance.
+- TAR 399521 - Bad card read loops to suspend before ejecting card
+- Diebold IX - No Cash given to the Card holder but Transaction is successful at the switch
+- TAR 383609 - Card reader reports No Card in Dash rdr as Cancelling Txn, but presents cash
+- TAR 393354:  Mstat 26(dec) returnd in unsolic instead of 38(dec) when Card Capture Bin Full
+-  AANDC Voice Guidance orientation script not allowed to play to the end Â¿  change timer from config to fixed of 4mins (US implemented for Cardtronics)
+- Voice Guidence does not active if the card reader is fatal or not connected.
+- SCPM: Update the Detail Display state, Summary Display state and NDCRenderer to support visual indication to cardholders when a cheque is going to be Returned
+- PA-DSS requires secure authentication for supervisor functions which may allow access to card holder data
+- When the ConsumerResource is requested in the middle of transaction, after completion of that transaction CardReader is getting enabled for a second before releasing ConsumerResource.
+- PCI - Add an extra field to the BNA ECB6 unsol to contain 'customer' data following the rules defined for the card capture unsol
+- Display a campaign in the close state only if the txn is successful. The campaign must not be displayed if the customer card has been captured or the txn was rejected  
+- Review processing of flowpoints during close state operation  - allow close state flowpoint to be configurable i.e.  either before card/receiptÂ¿after Card but before receiptÂ¿.after card and receipt etc.
+- PCI DSS - RFC to mask card data when a card is captured
+- TAR 393354:  Mstat 26(dec) returnd in unsolic instead of 38(dec) when Card Capture Bin Full
+- TAR 360974:  BEEPER DOES NOT SOUND WHEN CARD IS RETURNED ON CARD READ STATE.
+- TAR 387838 - Incorrect card capture bin status reported on exit from suspend
+- severity of the card reader set to 2 after exiting from supervisor with card reader in fatal
+- Deposit Count for CPM, envelope & card capture not working
+- StateCardRead (author proj) does not build due to incorrect workflow
+- TAR 385943: Next state for Cardless transaction  needs to be a registry string
+- Card left in reader after restarting application causes looping of retain card command
+- Application going to suspend mode when all card read conditions failed 
+- Avoid Sync Calls in card read state
+- If card reader FATAL and cardless active then idle screen not shown
+- Beep sound coming two times when we press keys on Pinpad while doing VG transaction after inserting the card in Touch screen only.
+- Card Read State T with DASH reader installed and Magnetic Read conditions only not functions correctly when card not remove during Card read state T.
+- Suspend message and Fatal messages are not sent when Card not remove during card read state T.
+- Card Removed Manually message is not recorded to EJ
+- Volume Adjust at any time is working only after card insertion and not in idle loop.
+- When Advance NDC is terminated in Idle Loop by ALT-F4, card reader stays enabled and the MEI keeps flashing
+- Application crashes when machine reset occurs with card reader fatal
+- TAR 383609 - Card reader reports No Card in Dash rdr as Cancelling Txn, but presents cash
+- TAR 382509 - Timing of card capture bin overfill unsolic
+- TAR 382509:  Timing of card capture bin overfill unsolic
+- Second fatal message for the card reader is not reporting when Card reader and Dispener become fatal
+- Application going to transaction selection menu when we send GIS just after Card reader clears its suspend condition
+- Crash! AppCore crashes often when using cardless transactions.
+- Card reader suspend is also reported to the host when we did the Cash handler suspend codition
+- TAR 365813: AA-NDC Reference Manual does not specify state processing for cardless Txn
+- TAR 377213 - Idle Loop displayed but no card entry, when OOS sent after Card Reader Fatal
+- After crash, when app restarts and GIS sent it bypasses CardRead and PIN states to previous state where it crashed.
+- TAR 374243 - Cardless transaction is not controlled by Option 77
+- TAR 374243 - Cardless transaction is not controlled by Option 77
+- Journal Tracing in State Card Read - "Card Inserted" is not printing
+- ADI reset commands sent from Platform - Causes multiple unsols sent to the host on Cardcapture
+- TAR 362993 - No unsolic card reader status when card reader fatal on supervisor exit
+- TAR 362993 - No unsolic card reader status when card reader fatal on supervisor exit
+- TAR 375322: Requirement for Track 2 Data in cardless transaction is not documented
+- TAR RFC 375742: Cardless Activation with no TK2 data fails when 'T' State used
+- TAR 361152 Â¿ AA-NDC: Change usage of Timer 72 for non Dash card readers to Timer 2
+- TAR 362596 - Cardless transaction reports Fatal MCRW in close state if MCRW is Fatal.
+- TAR 365370 - If a card is in Dash reader and read state is T, Card reader becomes unusable
+- TAR 365370 - If a card is in Dash reader and read state is T, Card reader becomes unusable
+- TAR 361839 - Card read error is reported for every transaction when Cardless Transaction is active
+- TAR 361839 - Card read error is reported for every transaction when Cardless Transaction is active
+- TAR 357853 - AA-NDC: Card left in DASH on Transaction reply causes command reject 
+- Cardless Transaction does not support alphanumeric states
+- Request for non-magnetic card read function to be available in NDC
+- Request for non-magnetic card read function to be available in NDC
+- TAR 362884: Cardless transaction with touch does not work during mpeg in idle screen
+- TAR 356078 -  Language Select from Card State "V" does not use current PLNDX value
+- Provide a Cardholder Keyboard Entry exit utility (required to support a Biometrics Exit)
+- TAR 365370 - If a card is in Dash reader and read state is T, Card reader becomes unusable
+- TAR 362993 - No unsolic card reader status when card reader fatal on supervisor exit
+- TAR 361839 - Card read error is reported for every transaction when Cardless Transaction is active
+- Card Number in ECB Log is always "A/C NO UNKNOWN" 
+- TAR 357853 - AA-NDC: Card left in DASH on Transaction reply causes command reject 
+- TAR 361152 Â¿ AA-NDC: Change usage of Timer 72 for non Dash card readers to Timer 2
+- TAR 362596 - Cardless transaction reports Fatal MCRW in close state if MCRW is Fatal.
+- Request for non-magnetic card read function to be available in NDC
+- TAR 362884: Cardless transaction with touch does not work during mpeg in idle screen
+- Cardholder 'Authorised' Verification for off host transactions
+- Request for txn journalling to distinguish between card and cardless txns.
+- Request to move Printer Initialisation commands from the Card Read State
+- When doing an Envelope Deposit during a Cardless Transaction, a system escape occurs.
+- Discrepancy in cardless transaction handling
+- TAR 356078 -  Language Select from Card State "V" does not use current PLNDX value
+- TAR 340924 - Track 2 IMCRW with Smart card is reported as non smart in get config
+- TAR 356078 -  Language Select from Card State "V" does not use current PLNDX value
+- TAR 356078 -  Language Select from Card State "V" does not use current PLNDX value
+- CDM sends sync GetInfo which blocks IDC Async call during fast cash, and card is never returned
+- Extended Journalling - Possibility of having a Card Taken Trace when a Successful card Accept has not happened
+- Card reader status continually polls 
+- TAR 354370 - Update of card details with trans reply, that does not update track 3 fails
+- TAR 354370: Update of card details with trans reply, that does not update track 3 fails
+- TAR 353097:  Card is not always ejected if OOS received as Card is inserted
+- In the Card less transaction, CARD TAKEN is printed on journal
+- Advance NDC MV Diagnostics - card capture count not increasing
+- TAR 339830 -  Terminal hangs if OOS then GIS sent while Card reader in suspend state - Test Only
+- TAR 339439 - send config info returns card reader good, when its fatal due to comms error
+- TIR 351121 - Card left in DASH card reader has incorrect processing and wrong screens displ
+- TAR 340924 - Track 2 IMCRW with Smart card is reported as non smart in get config
+- Supervisor function DISP SUPPLY (Replenish Menu) does not report Card Capture Bin being nearly full
+- ANDC 93.02.00.56 Extended Journaling functionality - Card Taken/Cash Presented information logged twice to the Journal
+- AANDC 93.02.00.56 Extended Journaling - CARD TAKEN message is printed when using a DASH card reader
+- AANDC 93.02.00.56 Extended Journaling - TRANSACTION END message is not printed when card read fails
+- TAR 342955 - Disconnect Command should be discarded and not processed
+- Promote - update CL to move ServiceSelected sync point for Coupon beside Card Inserted flow point sync
+- Wincor - allow ANDC to act upon card skim plZextra detail.
+- Wincor - card returned where present failed
+- TAR 339830 -  Terminal hangs if OOS then GIS sent while Card reader in suspend state
+- Provide configurable mask format for journalling the card number
+- Support Universal USB IMCRW Smart Card Performance Enhancement, specifically in Card Entry to Enter PIN area.
+- TAR 326503 - AA-NDC doesn't display take card and take cash screens when jitter is switched
+- TAR 330022 -Cardless transaction does FIT Search on Dummy Track 2 data
+- TAR 330022 -Cardless transaction does FIT Search on Dummy Track 2 data
+- TAR 326503 - AA-NDC doesn't display take card and take cash screens when jitter is switched
+- TAR 326503 - AA-NDC doesn't display take card and take cash screens when jitter is switched
+- DBS issue of Card Reader and EJ loop investigation
+- Test 5.7.3.1.1.3.13 Message Mode Option 4 = 7 Â¿ Invalid Setting (Delayed Status Reporting.  No Beep on Card Eject  Send Additional Note Count Set) Failed
+- Opteva - After diagnostics & self test of card reader Card read State loops.
+- TAR 318298:  Second nested screen not shown in card before cash transaction with no card in
+- TAR 321521: NDCCardHolderDataCollector unable to display screen numbers greater than 255
+- TAR 319597 - AA-NDC: Card bin threshold is not displayed in Device Error list.
+- TAR 321521: NDCCardHolderDataCollector unable to display screen numbers greater than 255
+- TAR 321521: NDCCardHolderDataCollector unable to display screen numbers greater than 255
+- TAR 318712: Card before cash screen display issue on motorised readers if already ejected
+- TAR 318712: Card before cash screen display issue on motorised readers if already ejected
+- TAR 319614 - Card bin "nearly full" status not reported in Supplies status
+- TAR 319614 - Card bin "nearly full" status not reported in Supplies status
+- TAR 318298:  Second nested screen not shown in card before cash transaction with no card in
+- TAR 318298:  Second nested screen not shown in card before cash transaction with no card in
+- TAR 318298:  Second nested screen not shown in card before cash transaction with no card in
+- Capture the cheque if it fails to be returned to the cardholder, and print a receipt for the cardholder
+- ANDC 03.00.02 - When R00/R01 screens are downloaded, if a FF occurs in a print buffer, subsequent data in that buffer is discarded
+- Test 5.4.6.11 - Unsol for card reader fatal not sent when mains power lost, SST goes in service then entry to supervisor causes a hang
+- TAR 313945 - DASH reader does not report fatal if card left in reader
+- ANDC 92.06.06.03 - Entering Bad Cards into MCRW has a different effect on XFS 04.01.01 has a different effect from XFS 02.02.02
+- TAR 312745 - AA-NDC: Intermittent Hang after Chip card insertion
+- TAR 312745 - AA-NDC: Intermittent Hang after Chip card insertion
+- Touch screen events not seen by  NDC Cardholder Data Collector worker
+- TAR 309642:  Card Captured screen is shown in the close state, when card taken with suspend
+- TAR 307861 -  AA-NDC 02.06.04 : Card reader suspend only sent one time
+- TAR 309642:  Card Captured screen is shown in the close state, when card taken with suspend
+- TAR 309642:  Card Captured screen is shown in the close state, when card taken with suspend
+- Advance NDC does not capture card that is possibly in the reader on exit from supervisor
+- Problems when Card Reader recovers from a fatal condition after ATM Reboot
+- Suspend message not sent to host upon card capture attempt in ANDC 92.06.05.02
+- TAR 307861 -  AA-NDC 02.06.04 : Card reader suspend only sent one time
+- TAR 264331 - AA-NDC reads all 3 tracks on card even if only 2 present.
+- Beeping in Fast Cash with retract option on stops when card taken
+- Card Ejector Worker help does not mention captured signal
+- Remove unused 'Blank Card' signal from Card Track Reader worker
+- Remove unused 'Blank Card' signal from Card Track Reader worker
+- TAR 305994 - AA-NDC 02.06.03 - Manual card removal before card eject/capture not handled OK
+- ITS Insufficient for - GR1T 307940 - AA-NDC reads all 3 tracks on card even if only 2 present
+- Support Cardless Transaction in Advance NDC
+- TAR 304162 - No cards accepted if intial download STATE A->No FIT Match Next State = 000
+- After Card Reader suspend, GetFit sometimes reports D0, not D3.
+- Test 5.16.16 - Dialup - Line not bought down - Need to do EndallDials except when in Close due to Card or Encryptor error i.e. non-Transaction
+- TAR 299892 - Card reader fatal status not reported as unsolicited after GIS
+- TAR 302697 - GOS command can cause a subsequent card read issue due to OOS Pending flag
+- Dialup - Using EMV with Pre-Dial Dialup - AID not recognised error generated on card insertion not sent up due to Session End in Close State
+- PS - Dialup - TEST 5.16.20.5 - If I disconnect the comms cable and reconnect, then press FDK A, the ATM returns the card immediately and goes offline
+- TAR 302697 - GOS command can cause a subsequent card read issue due to OOS Pending flag
+- DASH card reader suspend message send unnecessarily due to Service provider returning User_error event.
+- Card is not ejected in the close state and remains latched. After a couple of minutes a new transaction will be started automatically.
+- When the DASH reader is enabled for Chip detection and a non-chip card is inserted the susbsequent Pin Entry state fails.
+- Usability: after clearing Card Capture counts, full counts screen not shown.
+- Card not captured on exit from suspend.
+- The card read state does not take the fit not found exit when Chip bit set and bad track read. (blank track)
+- Solicited status message not returned for bad stack in Card Before Parallel Dispense & Print
+- CARD CAPTURED A/C... printed on the journal when related option digit not set
+- PS - Dialup - ITS Document and Test Script - Test 5.16.20.5 - Step 8 card is returned so rest of test is non sensical
+- PS - On WINCOR card is only ejected once
+- PS - Card read error not printed on journal on WINCOR
+- PS - Incorrect card reader error logged on WINCOR
+- PS - On WINCOR, when card captured, it is not logged to the journal
+- TAR 299892 - Card reader fatal status not reported as unsolicited after GIS
+- TAR 299892 - Card reader fatal status not reported as unsolicited after GIS
+- PS - Cardless Settlement not working properly
+- PS - Severity of 0 reported if Card Capture Bin Full
+- PS - Test 6.8.1.3 - Incorrect screen appears entering card in DASH reader
+- Support For 40x20 Cardholder Screen Display (TAR RFC 263459)
+- SP1 causes card reader Service provider to fail
+- PS - Test 6.8.1.14 - Bad card entered on DIP functions differently from spec
+- PS - If card taken too quickly after unlatch on DASH get misread
+- System escape in card before cash using Dash Card Reader
+- After long inactivity on DASH reader it no longer accepts cards.
+- Take card quickly in the close state AANDC does not recognise that it has been taken.
+- Partial insertion and removal of card causes problem with DASH and enabled for Chip.
+- Timer 72 (DASH take card) does not have default value. 
+- Dash Card reader reports severity as 4 in case of suspend
+- Card unlatch worker added in ADE 1.4 is causing a worker factory issue
+- TAR 287923 - C03 command reject sent if OOS sent immediately after card entry
+- DialupUT:- Smart Card Reader Variant not read in correctly for Dialup Smart Card Processing
+- DASH - not going into Suspend when card left in reader
+- TAR 259881 - Cannot handle state flow straight to card read state
+- TAR 248389 - Card Bin/Deposit Bin Status coming back as space if Message Mode option 6c is set to on
+- TAR 287923 - C03 command reject sent if OOS sent immediately after card entry
+- TAR 286370 - Card Before Cash transaction reply prints additional unexpected receipts
+- TAR 274686 - Card Capture Print should not be hard coded
+- TAR 264331 - AA-NDC reads all 3 tracks on card even if only 2 present.
+- Support (XFS) for Card Tamper Indication
+- Test 5.6.1.11 - Press NO in timeout doesnot return the card
+- A partial read will return always the card even if the read conditions are met
+- TAR 286370 - Card Before Cash transaction reply prints additional unexpected receipts
+- MV - support 3 track write card reader in AANDC 3.00 with CEN XFS 3.0
+- MV - support swipe card reader in AANDC 3.0 with CEN XFS 3.0
+- TAR 274686 - AA-NDC 02.04.00: How to change "card captured" journal message?
+- TAR 273457 - Card status msg printed in wrong format to journal
+- TAR 259881 - Cannot handle state flow straight to card read state
+- CBC Transaction In Progress Screen still displayed when card returned
+- Test 5.14.2.5 Card captured printed on journal with IMCRW when card not captured
+- Test 5.14.2.7 While performing the bad card test the application crashes (UX4 test) 
+- Test 7.35.2.26: Extra card fatal unsols sent and card not captured.
+- Test 7.15.1.3: PIN screen shows on card entry with DASH reader.
+- Ref.Manual 3-4. Add note after description of screen C05 to say card not read screen not displayed
+- Entering card in iMCRW causes weird app hang scenario.  But why?
+- 7.15.1.3 Test Fails with DIP. Pin Entry State Activated when card is insterted
+- SV XP IT9 - NWCUSTOM - The select language screen after card entry only partially drawn
+- SV: All MEI calls should be XFS now but Cash and Card still use ADI in SV environment.
+- Cardholder Keyboard in SV application is CEN-XFS not ADI2 based
+- Functionality to update default Cardholder keyboard using host download cannot be provided - promote other mechanism
+- Test 3.3.7.2 Card write failure due to invalid track 3 data stops dispense in NDC+ not AA-NDC
+"- 3.8.7.2	12-character amount buffer and no Track 2 card data."
+"- 3.8.7.1	Default config, Track 2 card data <= 30 characters."
+- MV NDC: Support TK1/2/3 Smart Card reader/writers
+- Card Before Dispense & Print: incorrect behaviour from AANDC when invalid track 3 data sent.
+- Additional MCRW unsols from AANDC after failed card capture in previous transaction.
+- DIP Card reader MEI is not flashing at idle screen.
+- Two solicited messages sent by application in response to Card reader COMMS errors
+- Two solicited messages sent by application in response to Card reader COMMS errors
+- Two solicited messages sent by application in response to Card reader COMMS errors
+- RFC: Card Reader SNMP Trap - Card Capture Reason
+- ATM unable to send the UnSol, when a bad card is inserted for more than 13 times
+- IP ALMCI600801: The Resrvd.def file cannot be used to define cardholder screens, especially those with changing display in idle control codes
+- PEN TEST : Address `LAST CARD USEDÂ¿ residing in memory within ANDC for AANDC 4.1.X
+- CI595180: Cardholder Display Diagnostics Information reporting in the Get fitness Response
+- Diebold - Make Card reader bin full behaviour like NCR.
+- Alphabets Are not Activated When Option 80 is Set to '1' in Card Less Transactions.
+- Add Secure Authentication to 93 CARDLESS TRANSACTIONS supervisor option
+- CI576683: Promote campaign continues to display when card reader suspends after multiple card read failures 
+- CI 601755: Insert Card State (z008) does not display multilingual NDC screens 
+- Additonal return card recovery action when ATM freeze condition is detected
+- CI603077: Envelope Deposit where jam present resulting in "cardholder has access" being notified to host where envelope not deposited using Wincor combined EDEP
+- CI605505 - PIN Entry requested on cardless transaction from T-state with SkipFitSearch true
+- CI605505 - PIN Entry requested on cardless transaction from T-state with SkipFitSearch true
+- CI 582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time. 
+- CI580406: A previous card write state failing to update track data followed by transaction looping results in the next card before cash transaction to be cancelled.
+- Barcode Read State should allow Fit Search or a Separate Mechanism for Fit Search through state flow required outwith card read state
+- Change Item 603077 - Envelope Deposit where jam present resulting in "cardholder has access" being notified to host where envelope not deposited using Wincor combined EDEP
+- Change Item 603077 - Envelope Deposit where jam present resulting in "cardholder has access" being notified to host where envelope not deposited using Wincor combined EDEP
+- ANDC 4.01.01 - Looping in Idle when Alphanumeric States Enabled and Invalid Next State in Card Read
+- CI 601755: Insert Card State (z008) does not display multilingual NDC screens 
+- Support Wincor Card Skimmer ASKIMII
+- IP: Being able to enable and disable cardless trasnactions via option 77 needs an update
+- Diebold - Card not ejected in Close State
+- CI590757: card before cash transaction passes screen references to Display Manager as screen group 'l' instead of screen group 'u' 
+- card before cash transaction passes screen references to Display Manager as screen group 'l' instead of screen group 'u' 
+- CI 596985 Cardholder graphics installed to wrong location and customer defined graphics are not displayed from Media path
+- CI 596985 Cardholder graphics installed to wrong location and customer defined graphics are not displayed from Media path
+- AANDC 4.1 - if SMPrimitives has locked the supervisor resource and the mode switch is set to enter supervisor, when card is returned AANDC screen repeatedly changes between the in-service and out of service screen.
+- Voice Guidance: Start cardless transaction in the middle of VG initialisation sequence
+- Voice Guidance: Start a Voice guided cardless transaction using the PINPad
+- CI595180: Cardholder Display Diagnostics Information reporting in the Get fitness Response
+- CI582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time. 
+- CI583334: Card before functions do not display take cash when no card in motorised reader
+- AANDC IP: The description of Card Read PIN Eenry State (T) is inaccurate in regards to pin length processing 
+- PEN TEST : Address `LAST CARD USEDÂ¿ residing in memory within ANDC for AANDC 4.1.X
+- Change Item 584556 - LUNO and Security number is not sent in the card reader unsolicited message
+- Change Item 584556 - LUNO and Security number is not sent in the card reader unsolicited message
+- Change Item 584556 - LUNO and Security number is not sent in the card reader unsolicited message
+- Second Card eject on MV ATMs
+- Enable cardless transaction via Supervisor
+- Contact less card reader support
+- Combined transaction reply function required for Dispense, Encash, Card Return and Print
+- CI582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time.
+- CI580406 - A previous card write state failing to update track data followed by transaction looping results in the next card before cash transaction to be cancelled.
+- Change Item 580406 - A previous card write state failing to update track data followed by transaction looping results in the next card before cash transaction to be cancelled.
+- Change Item 580406 - A previous card write state failing to update track data followed by transaction looping results in the next card before cash transaction to be cancelled.
+- Request to send all track details (track1 , track2 and track3) through retracted status message to the switch when card is retracted.
+- use existing card reader sensors to detect a trapped card
+- Enable Cardless transaction remotely thru NDC HOST.
+- TAR 468037:AA-NDC hangs if card is inserted and removed while second video is playing.
+- Migration of ContactLess  Card Reader Functionality from AANDC 03.04.02 to AANDC 04.01.00
+- CI576683: Promote campaign continues to display when card reader suspends after multiple card read failures 
+- Diebold - Make Card reader bin full behaviour like NCR.
+- Change Item 576683: Promote campaign continues to display when card reader suspends after multiple card read failures 
+- AANDC sends extra unsolicited card reader errors [D0] when an error occurs due to an EMV Exits command - EMV 3.0 specific
+- Card Trap Detect & Report from Application to avoid Skimming Attacks
+- TAR 468037:AA-NDC hangs if card is inserted and removed while second video is playing.
+- TAR 466213 - Card Captured message is not journalled when card captured in Card Read state
+- TAR 466213 - Card Captured message is not journalled when card captured in Card Read state
+- TAR 460408 : Ready B sent by AANDC in spite of Stack Failed during Card Before Cash on a GBRU machine.
+- IP TAR457490: Document the "CardHolder Use SIU AUDIO" registry information
+- Information Products, Reference Manual : more info on :Card Before Cash screen requirements
+- Provide DummyTrack2/PAN for Cardless Tn when no Fit Search Performed
+- Direct Deposit support. When the cardholder presses Deposit in the Confirmation screen, a w1 unsolicited status message is sent before the Transaction Request.
+- TAR 461684 - OPCodePos attribute manipulates opcode buffer bytes in cardless settlement trq
+- TAR 461684 - OPCodePos attribute manipulates opcode buffer bytes in cardless settlement trq
+- TAR 461498 - ConfigID cmd gets rejected if sent during a cardless settlement transaction
+- TAR 461498 - ConfigID cmd gets rejected if sent during a cardless settlement transaction
+- Card data was reported though P6DetectedUnol property is set to SendWithoutCardData rea
+- TAR 459156 - Incorrect status command (for PTR) being sent to the IDC SP after a card eject
+- Extended journalling issue on spray dispenser while using Card before dispense and print (CBDP) reply
+- TAR 459156 - Incorrect status command (for PTR) being sent to the IDC SP after a card eject
+- TAR 460408 : Ready B sent by AANDC in spite of Stack Failed during Card Before Cash on a GBRU machine.
+- TAR 393354:  Mstat 26(dec) returnd in unsolic instead of 38(dec) when Card Capture Bin Full
+- TAR RFC 456188 : Card reader error ( USB cable disconnected) not listed in the fault display
+- CIC - New ECB6 Extract format allows additional data apart from card Number to be stored in the ECb6Dtatabase and extracted during Extract Sigs. Requirement to store TSN and Machine Number per Tx involving cf and sp notes.
+- Card inserted flow point is not displayed in T state with both chip connect bit set and chip connect bit not set
+- Displays - Promote Campaigns don't work for cardless transactions
+- Promote campaigns are displaying continuesly instead of displaying only at Card Insert screen 010.htm and Transaction request screen 172.htm and In transaction treq state the window which is displaying campaign is not getting highlighted
+- TAR 447146:  Cardless doesn"t work with VG ( FDKs are used for cardless Activation)
+- Config component chooses the wrong card reader on DBD Opteva.
+- IMCRW card reader accepting wrong alignment card or invalid card When set AcceptMagCardsOnly = 00000001and  NON MAGNETIC ACCEPT=1
+- TAR 440554:  Freezes around card read state forcing atms to be taken out of service
+- TAR 440423:  MPEG in an idle loop being played even after card entry till end of stream
+- Option39\AcceptMagCardsOnly registry updated in the AdvanceNdc.reg file
+- InsertCardState: Insert card state has memory leak,
+- TAR 426569 - AA-NDC APP CORE hangs if card inserted before idle screen can be dispplayed
+- AANDC should use the CCM TCPIP Supervisor Task to allow the Network Connection being configured to be selected when there is more than one network card or a different LAN Connection Specified
+- TAR 422250 : Card Capture Count CDI doesn't return the updated value
+- TIR422137 - Card mis-read error screen displayed onSelfServ with DIP reader (Extentision to TAR 357862)
+- TAR 410398 - "card capture bin high" in supplies status even when card count is cleared
+- WINCOR:  On card jam/card left in reader or card eject/card jam/card left in reader, the ATM does not try and capture the card after 5 minutes.
+- Diebold IX - No Cash given to the Card holder but Transaction is successful at the switch
+- TAR 417509:  State moves on to next state if we dont take the card with Early eject enabled
+- TAR 417509:  State moves on to next state if we dont take the card with Early eject enabled
+- TAR RFC 278199 - Card Before Parallel Dispense and Print is not as per NDC+ implementation
+- Request for Card Eject processing to be reviewed in the Card before Cash or Card before parallel Dispense and Print Transactions
+- NDCReboot.exe to return the card to user on powerdown and BrowserClient.exe is required to suppress popups
+- Promote Card Insert Hang Issue - with AANDC 3.4
+- IP TAR 405063 Error handling for Card Read state for a jam condition is not documented
+- TAR 410398 - "card capture bin high" in supplies status even when card count is cleared
+- SCPM: The beeper and MEI for the SCPM are different from that of the Card Reader
+- Voice Guidence does not active if the card reader is fatal or not connected.
+- TAR 399521 - Bad card read loops to suspend before ejecting card
+- TAR 371760 - Audio played for Card Captured screen is truncated and restarted
+- TAR 371760 - Audio played for Card Captured screen is truncated and restarted
+- TAR 393354:  Mstat 26(dec) returnd in unsolic instead of 38(dec) when Card Capture Bin Full
+- CARD REMOVED MANUALLY Printed When Dispense Error for Fastcash and a Subsequent Next State and Print in Sent
+- TAR 360974:  BEEPER DOES NOT SOUND WHEN CARD IS RETURNED ON CARD READ STATE.
+- TAR 387838 - Incorrect card capture bin status reported on exit from suspend
+- TAR 387838 - Incorrect card capture bin status reported on exit from suspend
+- Cardless Transaction does not support alphanumeric states
+- When no Card Reader is present on the system (DEV_IDC_NODEVICE) Cardless transactions can not be used
+- TAR 383609 Card reader reports No Card in Dash rdr as Cancelling Txn, but presents cash
+- TAR 383609 Card reader reports No Card in Dash rdr as Cancelling Txn, but presents cash
+- TAR 377213: Idle Loop displayed but no card entry, when OOS sent after Card Reader Fatal
+- TAR 374243: Cardless transaction is not controlled by Option 77
+- Request to move Printer Initialisation commands from the Card Read State
+- Allow Card Read State 000 to be implemented by an Exit & a new Card Insert State to be initiated in the middle of a state flow
+- TAR 362884: Cardless transaction with touch does not work during mpeg in idle screen
+- Cheque Image Scaling - Current scaling function in AANDC seems to lose significant cheque detail. Ricardo has customization that performs a better job.
+- Card left in DASH on Transaction reply causes command reject
+- In parallel dispense and card eject the beeper stops at the wrong time
+- In parallel dispense and card eject the beeper stops at the wrong time
+- Card capture on MCRW(not on IMCRW) reports  FATAL unsol  with M_STATUS 18 instead of card capture unsol(D1 message)
+- TAR 305994 - AA-NDC 02.06.03 - Manual card removal before card eject/capture not handled OK
+- TAR 325225 - add campaign targeting support for the card inserted flowpoint in AA-NDC
+- TAR 336252 - Unsolicited message not sent for fatal card reader
+- Cardless transaction - if MCRW is not preset ANDC loops in  bad card read flow. 
+- TAR 332341 - T-state does not work correctly with DASH card reader if chip connect not set
+- CARD CAPTURED A/C... printed on the journal when related option digit not set
+- TAR 326503 - AA-NDC doesn't display take card and take cash screens when jitter is switched
+- TAR 313945 - DASH reader does not report fatal if card left in reader
+- TAR 319597 - AA-NDC: Card bin threshold is not displayed in Device Error list.
+- AANDC 92.06.06.03 - Too many Bad Card entries sends MCRW fatal but only Suspend is sent to the host.
+- TAR 307861 -  AA-NDC 02.06.04 : Card reader suspend only sent one time
+- TAR 305994 - AA-NDC 02.06.03 - Manual card removal before card eject/capture not handled OK
+- CArd track reader worker should distinguish between jam conditions and blank or unreadable magnetic stripes
+- TAR 264331 - AA-NDC reads all 3 tracks on card even if only 2 present.
+- TAR 278199 - Card Before Parallel Dispense and Print is not as per NDC+ implementation
+- Dash Card Reader requires MEI support under AANDC 3.1
+- ANDC Destructive Testing - Card Retained screen displayed when card already taken
+- Card being updated (according to screen) when card has already been returned
+- ANDC Destructive Testing - Card Write Query
+- During PAR910 transaction prevented shutter opening, cash not dispensed, but user offered option of further transaction (& promt to remove card)
+- MVNDC and AANDC will dispense cash even if card write failed due to incorrect/failed track write
+- MV NDC: Support for HICO card reader
+- MV NDC: Support TK1/2/3 card reader/writers
+- AA NDC Customisation Layer required to provide Card Information to Edge Card Service for AA NDC
+- NDC Msg Interface Spec - Allow Card to be Inserted Mid Transaction
+
+## intent:Dispenser
+- ANDC Dispenser unsol with MStatus 19 is not reflected in Fault Display
+- NDC Host support for dual dispensing - More a clarification on AANDC implemenation of dual dispensing - from reading the documentation it looks like no support has been implemented to allow the the host to explicitly say which dispenser to use  ?
+- Envelope Dispenser fitness shows as 3 when envelope depository went to suspend
+- No unsol reported to the Host while doing a deposit transaction when envelope deposit went to Fatal from suspend condition (Device is ENV Depository and Dispenser)
+- Dispenser fitness is not showing as 4 (FATAL) after exiting from supervisor with Purge bin removed
+- Fitness of the envelope dispenser is set to 0 when we restart the AANDC Applications With Envelope dispenser in fatal condition
+- Implementing the availabilityof CPM and Coin Dispenser in AANDC 3.2 DeviceAvailibility dll
+- Problem with Cash Dispenser with Ad-hoc  general device testing
+- When Envelope Dispenser goes to Fatal,it is showing the Hardware Fitness as 0 instead of 4 if we send Enhanced Configuration Information message(1FS FS FS 76) from Host.
+- TAR 370897 - CICO Dispenser Fatal not sent to host when cannot dispense (itemsleft)
+- TAR 376585 - Different behaviour in the supplies status reported in dispenser error message
+- Incorrect Coin counts with 4 hopper dispenser and option digit 79 set to 1.
+- Incorrect Coin counts with 4 hopper dispenser and option digit 79 set to 1.
+- Support for USB Coin Dispenser
+- Support for USB Coin Dispenser
+- Support GBRU with dispenser combination - Dual Dispense
+- Dual Dispenser - Cassette based reporting of counters in the supervisor replenishment menu
+- UT - Counts go negative when total notes dispensed across both dispensers greater than added and blanks displayed for cassette type only present on CDM
+- XFS Memory leak in Coidispenser counters code
+- Recycling - Updates on Dispenser side for Counts and Messaging
+- Incorrect Coin counts with 4 hopper dispenser and option digit 79 set to 1.
+- Support for USB Coin Dispenser on AANDC 03.02.00
+- Spray dispenser tests - Partial dispense returns supplies for ALL cassettes
+- Solicited Error messages on Spray dispenser contain 2 extra bytes (00) in notes dispensed field
+- MV Diagnostics does not report correct status for Envelope Dispenser / Depository
+- TI for Cash Dispenser, Coin Dispenser & GBRU Cash-Out using Option 24
+- Fault Headers do not display correctly on dual dispenser
+- Coin TI reports 01 when coin dispenser is not present
+- EOP shows UNKNOWN ERROR instead of FATAL for Cash Dispenser(5.7.2.5.3.1.55)
+- TAR 344049:  No Help available on CurrencyDispenser attribute on the Cassette total wrkr
+- Envelope Dispenser MEI light flash rate has been hardcoded to a fixed value WFS_SIU_MEDIUM_FLASH
+- Wincor - no dispenser clear from Supervisor -> Normal
+- No Alarms/Tamper Indication Monitoring in Diagnostics - Dispenser TI reporting
+- Cash Out - Incorrect Dispenser variant (03) when reporting as CDM
+- Support Cash In/Cash Out on GBRU (ATM with GBRU, no dispenser, no recycling)
+- Cash Out - Dispenser severity is reported as 4 when a dispense fails as a result of cash in state being active
+- Cash Out - Dispenser suspend unsol during a Cash In transaction
+- Cash-Out - If we have a billdispenser should always use a RESET (not Retract) to clear the issue
+- Diagnostics menu hanging when Envelope Dispenser is fatal
+- TAR RFC 321382 - Provide a way to disable dispenser Clear at the end of suspend
+- TAR RFC 321382 - Provide a way to disable dispenser Clear at the end of suspend
+- IT10 Dual Dispenser Testing - On exit from suspend seem to get into infinite loop trying TestCAsh
+- Test 5.7.3.1.1.9.1/2 Printing for Cash Handler Tampering prints C1 at start on Single Dispenser SSTs
+- IT11 - Dual Dispenser - Suspend condition not created when shutter jamme closed during dispense
+- IT11 Dual Dispenser - If cassette racked out on CDM 1 and supplies msg sent then missing is reported even if CDM2 cassette of same type is present
+- IT10 Dual Dispenser testing - if both dispensers fatal after suspend created no fatal sent to host
+- IT10 DUal Dispenser Testing - after performing a dispense note counts become invalid
+- IT10 Dual Dispenser Testing - pull out both purge bins and attempt to dispense returns R9
+- IT10 Dual Dispenser - Seperated counters entry line displaying % still
+- Simulated Supervisor does not put SST OOS until after completion of dispenser clear
+- Exception in AppCore on single dispenser ATMs during startup.
+- Dual Dispenser - As a result of the integration of TAR 323048 no longer the C1/C2 prefix in front of cassette types in SOH display
+- IT - Dual Dispenser - CassSuspendedValue has incorrect default behaviour
+- IT - Dual Dispenser - Cash Handler Priority registry key set to incorrect default value
+- IT - Dual Dispenser - if CDM1 OR CDM2 fatal, terminal commands return status of 'other' CDM even if it is fatal
+- IT - Dual Dispenser - Using Seperated counters, display counts displays Cassette 2 counts for Cassette 4 for CDM 1
+- IT - Dual Dispenser - If value > seperated counters mode in registry, defaults to seperated rather than combined counters
+- AANDC - Already used Dispenser unsol event is not being deleted
+- IT - Dual Dispenser- Seperated counters allows > 65534 notes to be entered into each cassette type 
+- IT - Dual Dispenser code inspection - Fault display headers specify CDM 01 on single dispenser
+- IT - Dual Dispenser test 4.2.2.9 - PRINT SUPPLY Displays C% in header - Retest on Single Dispenser
+- TAR 319533 - AA-NDC: Unsol Dispenser status messages cause extra dial up
+- TAR 319533 - AA-NDC: Unsol Dispenser status messages cause extra dial up
+- IT - Dual Dispenser test 4.6.4.2 - Note counts intermittently invalid when opening safe door during dispense
+- IT - Dual Dispenser test 4.5 - Simulate Supervisor Entry/Exit not working
+- IT - Dual Dispenser test 4.3.4 - Incorrect cassette status entries displayed on EOP
+- IT - Dual Dispenser test 4.3.3.5, 4.3.3.12 and 4.6.2.1 - Blocking shutter opening results in successful present 
+- IT - Dual Dispenser test 4.3.3.3 - Delay with MEIs starting and stopping
+- IT - Dual Dispenser test 4.2.2.11 and 4.6.5 - STD CASH using combined counts results in blanks being displayed
+- IT - Dual Dispenser test 4.2.2.9 - PRINT SUPPLY Displays C% in header
+- IT - Dual Dispenser test 4.2.2.8 and 4.2.2.9 - DISP SPPLY / PRINT SUPPLY displays screen no.s rather than the screens themselves 
+- IT - Dual Dispenser test 4.2.1.3 and 4.2.14 Display/Print blanks
+- IT - Dual Dispenser test 4.2.1.2 printing incorrect headers
+- TAR 315854 - GetCount terminal command causes system escape on SST with no dispenser
+- IT- Cash Dispenser Transactions Showing worng Present Error
+- IT:5.4.1.6. Wrong message printed on Journal in Cash Dispenser Test-i.e., Presentor error with E0
+- IT - Dual Dispenser Test 4.3.2 - Interlock open reported twice and not removed
+- IT - Dual Dispenser - registry keys not included in build
+- IT - Dual Dispenser - Application Core Access violation on startup
+- IT - Dispenser Cassette issues reported on EOP fault display show C1 prefix for dual dispenser when only single dispenser configured
+- TAR 319533 - AA-NDC: Unsol Dispenser status messages cause extra dial up
+- Counters are invalid after power fail on dual dispenser.
+- Supply and severity wrongly reported on dual dispenser when problem with reject bin
+- Supply reported wrongly on retract message (dual dispenser)
+- Support for the Telequip Coin Dispenser (as NDC+ equivalent functionality - 4 hopper)
+- Support the P86 and P76M Coin Dispenser (8 hopper)
+- Support New Universal Dispenser "Bunch 50 instead of 40" functionality
+- Implement Dual Dispenser for AANDC 3.01
+- TAR 307941 - ActiveXFS alias configuration for BillAcceptor and dispenser
+- On 2.6 - Coin Dispenser not supported however customer using it requires urgent counter and fitness problem resolved
+- TAR 305199:  Nested screens not displaying on a EP57 with dip reader & spray dispenser
+- TAR304661:      1..73 cmd returning env_dispenser fatal when not present...
+- TAR 305199:  Nested screens not displaying on a EP57 with dip reader & spray dispenser
+- TAR 304661:      1..73 cmd returning env_dispenser fatal when not present...
+- PS - Wrong mStatus in Cash dispenser solicited if dispenser already fatal
+- Cash dispenser Sols and Unsols on WINCOR harware. 
+- PS - With dispenser racked out during transaction no Fatal reported on fault display
+- Document that MaxBills on SP needs to be set to 70 for Spray Dispenser
+- Spray Dispenser - Should handle all possible errors
+-  Error severity is reported as 2 instead of 4 for the Dispenser
+- Wrong Solic returned if cassette ejected while dispensing on Spray Dispenser
+- Improper test cases for the cash dispenser
+- TAR 294846 - AA-NDC hang after dispenser shutter jam.
+- Spray Dispenser UT - Beeper sounded when it shouldn't be
+- Spray Dispenser UT - Wrong solic details returned on Hardware error
+- TAR 294846 - AA-NDC hang after dispenser shutter jam.
+- Spray Dispenser power fail during dispense - purge counts not updated
+- Support (XFS) for Open/Close Dispenser Shutter 
+- XFS Support for the Cash Dispenser
+- TAR 285336 - Hang occurs after Disepnse and Print completes for Spray Dispenser
+- MV - support spray dispenser in AANDC 3.00 with CEN XFS 3.0
+- Spray Dispenser power fail during dispense - purge counts not updated
+- Wincor - Envelope dispenser suspend not exited correctly
+- Spray dispenser - explain in detail what counts are returned in the cash handler solicited message
+- MV NDC - support Tamper Indication for depository and dispenser
+- Support RS232 Spray Dispenser via ADI2 interface
+- The p86 Currency dispenser is different from the 56xx dispenser and hence PROM
+- RFC: Test S2 Dispenser as S1 Dispenser on AANDC 4.1.2 (No application impact)
+- Certify S2 Dispenser on AANDC 4.1.2
+- Coin dispenser Supplies data is not updating when coins are less in hoppers.
+- LocalCashDispenseState: Unsol message for every dispenser error as like online dispense and need to print mstatus and mdata.
+- CI 582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time. 
+- Getting Invalid Casette counts, when Unknown Present Status after power fail occurs for Cash Dispenser
+- Add dual dispenser support to Enhanced Amount Entry with Note Mix Selection State (State Type `z017Â¿)
+- CI582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time. 
+- Registry entires for Spray dispenser MEI is not integrated to build
+- AANDC and Activate NDC Business Service IP: Should make it clear when Coin Dispenser counts are included in the Last Transaction Status field.
+- CI582784: MStatus 18 for the currency dispenser is not send to host if occurred along with M-Status 13 for card reader at same time.
+- Ability to have separate reconcilliation and clear functions for the combination of an ATM dispenser and GBRU dispenser
+- CashDispense: View the status and supplies of all configured cash dispenser bins
+- CashDispense: Keep track of all notes counts that have been moved to each of the cash dispenser bins
+- RFC to support MEI for spray dispenser. ( Self Serv 16 machines have forMEI fitted for spray dispenser) 
+- CashDispense: Warning when one dispenser is fatal in a dual-dispenser setup when using single dispenser emulation
+- Dispenser MEI is keep on flasing after takeing the cash also when we use CBCASH only.
+- BillDispenser1 value is being set for BOTH CurrencyDispenser1 & CurrencyDispenser3
+- MV Diag - CDM1/CDM2 selftest returns combined status with Dual Dispenser on NCR
+- Uninitialised memory in ooxfs mMVCurrencyDispenserImp::InitialStatus causes access violation in XFS Manager
+- Cash dispenser fatal message not printed on journal.
+- IP update required to better document specific parameter that can use to limit the dispenser to 20 or 25 notes per transaction
+- TAR 453989:  App does not recover from suspend mode after an envelope dispenser jam
+- TAR 461067 - Fatl status reported to the host after Dispenser Fatal cdtn cleared via SSA
+- TAR 461067 - Fatl status reported to the host after Dispenser Fatal cdtn cleared via SSA
+- Change the CassSuspendedValue to allow it to report fatal for a cassette(AIB Dual Dispenser Issue)
+- once 24 v reset command issued to all USB devices, then Cash Dispenser Device is expecting Reset command to do next immediate dispense transaction.
+- Extended journalling issue on spray dispenser while using Card before dispense and print (CBDP) reply
+- TAR 453989:  App does not recover from suspend mode after an envelope dispenser jam
+- CICO/Recycling - BillDispenser and RecyclingMode registry keys are not MV compliant
+- Recycling/CICO - Cassette Full Soon status is shown on fault display even though it's not a fault from dispenser perspective
+-  Dispenser solicited message sent with severity 0 (Wincore)
+- CLEAR CASH on DualDispenser: When Separated Counters are in use , clear the counts for each dispenser separately.
+- Provide an offlineÂ dispenser state
+- AA-NDC : RFC to prevent Envelope dispense if envelopes are out in Envelop Dispenser
+- TARs 321382 and 410783 Provide a way to disable dispenser Clear at the end of suspend/ Allow application to take control of devices
+- Improve dual dispenser transaction time by pre stacking amount (7-10 seconds faster, depending on note mix)
+- Support New dispenser - Being introduced (Q1 10, latest now is Q3 10)
+- AANDC: find better cash handler does not need to be done on single dispenser systems
+- TAR 370897 - CICO Dispenser Fatal not sent to host when cannot dispense (itemsleft)
+- AA-NDC-on power fail, journal if notes found in dispenser and retracted or not
+- On dual dispenser with CDM/GBRU the Fault Display shows the 2 Dispensers as CDM1 and CDM1 instead of CDM1 and CDM2.
+- ExecuteBillDispenserResetImpl needs to be aware of which dispenser use
+- Various issues with sensor reporting on dual dispenser with CDM & GBRU
+- Cash Configuration support for extended cassettes & dual dispenser
+- Removal of TAR 319533 - AA-NDC: Unsol Dispenser status messages cause extra dial up
+- ANDC 93.01.01.05 - Saw instance on Dual Dispenser where 'CDM 01' text is replaced by 'CASH HANDLER'
+- TAR 329503 - EDEP doesn"t go into suspend when Envelope dispenser is tampered with
+- ANDC 93.01.01.02 - Wincor - Supplies staus of Cassettes 3 & 4 on a 2-high dispenser are reported as '3 - Media Out'
+- TAR 328082 - AA-NDC: Enclosure open status causes DispenserTest if Supervisor Auto Exit set
+- Support for the RS232 Telequip Coin Dispenser for 8 Hopper and 6 denominations of currency, in line with new NDC host message format
+- TAR 328082 - AA-NDC: Enclosure open status causes DispenserTest if Supervisor Auto Exit set
+- IT-Envelope Depository went fatal when trying to make Envcelope Dispenser fatal
+- IT-Diagnostics hang immmediately when Envelope Dispenser fatal
+- TAR 319533 - AA-NDC: Unsol Dispenser status messages cause extra dial up
+- Support Dual Dispense, increased capacity with host change (also supporting Dual Dispense on a GBRU and a Dispenser)
+- Support New Universal Dispenser (5-high) "Cassette Latching Confirmation" functionality
+- Support New Universal Dispenser (5-high) "Programmable Note Low" functionality (aka Cassette Fill Sensing)
+- Support New Universal Dispenser (5-high) "Small Media" functionality
+- Support Universal Dispenser "16 currency IDs" functionality, i.e. 16 for cash and 16 for small media, 32 total
+- Support Universal Dispenser "Dual 5-High Dispense" functionality for more denominations (with host impact)
+- Certify Dual Dispense functionality for increased capacity with no host impact on Universal Athena with dual 5-High Dispensers
+- Support New Universal Dispenser (5-high) "5 high ATM" functionality (with host change)
+- Support New Universal Dispenser (5-high) "5 high ATM" functionality, with no host change.
+- Spray Dispenser power fail during dispense - purge counts not updated
+- Dispenser always cleared after cash retract
+- CAsh transactions offered when dispenser has error
+- ANDC Destructive Testing - Dispenser shutter query
+- ANDC Destructive Testing - Dispenser severity reporting query
+- MV NDC: Support the Envelope Dispenser
+- MV NDC: Support for the Cash Dispenser
+
+## intent:Enntitycheque
+- scpm - [imagemark](key1) creates the detail for [retracted](key2) cheques also when we do the [transaction](key3) with accept and reject cheques together
+- scpm - it [build](key1) 13 : the images of returned [cheques](key2) are not printed on the [receipt](key3)
+- scpm: trans request [message](key1) needs to send the total amount of individual [cheques](key2) when using the single cheque message [interface](key3)
+- [memory](key1) [leak](key2) in [transaction](key3) request data for bunch cheque accept data
+- scpm: cheque at exit/sensor [blocked](key1) at accept state when the [bunchchequeacceptservice](key2) is in [chequesleft](key3) state does not report any unsol
+- bunchchqaccptsrv: [cheques](key1) [jam](key2) during [scancheques](key3) operation without service recovery action.
+- scpm: wrong unsol message is sent when [shutter](key1) is [jammed](key2) open after bunch inserted and cheques still in [infeed](key3) transport
+- out of range [testing](key1) for bunch [cheque](key2) state table parameters
+- scpm: [powerfail](key1) - reset not done when cheques in [stacker](key2) at [sod](key3) and reset was done during transaction
+- when alphanumeric state entry is enabled, [cheque](key1) detail display state [goes](key2) to default close from any of its exits
+- scpm: receipt [contains](key1) [pathname](key2) to incorrect cheque [bmp](key3) instead of cheque image
+- chequemanagement.h doesnt include a [preprocessor](key1) definition to protect against multiple includes, resulting in the [redifinition](key2) of symbols
+- [statedata](key1) [debug](key2) [log](key3) for bunch cheque accept state does not match fs
+- [cheque](key1) depositing to bin1 when [left](key2) in transport
+- [ueh](key1) on start-up on a cpm4 ( and also seen ueh on start-up on a single [cheque](key2) [scpm](key3) )
+- c07 in resrvd.def does not [reflect](key1) the change of [path](key2) for [cheque](key3) images
+- potential [memory](key1) [leak](key2) in bunchchequeid, executereset()
+- application [crash](key1) when tried to get amount using [managed](key2) [cpp](key3) cheque details wrapper
+- when bunch [cheque](key1) accept state [enable](key2) image processing parameter is set to any value other than 000, an exception occurs
+- proceed key in the cheque detail display state does not exit the state in operation [modes](key1) 2&3 if more [cheques](key2) can be displayed and [zero](key3) amount is allowed
+- [scpm](key1) it7 - amount entry in [cheque](key2) detail display state does not function correctly
+- wrong [unsolicited](key1) [message](key2) is sent to host when cheque is inserted with wrong [orientation](key3) in dpm.
+- an access [violation](key1) occurs when ssdsndcdata.dll and ssdsndcfield.dlls use [new](key2) .net [ssdschequeacceptmanagement](key3) dll
+- accept state to support [marking](key1) cheques to be returned at the end of the transaction, based on [failing](key2) codeline [validation](key3)
+- scpm: when [cheque](key1) accept state takes device error exit no error [unsol](key2) is sent
+- scpm: after [retract](key1) from exit [slot](key2) all [cheques](key3) reported in bin 1 even if some were taken
+- scpm: [temporary](key1) cheque images for [receipt](key2) [printing](key3) are not being deleted in the close state
+- [memory](key1) [leaks](key2) found in cheque details [wrapper](key3)
+- scpm: when all [cheques](key1) are marked to be returned a trans reply specifying a [chequeid](key2) moves no cheques but sends ready9
+- cheque image display with full [path](key1) to [picture](key2) [file](key3) does not display correctly.
+- scpm it4 - [modify](key1) init depos & [supv](key2) exit initialisation to ensure the [bunchchequeacceptservice](key3) is not left in a bad state
+- scpm: address code [review](key1) comments on cheque accept [status](key2) [handling](key3)
+- scpm: [timeout](key1) exit taken from [cheque](key2) accept state when no [pressed](key3) on timeout screen
+- scpm: [retract](key1) [message](key2) not sent for rejected [cheques](key3)
+- scpm: q6j [unsol](key1) sent after bunch entered with one [refused](key2) [cheque](key3) being expelled or taken
+- scpm: summarystate, to allow [cyclical](key1) [navigation](key2) if there are more cheques to display than will [fit](key3) on a single screen.
+- scpm it5 - when cancel [mask](key1) = 000 in bunch cheque accept state, cancel key on [pinpad](key2) is not [enabled](key3)
+- [scpm](key1) it5 - numeric key 1-9 active when cancel [mask](key2) (& display) in bunch [cheque](key3) accept state
+- scpm: bunch [cheque](key1) [flows](key2) are [journalling](key3) u0058 screen without dynamic data.
+- bunchchequehandling flow unit [test](key1) [fails](key2) using [payment](key3) processor. 
+- scpm - issue with image [printing](key1) of [cheques](key2) returned in [transaction](key3) reply function
+- [scpm](key1) it5 - [unexpected](key2) behaviour when returned cheque taken just as it is being [retracted](key3)
+- q3n [unsol](key1) is not [observed](key2) on [reboot](key3) when cheque is still in transport
+- scpm: when jam occurs [clearing](key1) cheques at [sod](key2), unsol msg is not clear that it is a sod [scenario](key3)
+- scpm: for [pci](key1) compliance the bunchchequeacceptservice and [imagemarkdepositrecorder](key2) archive/backup directories need to be [encrypted](key3)
+- scpm: re-work clearing the [scannedcheques](key1) [array](key2) for better synchronisation with [statushandler](key3)
+- [scpm](key1) fxcop issues in [bunchchequetransactionreply](key2) code
+- scpm - cheque id 000 is [accepted](key1) even when it is present in the second cheque [group](key2) in [buffer](key3) b
+- [scpm](key1) it4 - cheque at exit/sensor [blocked](key2) at accept state does not report any [unsol](key3)
+- scpm: status [handler](key1) does not send retract unsol from close state in case when cheques are [retained](key2) from [stacker](key3)
+- [scpm](key1) it - [timeout](key2) and cancel [unsols](key3) are only reported in bunch cheque accept state
+- ensure that [retracted](key1) [cheques](key2) are stored into bin2 by default
+- scpm: [status](key1) [handler](key2) to include [journalling](key3) for cheque capture with u0058/u0059 screens
+- issue with customer entered amount [field](key1) in [cheque](key2) details [wrapper](key3)
+- scpm: c11 reject [message](key1) sent after every [cheque](key2) related trans reply
+- scpm: update the [displaychequesummarystate](key1) to support display based on screen [paging](key2)
+- scpm: [suppress](key1) cheque unsol [messages](key2) for offline cheque deposit [transactions](key3)
+- scpm: add [timeout](key1) exit to bunch cheque [handling](key2) [flow](key3) for cheques not taken and not retracted.
+- wrong screen displayed when [retracting](key1) cheques in bunch cheque [handling](key2) state with [media](key3) control set to 000
+- next and previous screens are displayed in cheque [summary](key1) display state when [fdk](key2) [masks](key3) are 000 and more cheques than can be displayed is entered 
+- expose more [via](key1) the [chequedetails](key2) [wrapper](key3)
+- scpm:  [handling](key1) and close [states](key2) need to be able to exit the state in the case when [cheques](key3) are configured to be returned and not retracted, but the cheques are not taken
+- [cheque](key1) accept state - cancel key not [enabled](key2) when device re-enabled for cheque input
+- bunch [cheque](key1) accept - [enable](key2) image processing state parameter ignored.
+- scpm close state - does not [operate](key1) correctly when cheques [left](key2) in exit [slot](key3) in previous operation
+- [cheque](key1) depositing to bin1 when [left](key2) in transport
+- setting endorse data directly on a cheque [item](key1) incorrectly copies the [internal](key2) cheque objects rather than referencing the [real](key3) objects
+- [reference](key1) [manul](key2) should provide detail on cheque accept state codeline [validation](key3)
+- double beep in bunch [cheque](key1) [states](key2) when [pressing](key3) keys
+- [cheque](key1) index set during a cheque detail display state doesn't seem to be initialised between cheque deposit transactions.
+- bunch [cheque](key1) accept state - rejected cheque reasons functionality missing
+- [scpm](key1) & cpm: for [pci](key2) compliance, [mask](key3) the codeline when the cheque is displayed
+- scpm: change the [summary](key1) display state to support the display of only up to 9 [cheque](key2) details
+- scpm: update the detail display state, [summary](key1) display state and [ndcrenderer](key2) to support [visual](key3) indication to cardholders when a cheque is going to be returned
+- scpm: update all bunch cheque [states](key1) to [handle](key2) the situation where there may be no [cheques](key3) inserted into the device.
+- add support for the [timeout](key1) state to the bunch [cheque](key2) [states](key3)
+- bunch [cheque](key1) accept state - [refused](key2) reasons [dictionary](key3) not displayed
+- [bunchchequehandling](key1) state [endorses](key2) with the screen number instead of screen [contents](key3)
+- imagemark - bunch cheque handling [exports](key1) imagemark file [irrespective](key2) of the [registry](key3) value that is used to configure it
+- express recovery - 24v [reset](key1) for [cheque](key2) processing
+- bunch cheque [summary](key1) state - when more than 'max [items'](key2) [cheques](key3) are entered the cheque summary state displays a 'phantom' cheque
+- bunch [cheque](key1) accept state - 'escrow full error screen' displayed when number of [cheques](key2) entered is same as 'max [items'](key3) 
+- bunch [cheque](key1) close state - [cheques](key2) [retracted](key3) regardless of cheque retain/return flag.
+- scpm: integrate [imagemarkrecorder](key1) into andc [bunchchequehandlingstate](key2) for cheque deposit [recording](key3) - linkage with payment system solutions (passport)
+- bunch [cheque](key1) accept state - please wait for device screen '000' results in 'more time' screen being displayed.
+- scpm: support for [printing](key1) multiple cheque images in a [transaction](key2) receipt, in [native](key3) ndc bunch cheque deposit sol
+- pci-dss - where a [electronic](key1) [payments](key2) system is used ensure cheque images are stored [encrypted](key3)
+- scpm: make information available to be used in [dbs](key1) exception reports, for [offline](key2) bunch [cheque](key3) deposit
+- scpm: provide ability for an exit to rotate/scale a [cheque](key1) image for subsequently [printing](key2) on a [receipt](key3)
+- scpm: support for [printing](key1) a [transaction](key2) receipt, in [offline](key3) bunch cheque deposit
+- scpm: [bunchchequehandling](key1) state
+- second cheque image is printing as [garbage](key1) via a [rawdata](key2) print on [universal](key3) machines with 203dpi (there is no issue on a personas printer)
+- [second](key1) cheque image is [printing](key2) with very bigger size using [forms](key3) when trying to print two cheque images on the receipt
+- first cheque image [printing](key1) as [blackended](key2) with [transaction](key3) reply has p01 followed by p00.
+- cpm deposit with [vg](key1) enabled-when i [pressed](key2)  1on [pinpad](key3)  to select deposit cheque option the orientation is going to amount entry state.
+- quality of cheque image print [via](key1) a [receipt](key2) [forms](key3) print is poor
+- (st1) [cheque](key1) image shown [vertically](key2) on cheque confirmation screen
+- the same cheque image are printing on [journal](key1) printer when [forms](key2) printing [feature](key3) and  ej with hard copy option are enabled
+- ''alwaysprintchequesonback'' and ''codelineheight'' [registry](key1) keys are not available in universalprinters.reg
+- [picture](key1) is not taken in the [cheque](key2) capture [flow](key3) point by camera.
+- screen displyed after [clrdepos](key1) and [clrbins](key2) is still showing the [cheques](key3) deposited counters not the 0's
+- (st1- cpm) q2e ( device error) [status](key1) [message](key2) is received for every successful cheque [transaction](key3)
+- (st1 - [cpm](key1) ): [cheque](key2) is not getting [endorsed](key3)
+- (st1 - cpm) [cheque](key1) is not getting captured
+- [receipt](key1) is not delivered for some values of chequesizenormal/chequesizerotated (dynamic [forms](key2) = 1)
+- when chequesizerotated/chequesizenormal are set to 10, no image is printed on [receipt](key1) for codeline 1 and 2 (dynamicforms = 0)
+- by default, [cheque](key1) image is [printing](key2) on [journal](key3)
+- (cpm):cheque is getting deposited when we send the cpm_r13a ( invalid message)
+- [cpm](key1) [forms](key2) installed in the wrong [place](key3) (endorse data is not getting printed on the cheque)
+- tar 378972: aa-ndc : add information for [printing](key1) cheque image on [receipt](key2) to ref [manual](key3)
+- [application](key1) getting closed after inserting the [cheque](key2)
+- tar 376710 : init depos clears a [cheque](key1) jam, but [leaves](key2) device [status](key3) as fatal
+- tar 373126: cheque image is [unreadable](key1) on [usb](key2) receipt [printer](key3)
+- scpm: full bunch [cheque](key1) [message](key2) [interface](key3) with host change (ndc host control)
+- scpm: [displaychequesummary](key1) state
+- scpm: [chequedetaildisplay](key1) state
+- scpm: [bunchchequeaccept](key1) state
+- quality of cheque image print on [legacy](key1) [personas](key2) thermal [printers](key3) is not as good as in aandc 3.2
+- re-evaluate the [limit](key1) of [chequesizerotated](key2) for [vertical](key3) cheque image printing
+- request for option on [cheque](key1) accept to never accept cheque without valid [micr](key2)
+- add a possibility to [cpm](key1) close state to [leave](key2) returned [cheque](key3) in the ejected position
+- [scpm](key1) - multiple [cheque](key2) [application](key3) changes
+- [vertical](key1) [printing](key2) of a more readable cheque image on [receipt](key3) as a configurable option in addition to the current horizontal printing
+- amount entry on same screen as [cheque](key1) image display
+- 2st - 2 [sided](key1) [thermal](key2) - support cheque image printing on the [reverse](key3) - local configuration
+- support for image based cheque [clearing](key1) systems - [linkage](key2) with [payment](key3) system solutions (passport)
+- there is no documentation regarding the [new](key1) [cheque](key2) print functionality
+- cpm: b20 reject due to no [endorse](key1) data is sent only when the [cheque](key2) is sent to a bin
+- cpm - cheque accept state retries also [decremented](key1) when [internal](key2) [timeout](key3) occurs
+- [cpm](key1) - no error [message](key2) is sent when there is a [cheque](key3) already in the device
+- [cpm](key1) - when cheque [jammed](key2) inside (no access), incorrect device [status](key3) returned
+- cpm - when cheque not taken after eject timeout, [flow](key1) [continues](key2) [wrongly](key3)
+- [cpm](key1) - after [hardware](key2) [timer](key3) expires, the cheque acceptor worker re-enables the cheque entry
+- cpm  - the cheque registry value missing in the receipt printer [section](key1) of the printer [registy](key2) configuration [files](key3)
+- tar 332741 - require the [beeping](key1) for upon [cheque](key2) insertion to be disabled earlier
+- tar 347289 - [cpm](key1) no longer accepting [cheques](key2) with no [micr](key3) after final retry
+- tar 347293: aa-ndc docs state exception state to be taken when accepting non-micr [cheques](key1)
+- support [cpm](key1) [cheque](key2) image print (including [rear](key3) image)
+- when [cheque](key1) is captured, [local](key2) [endorse](key3) is required
+- tar 255036 - support [cpm](key1) [cheque](key2) image print
+- tar 177235 - incorrectly inserted [cheques](key1) are [accepted](key2)
+- capture the [cheque](key1) if it [fails](key2) to be returned to the cardholder, and print a [receipt](key3) for the cardholder
+- [test](key1) case 5.6.2.2 : [cpm](key2) [transaction](key3) doesnot show the cheque image
+- option for [cheque](key1) image print to be added to [cpm](key2) cheque accept state
+- andc 4.01.01: bunch cheque [status](key1) reporting to [journal](key2) with single digit transaction [serial](key3) number
+- [chequeacceptstatushandler](key1) reports q2j(refused [cheques](key2) are accessible to the customer) instead of q6j( (jam no customer access).) at " cheques [jammed](key3) in transport on entry � no access" scenario.
+- [endorse](key1) [cheques](key2) which are being [retracted](key3) on scpm
+- ci583612: ndc display [manager](key1) [frontchequeimage](key2) path value not [passed](key3) through dmitrdata
+- [cheque](key1): identify whether cheque is [face](key2) up or down 
+- bunch [cheque](key1) components: improve pd according [new](key2) pd collection [guidelines](key3)
+- [voice](key1) [guidance](key2) transaction reply data not processed by [bna](key3) and cheque deposit replies
+- [application](key1) escaping at close state, while doing a bunch cheque transaction with bins missing and [pramote](key2) [enabled](key3)
+- ci583612: ndc display [manager](key1) [frontchequeimage](key2) path value not [passed](key3) through dmitrdata
+- tar 438634 - request to improve quality of [scpm](key1) [cheque](key2) image displayed by aandc
+- ci 583612  ndc display [manager](key1) [frontchequeimage](key2) path value not [passed](key3) through dmitrdata
+- add support for [endorsing](key1) returned [[cheque](key3)s](key2) (scpm) - single cheque processor
+- add support for [endorsing](key1) returned [[cheque](key3)s](key2) (scpm) - bunch cheque processor
+- improve scaling of displayed [cheque](key1) images
+- request for bunch [cheque](key1) amount display to be more configurable
+- tar 574600: [cheque](key1) amount display control [sequences](key2) do not provide [consistent](key3) results
+- tar 574600: [cheque](key1) amount display control [sequences](key2) do not provide [consistent](key3) results
+- tar 469338 - [cheque](key1) detail display state [transparent](key2) background code issue for amount entry
+- tar 466954:  [cheque](key1) details [overlay](key2) screen not displayed correctly if screen number < 100
+- [cheques](key1) [jammed](key2) in transport and [sdm](key3) reports q4j only
+- [application](key1) is getting hang in [cheques](key2) accept state
+- bunch cheque should generate unsolicited [messages](key1) for wfs_sys [events](key2) generated due to operations in other processes even though there is no [outstanding](key3) wfs command in aandc
+- [sdm](key1) - cash in [aer](key2) needs to be called before cheque aer to avoid clearing of [notes](key3) during cheque recovery
+- sdm - cheque [aer](key1) might clear [notes](key2) in device when sdm is configured for cheque and cash [transactions](key3)
+- scaling the cheque image before [passing](key1) the image to [parascript](key2) [engine](key3) for better recoginition of amount declared on the cheque
+- ip tar 463167: state z004 number of [cheques](key1) [refused](key2) can't be displayed.
+- [application](key1) is getting crash/ giving [hardware](key2) error when try to deposit cheque with [scpm](key3)
+- tar 462108 - exception raised when [nested](key1) screen in bunch [cheque](key2) accept state
+- tar 462108 - exception raised when [nested](key1) screen in bunch [cheque](key2) accept state
+- displays - bunch [cheque](key1) detail display doesn't [handle](key2) [transparent](key3) text when entering amount.
+- pa-dss - [cheque](key1) processing - ensure cheque images in the upload directory are [securely](key2) deleted at the end of the [transaction](key3)
+- in [cheque](key1) detail display state entered amount is not echoed on the screen
+- [scalable](key1) [cheque](key2) image display [fails](key3)
+- the [application](key1) is waiting infinite time after taking the [cheques](key2) into [scpm](key3) device in bunch cheque acceptance state, with alpha numeric states.
+- [scpm](key1) : [cheques](key2) with valid codeline also getting rejected when 'refusenonvalidcheques' [property](key3) is set to 'true' in advancendc.accfg file.
+- [sst](key1) config: itemprocessing1 should be used as [bunchcheque](key2) [axfs](key3) alias 
+- [scpm](key1) - [cheque](key2) images remain in folder after a powerfail/reset
+- tar 444775:  [cheque](key1) [retract](key2) causes two conflicting entries in [journal](key3)
+- ip tar 430376 - ip [states](key1) that return [cheque](key2) key can be [toggled](key3) where it cannot
+- tar 444775:  [cheque](key1) [retract](key2) causes two conflicting entries in [journal](key3)
+- tar 444775:  [cheque](key1) [retract](key2) causes two conflicting entries in [journal](key3)
+- tar 423770 - add more screen not being displayed on [cheque](key1) [summary](key2) screen
+- tar423770 - add more screen not being displayed on [cheque](key1) [summary](key2) screen
+- [cpm](key1) - [opteva](key2) - [cheque](key3) processor functionality not working ( also wn ccdm)
+- ip gr1t: andc ref man [states](key1) that return [cheque](key2) key can be [toggled](key3) where it cannot
+- tar 422692:  aa-ndc : [cpm](key1) [cheque](key2) [jam](key3) reported as fatal with no error recovery attempted
+- update the [tracing](key1) of bunchchequeacceptstate next state numbers in [stdata](key2) window of [debuglog](key3)
+- bunch cheque accept state: add a [new](key1) next state parameter to the [bunchchequeacceptstate](key2) to distinguish between accepting all [cheques](key3) and where some cheques have been returned
+- scpm and [cic](key1) - any data [objects](key2) i.e. [chequedetail](key3) - should be available cross process not just in aandc process
+- [unsole](key1) message are not coming while [last](key2) transaction are [failed](key3) and still cheque are in the dpm.
+- provide support for [offline](key1) single [cheque](key2) deposit in advance ndc
+- add [promote](key1) [flowpoints](key2) for cpm/scpm [chequeinserted](key3) and chequedeposited
+- bunch [cheque](key1) [auto](key2) recovery [hangs](key3) where no service provider.
+- scpm: [bunchchequeflows](key1) [dispose](key2) [implementation](key3) in bunchchequeacceptflow does not free resources.
+- wrong unsol message is being sent to host when [unacceptable](key1) cheque was [jammed](key2) during [retract](key3)
+- additional config detail required regarding support for single [cheque](key1) [scpm](key2) - tar 404360 
+- scpm: [imagemark](key1) can store front image twice (before and after endorse) if [cheque](key2) inserted [upside](key3) down
+- scpm: no capture [journalling](key1) when [cheques](key2) are cleared using [auto](key3) error recovery
+- scpm: screen for wait for [cheques](key1) not shown when multiple [bunches](key2) returned in close state
+- bunch [cheque](key1) [handling](key2) state screen 'wait for more returned [cheques'](key3) screen not displayed
+- scpm: when no is selected on the [timeout](key1) screen, [propose](key2) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key3)
+- [siu](key1) [session](key2) being opened even though there is no bunch [cheque](key3) device
+- scpm: close state can be improved in the way it [retains](key1) cheques to allow status [handler](key2) to be [simplified](key3)
+- [scpm](key1) - [cheque](key2) images remain in folder after a powerfail/reset
+- scpm & cpm: for [pci](key1) compliance, consider [masking](key2) even other [areas](key3) on the cheque
+- scpm: update the return [cheque](key1) [fdk](key2) option to behave as a [toggle](key3)
+- [cheque](key1) accept fault display only supports up to 3 bins.
+- wrong [unsol](key1) reported when error occurs while [retracting](key2) an [unacceptable](key3) cheque
+- require scpm sp update to allow cheques to be [endorsed](key1) during [retract](key2) while doing [transaction](key3) if there are cheques in the escrow/transport
+- scpm: support [uniquely](key1) [endorsing](key2) each cheque in a bunch in the [bunchchequehandling](key3) state, for offline bunch cheque deposit
+- scpm: support for [printing](key1) multiple cheque images in a [transaction](key2) receipt, in [offline](key3) bunch cheque deposit
+- [unsole](key1) message are not coming while [last](key2) transaction are [failed](key3) and still cheque are in the dpm.
+- correct  [unsol](key1) [message](key2) is not reporting to the host when do transaction on [dpm](key3) with short cheque
+- p00 data is not [printing](key1) on the [receipt](key2) when the cheque deposit [transaction](key3) without image lifting.
+- tar 376710 : init depos clears a [cheque](key1) jam, but [leaves](key2) device [status](key3) as fatal
+- tar 373126: cheque image is [unreadable](key1) on [usb](key2) receipt [printer](key3)
+- [cheque](key1) image scaling - current scaling function in aandc seems to lose significant cheque detail. [ricardo](key2) has customization that [performs](key3) a better job.
+- [supervisor](key1) -  [cheque](key2) processor clear bins display show pre-clear counts.
+- [opteva](key1) - [cheque](key2) processor functionality not working ( also wn ccdm)
+- no beep to [warn](key1) the customer that a [cheque](key2) has been returned after cancel
+- scpm & cin: when no is selected on the [timeout](key1) screen, [propose](key2) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key3)
+- [ichqaccptsrv aimodule]: need a [property](key1) for [endorsement](key2) while [retracting](key3) the cheques.
+- bunchchequeacceptservice: [endorse](key1) [cheques](key2) which are being [retracted](key3) on scpm
+- [itemacceptservice](key1) component should support equivalent functionality as was provided with [bunchcheque](key2) and cash accept services
+- [iitemacceptservice](key1) interface should support equivalent functionality as was provided with [bunchcheque](key2) and cash accept service [interfaces](key3)
+- bunchchqaccptsrv: [cheques](key1) [jam](key2) during [scancheques](key3) operation without service recovery action.
+- scpm: [imagemark](001) can store front image twice (before and after endorse) if [cheque](001) inserted [upside](001) down
+
+
+
+
+
+## intent:thanks
+- Thanks
+- Thank you
+- Thank you so much
+- Thanks bot
+- Thanks for that
+- cheers
+- cheers bro
+- ok thanks!
+- perfect thank you
+- thanks a bunch for everything
+- thanks for the help
+- thanks a lot
+- amazing, thanks
+- cool, thanks
+- cool thank you
+
+## intent:affirm
+- yes
+- yes sure
+- absolutely
+- for sure
+- yes yes yes
+- definitely
+
+
+## intent:name
+- My name is [Juste](name)  <!--- Square brackets contain the value of entity while the text in parentheses is a a label of the entity --> 
+- I am [Josh](name)
+- I'm [Lucy](name)
+- People call me [Greg](name)
+- It's [David](name)
+- Usually people call me [Amy](name)
+- My name is [John](name)
+- You can call me [Sam](name)
+- Please call me [Linda](name)
+- Name name is [Tom](name)
+- I am [Richard](name)
+- I'm [Tracy](name)
+- Call me [Sally](name)
+- I am [Philipp](name)
+- I am [Charlie](name)
+- I am [Charlie](name)
+- I am [Ben](name)
+- Call me [Susan](name)
+- [Lucy](name)
+- [Peter](name)
+- [Mark](name)
+- [Joseph](name)
+- [Tan](name)
+- [Pete](name)
+- [Elon](name)
+- [Penny](name)
+- name is [Andrew](name)
+- I [Lora](name)
+- [Stan](name) is my name
+- [Susan](name) is the name
+- [Ross](name) is my first name
+- [Bing](name) is my last name
+- Few call me as [Angelina](name)
+- Some call me [Julia](name)
+- Everyone calls me [Laura](name)
+- I am [Ganesh](name)
+- My name is [Mike](name)
+- just call me [Monika](name)
+- Few call [Dan](name)
+- You can always call me [Suraj](name)
+- Some will call me [Andrew](name)
+- My name is [Ajay](name)
+- I call [Ding](name)
+- I'm [Partia](name)
+- Please call me [Leo](name)
+- name is [Pari](name)
+- name [Sanjay](name)
+
+
+## intent:joke
+- Can you tell me a joke?
+- I would like to hear a joke
+- Tell me a joke
+- A joke please
+- Tell me a joke please
+- I would like to hear a joke
+- I would loke to hear a joke, please
+- Can you tell jokes?
+- Please tell me a joke
+- I need to hear a joke
+
+
+## intent:user_query
+- [Envelope](object) is [not getting retracted](problem) after a [envelope Suspend condition scenario](scenario) is [cleared](status)
+- [Envelope](object) [does not retract](problem) after a [envelope Suspend condition scenario](scenario) has been [cleared](status)
+- [No retraction](scenario) of [envelope](object) after envelope Suspend condition scenario is [cleared](status)
+
+
+## intent:search
+- i am having trouble with [abcdefghijk](problem) while i am using [xyzefghijk](case)
+- [abcdefghijk](problem) is not working properly
+
+
+## intent:4816
+- Envelope is not getting retracted after a envelope Suspend condition scenario is cleared
+- Envelope does not retract after a envelope Suspend condition scenario has been cleared
+- No retraction of envelope after envelope Suspend condition scenario is cleared
+- Cannot retract envelope even after envelope Suspend condition scenario has been cleared
+- Can't retract envelope even after envelope Suspend condition scenario has been cleared
+- Why does not envelope retract after envelope Suspend condition scenario is cleared?
+- envelope Suspend condition scenario is cleared but, envelope is not getting retracted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

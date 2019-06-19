@@ -1,0 +1,10 @@
+rasa_nlu
+ruamel
+simplejson
+future
+
+
+python -m rasa_nlu.train -c config.json --data data/demo_data.json -o models --fixed_model_name nluHanish --project current --verbose
+
+
+python -m rasa_nlu.server --path tests/models/
