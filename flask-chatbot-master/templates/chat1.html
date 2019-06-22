@@ -361,11 +361,11 @@
                     </div>
                     <div class="card-footer">
                         <form method="post" class="form-group" id="form-chat">
-                            <div class="input-group">
+                            <div class="input-group chatbox">
 
                                 <input type="text" name="" id="chatmessage" class="form-control type_msg" placeholder="Type your message...">
                                 <div class="input-group-append">
-                                    <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                                    <span class="input-group-text send_btn" id="chatSend"><i class="fas fa-location-arrow"></i></span>
                                 </div>
                             </div>
                         </form>
@@ -394,9 +394,30 @@
             success: function(response) {
                 $(".form-control.type_msg").val('');
                 var answer = response.answer.toUpperCase();
+                if (response.quick_replies != undefined) {
+                    var quick_replies = response.quick_replies.toUpperCase();
+
+                }
+
                 const chatPanel = document.getElementById("chatPanel");
                 $(".media-list").append('<li class="">\<div class="d-flex justify-content-start mb-4">\<div class="img_cont_msg">\<img src="https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif" class="rounded-circle user_img_msg">\</div>\<div class="msg_cotainer">\<p class="pull-right"><font color="white">' + answer + '</font></p>\</div>\</div>\
                         </li>');
+                if (response.quick_replies != undefined && quick_replies.length > 0) {
+
+
+                    chatbox = document.getElementsByClassName("chatbox");
+                    //document.getElementById("chatmessage").disabled = true;
+                    //document.getElementById("chatSend").disabled = true;
+                    //chatmsg.disable = true;
+                    //chatSend.disable = true;
+                    //chatbox.disable = true;
+                    //$(".media-list").append();
+                    $(".media-list").append('<li class="">\<div class="d-flex justify-content-start mb-4">\<div class="img_cont_msg">\<img src="https://cdn.dribbble.com/users/37530/screenshots/2937858/drib_blink_bot.gif" class="rounded-circle user_img_msg">\</div>\<div class="msg_cotainer">\<p class="pull-right"><font color="white">' + quick_replies + '</font></p>\</div>\</div>\
+                        </li>');
+
+
+
+                }
                 $(".card-body.msg_card_body").stop().animate({
                     scrollTop: $(".card-body.msg_card_body")[0].scrollHeight
                 }, 1000);

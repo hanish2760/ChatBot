@@ -22,24 +22,47 @@ def get_response(user_message):
 		# 	answere = QuestionRetrieval.get_response(entities)
 		# else:
 		# 	answere = QuestionRetrieval.get_response(user_message)
-		answere=QuestionRetrieval.get_response(user_message,entities)
+		answere=dict()
+
+		response=QuestionRetrieval.get_response(user_message,entities)
+		answere['ans']=response
+		answere['qr']="Is this what You were looking for ? "
+		answere['intent']=intent
 		return(answere)
 		#print("Bot : " + answere)
 	elif intent == "greet":
-		return "Hello!"
+		answere=dict()
+		answere['ans']="Hello"
+		answere['qr']=""
+		answere['intent']=intent
+		return answere
 		#print("Bot: Hello")
 
 	elif intent == "affirm":
-		return "Ok"
+		answere = dict()
+		answere['ans'] = "ok"
+		answere['qr'] = ""
+		answere['intent'] = intent
+		return answere
+
 		#print("Bot : Ok")
 
 	elif intent == "goodbye":
-		return "Bye!"
+		answere = dict()
+		answere['ans'] = "Bye"
+		answere['qr'] = ""
+		answere['intent'] = intent
+		return answere
+
 		#print("Bot : Bye")
 
 	else:
-		return "Sry i dint get you"
-		print("Bot :  Sry i dint get you")
+		#ee mama repeatu
+		answere = dict()
+		answere['ans'] = "Sorry I couldn't get you. Could you be more specific about the isuuue."
+		answere['qr'] = ""
+		answere['intent'] = intent
+		return answere
 
 
 app = Flask(__name__)
@@ -51,44 +74,35 @@ def hello():
 @app.route("/ask", methods=['POST','GET'])
 def ask():
 	message = str(request.form['chatmessage'])
-	if message == "save":
-	    return jsonify({"status":"ok", "answer":"Brain Saved"})
-	elif message == "reload":
-		return jsonify({"status":"ok", "answer":"Brain Reloaded"})
-	elif message == "quit":
-		exit()
-		return jsonify({"status":"ok", "answer":"exit Thank You"})
-
-	# kernel now ready for use
-	else:
-		#chabot code
-		response=get_response(message)
-		# response = requests.get("http://localhost:5000/parse", params={"q": message})
-		# response = response.json()
-		# intent = response.get("intent")
-		# intent = intent['name']
-		# entities = response.get("entities")
-		# ents = ""
-		# for item in entities:
-		# 	ents += item['value']
-		# 	ents += '  '
-		# if intent == "Intentcheque":
-		# 	# key=find_key(entities)
-		# 	import QuestionRetrieval
-		# 	ans=str(QuestionRetrieval.get_response(ents))+ "..you might find your issue here."
-		# elif intent == "greet":
-		# 	ans="Hello"
-		# # response_text = gst_info(entities)
-		# elif intent == "affirm":
-		# 	ans="Okay!"
-		# elif intent == "badbye":
-		# 	ans="Bye!"
-		# # response_text = gst_query(entities)
-		# else:
-		# 	ans="Sorry I dint get You "
-	return jsonify({"status": "ok", "answer": response})
+	response=get_response(message)
+	intent=response['intent']
+	return jsonify({"status": "ok", "answer": response['ans'],"quick_replies":response['qr'],"intent":intent})
 		# while True:
 		# print bot_response
 
 if __name__ == "__main__":
     app.run(debug=False)
+
+# response = requests.get("http://localhost:5000/parse", params={"q": message})
+# response = response.json()
+# intent = response.get("intent")
+# intent = intent['name']
+# entities = response.get("entities")
+# ents = ""
+# for item in entities:
+# 	ents += item['value']
+# 	ents += '  '
+# if intent == "Intentcheque":
+# 	# key=find_key(entities)
+# 	import QuestionRetrieval
+# 	ans=str(QuestionRetrieval.get_response(ents))+ "..you might find your issue here."
+# elif intent == "greet":
+# 	ans="Hello"
+# # response_text = gst_info(entities)
+# elif intent == "affirm":
+# 	ans="Okay!"
+# elif intent == "badbye":
+# 	ans="Bye!"
+# # response_text = gst_query(entities)
+# else:
+# 	ans="Sorry I dint get You "

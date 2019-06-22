@@ -6,6 +6,7 @@ from fuzzywuzzy import process
 
 
 def get_response(query,entities):
+
     faq_data2 = pd.read_excel("./data/forRasaNluCheque.xlsx")
     questions = faq_data2['Summary'].values.tolist()
 
@@ -28,7 +29,7 @@ def get_response(query,entities):
     for qas in matched_questions:
         if (qas[1] > 50):  # qas is question and ans .
             matched_row = faq_data2.loc[faq_data2['Summary'] == qas[0],]
-            if(issue_key.__contains__(str(matched_row))):
+            if(issue_key.__contains__(str(matched_row['Issue key'].values[0]))):
                 continue
             else:
                 issue_key += str(matched_row['Issue key'].values[0])
@@ -38,7 +39,7 @@ def get_response(query,entities):
         issue_key = "Sorry I didn't find anything relevant to your query!"
     else:
         issue_key += " your issue might be found here"
-
+    quickreply="yes/no"
     return  issue_key
     #
     # if score > 50:  # arbitrarily chosen 50 to exclude matches not relevant to the query
@@ -58,3 +59,4 @@ def get_response(query,entities):
     #
 
 
+get_response(query="BUNCH CHEQUE DEVICE ERROR WHILE PERFORMING DEPOSIT",entities="")

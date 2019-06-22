@@ -1259,7 +1259,7 @@
 - [unsol](key0) +[message](key0) +[dpm](key0) +
 - p00 data is not [printing](key1) on the [receipt](key2) when the cheque deposit [transaction](key2) without image lifting.
 - [printing](key1) [receipt](key2) [transaction](key2)
-- [printing](key1) +[receipt](key2) +[transaction](key2) +
+ - [printing](key1) +[receipt](key2) +[transaction](key2) +
 - tar 376710 : init depos clears a [cheque](key1) jam, but [leaves](key0) device [status](key1) as fatal
 - [cheque](key1) [leaves](key0) [status](key1)
 - [cheque](key1) +[leaves](key0) +[status](key1) +
@@ -1306,6 +1306,11 @@
 - scpm
 - bunchcheque
 - cheque
+
+## synonyms:retract
+- retract
+- timeout
+
 
 ## synonyms:imagemark
 - picture
