@@ -1,0 +1,44 @@
+{
+  "rasa_nlu_data": {
+
+    "regex_features": [],
+    "lookup_tables": [
+      {
+        "name": "retracted",
+        "elements": [
+          "retracted",
+          "retract",
+          "retraction",
+          "timeout",
+          "timeup"
+        ]
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "cheque",
+        "synonyms": [
+          "cpm",
+          "scpm",
+          "bunchcheque",
+          "bunch cheque"
+        ]
+      },
+
+      {
+        "value": "imagemark",
+        "synonyms": [
+          "picture",
+          "display",
+          "image"
+        ]
+      },
+      {
+        "value":"",
+        "synonyms":[
+
+        ]
+      }
+    ]
+  }
+}

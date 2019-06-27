@@ -1,0 +1,3 @@
+Application crash when tried to get amount using managed cpp cheque details wrapper
+Wrong unsolicited message is sent to host when cheque is inserted with wrong orientation in DPM.
+Cheque image display with full path to picture file does not display correctly.

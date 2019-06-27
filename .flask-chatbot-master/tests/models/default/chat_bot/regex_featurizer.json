@@ -1,0 +1,6 @@
+[
+    {
+        "name": "retracted",
+        "pattern": "(?i)(\\bretracted\\b|\\bretract\\b|\\bretraction\\b|\\btimeout\\b|\\btimeup\\b|\\bsupriya\\b)"
+    }
+]

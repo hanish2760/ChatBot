@@ -1,11 +1,27 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import requests
+from rasa_nlu.training_data import load_data
 
 from rasa_nlu.model import Interpreter
 nlu_model = Interpreter.load('./tests/models/default/chat_bot')
+training_data = load_data("training_data.json")
+def synnonym(w):
+	w=w.lower()
+	synms_dict = dict(training_data.entity_synonyms)
+	synm=synms_dict.get(w,"N")
+	if(synm=='N'):
+		return w
+	return synm
+
 
 def get_response(user_message):
+	listquery=user_message.split()
+
+	for word in listquery:
+		user_message=user_message.replace(word,synnonym(word))
+
+
 	parsing = nlu_model.parse(user_message)
 	# parsng has all the intent info and entities info
 	#print('Intent : ' + parsing["intent"]["name"])
@@ -15,6 +31,7 @@ def get_response(user_message):
 	for entity in list_of_entities:
 		#print("Entity Value : " + entity['value'])
 		entities += entity['value']
+		entities+=" "
 
 	if intent == "Intentcheque":
 		import QuestionRetrieval
@@ -40,7 +57,7 @@ def get_response(user_message):
 
 	elif intent == "affirm":
 		answere = dict()
-		answere['ans'] = "ok"
+		answere['ans'] = "Happy to help you :)"
 		answere['qr'] = ""
 		answere['intent'] = intent
 		return answere
@@ -49,7 +66,7 @@ def get_response(user_message):
 
 	elif intent == "goodbye":
 		answere = dict()
-		answere['ans'] = "Bye"
+		answere['ans'] = "Happy to help you"
 		answere['qr'] = ""
 		answere['intent'] = intent
 		return answere

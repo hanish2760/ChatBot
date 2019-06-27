@@ -608,697 +608,699 @@
 - MV NDC: Support for the Cash Dispenser
 
 ## intent:Intentcheque
-- scpm - [imagemark](key0) creates the detail for [retracted](key1) cheques also when we do the [transaction](key2) with accept and reject cheques together
-- [imagemark](key0) [retracted](key1) [transaction](key2)
-- [imagemark](key0) +[retracted](key1) +[transaction](key2) +
-- scpm - it [build](key0) 13 : the images of returned [cheques](key1) are not printed on the [receipt](key2)
-- [build](key0) [cheques](key1) [receipt](key2)
-- [build](key0) +[cheques](key1) +[receipt](key2) +
-- scpm: trans request [message](key0) needs to send the total amount of individual [cheques](key1) when using the single cheque message [interface](key1)
-- [message](key0) [cheques](key1) [interface](key1)
-- [message](key0) +[cheques](key1) +[interface](key1) +
-- [memory](key0) [leak](key1) in [transaction](key2) request data for bunch cheque accept data
-- [memory](key0) [leak](key1) [transaction](key2)
-- [memory](key0) +[leak](key1) +[transaction](key2) +
-- scpm: cheque at exit/sensor [blocked](key0) at accept state when the [bunchchequeacceptservice](key1) is in [chequesleft](key2) state does not report any unsol
-- [blocked](key0) [bunchchequeacceptservice](key1) [chequesleft](key2)
-- [blocked](key0) +[bunchchequeacceptservice](key1) +[chequesleft](key2) +
-- bunchchqaccptsrv: [cheques](key1) [jam](key0) during [scancheques](key1) operation without service recovery action.
-- [cheques](key1) [jam](key0) [scancheques](key1)
-- [cheques](key1) +[jam](key0) +[scancheques](key1) +
-- scpm: wrong unsol message is sent when [shutter](key0) is [jammed](key1) open after bunch inserted and cheques still in [infeed](key2) transport
-- [shutter](key0) [jammed](key1) [infeed](key2)
-- [shutter](key0) +[jammed](key1) +[infeed](key2) +
-- out of range [testing](key0) for bunch [cheque](key1) state table parameters
-- [testing](key0) [cheque](key1)
-- [testing](key0) +[cheque](key1) +
-- scpm: [powerfail](key0) - reset not done when cheques in [stacker](key1) at [sod](key2) and reset was done during transaction
-- [powerfail](key0) [stacker](key1) [sod](key2)
-- [powerfail](key0) +[stacker](key1) +[sod](key2) +
-- when alphanumeric state entry is enabled, [cheque](key1) detail display state [goes](key0) to default close from any of its exits
-- [cheque](key1) [goes](key0)
-- [cheque](key1) +[goes](key0) +
-- scpm: receipt [contains](key0) [pathname](key1) to incorrect cheque [bmp](key2) instead of cheque image
-- [contains](key0) [pathname](key1) [bmp](key2)
-- [contains](key0) +[pathname](key1) +[bmp](key2) +
-- chequemanagement.h doesnt include a [preprocessor](key0) definition to protect against multiple includes, resulting in the [redifinition](key1) of symbols
-- [preprocessor](key0) [redifinition](key1)
-- [preprocessor](key0) +[redifinition](key1) +
-- [statedata](key0) [debug](key1) [log](key2) for bunch cheque accept state does not match fs
-- [statedata](key0) [debug](key1) [log](key2)
-- [statedata](key0) +[debug](key1) +[log](key2) +
-- [cheque](key1) depositing to bin1 when [left](key0) in transport
-- [cheque](key1) [left](key0)
-- [cheque](key1) +[left](key0) +
-- [ueh](key0) on start-up on a cpm4 ( and also seen ueh on start-up on a single [cheque](key1) [scpm](key1) )
-- [ueh](key0) [cheque](key1) [scpm](key1)
-- [ueh](key0) +[cheque](key1) +[scpm](key1) +
-- c07 in resrvd.def does not [reflect](key0) the change of [path](key1) for [cheque](key1) images
-- [reflect](key0) [path](key1) [cheque](key1)
-- [reflect](key0) +[path](key1) +[cheque](key1) +
-- potential [memory](key0) [leak](key1) in bunchchequeid, executereset()
-- [memory](key0) [leak](key1)
-- [memory](key0) +[leak](key1) +
-- application [crash](key0) when tried to get amount using [managed](key1) [cpp](key2) cheque details wrapper
-- [crash](key0) [managed](key1) [cpp](key2)
-- [crash](key0) +[managed](key1) +[cpp](key2) +
-- when bunch [cheque](key1) accept state [enable](key0) image processing parameter is set to any value other than 000, an exception occurs
-- [cheque](key1) [enable](key0)
-- [cheque](key1) +[enable](key0) +
-- proceed key in the cheque detail display state does not exit the state in operation [modes](key0) 2&3 if more [cheques](key1) can be displayed and [zero](key1) amount is allowed
-- [modes](key0) [cheques](key1) [zero](key1)
-- [modes](key0) +[cheques](key1) +[zero](key1) +
-- [scpm](key1) it7 - amount entry in [cheque](key1) detail display state does not function correctly
-- [scpm](key1) [cheque](key1)
-- [scpm](key1) +[cheque](key1) +
-- wrong [unsolicited](key0) [message](key0) is sent to host when cheque is inserted with wrong [orientation](key1) in dpm.
-- [unsolicited](key0) [message](key0) [orientation](key1)
-- [unsolicited](key0) +[message](key0) +[orientation](key1) +
-- an access [violation](key0) occurs when ssdsndcdata.dll and ssdsndcfield.dlls use [new](key1) .net [ssdschequeacceptmanagement](key2) dll
-- [violation](key0) [new](key1) [ssdschequeacceptmanagement](key2)
-- [violation](key0) +[new](key1) +[ssdschequeacceptmanagement](key2) +
-- accept state to support [marking](key0) cheques to be returned at the end of the transaction, based on [failing](key1) codeline [validation](key2)
-- [marking](key0) [failing](key1) [validation](key2)
-- [marking](key0) +[failing](key1) +[validation](key2) +
-- scpm: when [cheque](key1) accept state takes device error exit no error [unsol](key0) is sent
-- [cheque](key1) [unsol](key0)
-- [cheque](key1) +[unsol](key0) +
-- scpm: after [retract](key0) from exit [slot](key1) all [cheques](key1) reported in bin 1 even if some were taken
-- [retract](key0) [slot](key1) [cheques](key1)
-- [retract](key0) +[slot](key1) +[cheques](key1) +
-- scpm: [temporary](key0) cheque images for [receipt](key2) [printing](key1) are not being deleted in the close state
-- [temporary](key0) [receipt](key2) [printing](key1)
-- [temporary](key0) +[receipt](key2) +[printing](key1) +
-- [memory](key0) [leaks](key0) found in cheque details [wrapper](key1)
-- [memory](key0) [leaks](key0) [wrapper](key1)
-- [memory](key0) +[leaks](key0) +[wrapper](key1) +
-- scpm: when all [cheques](key1) are marked to be returned a trans reply specifying a [chequeid](key0) moves no cheques but sends ready9
-- [cheques](key1) [chequeid](key0)
-- [cheques](key1) +[chequeid](key0) +
-- cheque image display with full [path](key1) to [picture](key0) [file](key1) does not display correctly.
-- [path](key1) [picture](key0) [file](key1)
-- [path](key1) +[picture](key0) +[file](key1) +
-- scpm it4 - [modify](key0) init depos & [supv](key1) exit initialisation to ensure the [bunchchequeacceptservice](key1) is not left in a bad state
-- [modify](key0) [supv](key1) [bunchchequeacceptservice](key1)
-- [modify](key0) +[supv](key1) +[bunchchequeacceptservice](key1) +
-- scpm: address code [review](key0) comments on cheque accept [status](key1) [handling](key2)
-- [review](key0) [status](key1) [handling](key2)
-- [review](key0) +[status](key1) +[handling](key2) +
-- scpm: [timeout](key0) exit taken from [cheque](key1) accept state when no [pressed](key1) on timeout screen
-- [timeout](key0) [cheque](key1) [pressed](key1)
-- [timeout](key0) +[cheque](key1) +[pressed](key1) +
-- scpm: [retract](key0) [message](key0) not sent for rejected [cheques](key1)
-- [retract](key0) [message](key0) [cheques](key1)
-- [retract](key0) +[message](key0) +[cheques](key1) +
-- scpm: q6j [unsol](key0) sent after bunch entered with one [refused](key0) [cheque](key1) being expelled or taken
-- [unsol](key0) [refused](key0) [cheque](key1)
-- [unsol](key0) +[refused](key0) +[cheque](key1) +
-- scpm: summarystate, to allow [cyclical](key0) [navigation](key1) if there are more cheques to display than will [fit](key2) on a single screen.
-- [cyclical](key0) [navigation](key1) [fit](key2)
-- [cyclical](key0) +[navigation](key1) +[fit](key2) +
-- scpm it5 - when cancel [mask](key0) = 000 in bunch cheque accept state, cancel key on [pinpad](key1) is not [enabled](key2)
-- [mask](key0) [pinpad](key1) [enabled](key2)
-- [mask](key0) +[pinpad](key1) +[enabled](key2) +
-- [scpm](key1) it5 - numeric key 1-9 active when cancel [mask](key0) (& display) in bunch [cheque](key1) accept state
-- [scpm](key1) [mask](key0) [cheque](key1)
-- [scpm](key1) +[mask](key0) +[cheque](key1) +
-- scpm: bunch [cheque](key1) [flows](key0) are [journalling](key1) u0058 screen without dynamic data.
-- [cheque](key1) [flows](key0) [journalling](key1)
-- [cheque](key1) +[flows](key0) +[journalling](key1) +
-- bunchchequehandling flow unit [test](key0) [fails](key1) using [payment](key2) processor.
-- [test](key0) [fails](key1) [payment](key2)
-- [test](key0) +[fails](key1) +[payment](key2) +
-- scpm - issue with image [printing](key1) of [cheques](key1) returned in [transaction](key2) reply function
-- [printing](key1) [cheques](key1) [transaction](key2)
-- [printing](key1) +[cheques](key1) +[transaction](key2) +
-- [scpm](key1) it5 - [unexpected](key0) behaviour when returned cheque taken just as it is being [retracted](key1)
-- [scpm](key1) [unexpected](key0) [retracted](key1)
-- [scpm](key1) +[unexpected](key0) +[retracted](key1) +
-- q3n [unsol](key0) is not [observed](key0) on [reboot](key1) when cheque is still in transport
-- [unsol](key0) [observed](key0) [reboot](key1)
-- [unsol](key0) +[observed](key0) +[reboot](key1) +
-- scpm: when jam occurs [clearing](key0) cheques at [sod](key2), unsol msg is not clear that it is a sod [scenario](key1)
-- [clearing](key0) [sod](key2) [scenario](key1)
-- [clearing](key0) +[sod](key2) +[scenario](key1) +
-- scpm: for [pci](key0) compliance the bunchchequeacceptservice and [imagemarkdepositrecorder](key1) archive/backup directories need to be [encrypted](key2)
-- [pci](key0) [imagemarkdepositrecorder](key1) [encrypted](key2)
-- [pci](key0) +[imagemarkdepositrecorder](key1) +[encrypted](key2) +
-- scpm: re-work clearing the [scannedcheques](key0) [array](key1) for better synchronisation with [statushandler](key2)
-- [scannedcheques](key0) [array](key1) [statushandler](key2)
-- [scannedcheques](key0) +[array](key1) +[statushandler](key2) +
-- [scpm](key1) fxcop issues in [bunchchequetransactionreply](key0) code
-- [scpm](key1) [bunchchequetransactionreply](key0)
-- [scpm](key1) +[bunchchequetransactionreply](key0) +
-- scpm - cheque id 000 is [accepted](key0) even when it is present in the second cheque [group](key1) in [buffer](key2) b
-- [accepted](key0) [group](key1) [buffer](key2)
-- [accepted](key0) +[group](key1) +[buffer](key2) +
-- [scpm](key1) it4 - cheque at exit/sensor [blocked](key0) at accept state does not report any [unsol](key0)
-- [scpm](key1) [blocked](key0) [unsol](key0)
-- [scpm](key1) +[blocked](key0) +[unsol](key0) +
-- scpm: status [handler](key0) does not send retract unsol from close state in case when cheques are [retained](key1) from [stacker](key1)
-- [handler](key0) [retained](key1) [stacker](key1)
-- [handler](key0) +[retained](key1) +[stacker](key1) +
-- [scpm](key1) it - [timeout](key0) and cancel [unsols](key0) are only reported in bunch cheque accept state
-- [scpm](key1) [timeout](key0) [unsols](key0)
-- [scpm](key1) +[timeout](key0) +[unsols](key0) +
-- ensure that [retracted](key1) [cheques](key1) are stored into bin2 by default
-- [retracted](key1) [cheques](key1)
-- [retracted](key1) +[cheques](key1) +
-- scpm: [status](key1) [handler](key0) to include [journalling](key1) for cheque capture with u0058/u0059 screens
-- [status](key1) [handler](key0) [journalling](key1)
-- [status](key1) +[handler](key0) +[journalling](key1) +
-- issue with customer entered amount [field](key0) in [cheque](key1) details [wrapper](key1)
-- [field](key0) [cheque](key1) [wrapper](key1)
-- [field](key0) +[cheque](key1) +[wrapper](key1) +
-- scpm: c11 reject [message](key0) sent after every [cheque](key1) related trans reply
-- [message](key0) [cheque](key1)
-- [message](key0) +[cheque](key1) +
-- scpm: update the [displaychequesummarystate](key0) to support display based on screen [paging](key1)
-- [displaychequesummarystate](key0) [paging](key1)
-- [displaychequesummarystate](key0) +[paging](key1) +
-- scpm: [suppress](key0) cheque unsol [messages](key1) for offline cheque deposit [transactions](key2)
-- [suppress](key0) [messages](key1) [transactions](key2)
-- [suppress](key0) +[messages](key1) +[transactions](key2) +
-- scpm: add [timeout](key0) exit to bunch cheque [handling](key2) [flow](key0) for cheques not taken and not retracted.
-- [timeout](key0) [handling](key2) [flow](key0)
-- [timeout](key0) +[handling](key2) +[flow](key0) +
-- wrong screen displayed when [retracting](key0) cheques in bunch cheque [handling](key2) state with [media](key1) control set to 000
-- [retracting](key0) [handling](key2) [media](key1)
-- [retracting](key0) +[handling](key2) +[media](key1) +
-- next and previous screens are displayed in cheque [summary](key0) display state when [fdk](key1) [masks](key2) are 000 and more cheques than can be displayed is entered
-- [summary](key0) [fdk](key1) [masks](key2)
-- [summary](key0) +[fdk](key1) +[masks](key2) +
-- expose more [via](key0) the [chequedetails](key1) [wrapper](key1)
-- [via](key0) [chequedetails](key1) [wrapper](key1)
-- [via](key0) +[chequedetails](key1) +[wrapper](key1) +
-- scpm:  [handling](key2) and close [states](key0) need to be able to exit the state in the case when [cheques](key1) are configured to be returned and not retracted, but the cheques are not taken
-- [handling](key2) [states](key0) [cheques](key1)
-- [handling](key2) +[states](key0) +[cheques](key1) +
-- [cheque](key1) accept state - cancel key not [enabled](key2) when device re-enabled for cheque input
-- [cheque](key1) [enabled](key2)
-- [cheque](key1) +[enabled](key2) +
-- bunch [cheque](key1) accept - [enable](key0) image processing state parameter ignored.
-- [cheque](key1) [enable](key0)
-- [cheque](key1) +[enable](key0) +
-- scpm close state - does not [operate](key0) correctly when cheques [left](key0) in exit [slot](key1) in previous operation
-- [operate](key0) [left](key0) [slot](key1)
-- [operate](key0) +[left](key0) +[slot](key1) +
-- [cheque](key1) depositing to bin1 when [left](key0) in transport
-- [cheque](key1) [left](key0)
-- [cheque](key1) +[left](key0) +
-- setting endorse data directly on a cheque [item](key0) incorrectly copies the [internal](key1) cheque objects rather than referencing the [real](key2) objects
-- [item](key0) [internal](key1) [real](key2)
-- [item](key0) +[internal](key1) +[real](key2) +
-- [reference](key0) [manul](key1) should provide detail on cheque accept state codeline [validation](key2)
-- [reference](key0) [manul](key1) [validation](key2)
-- [reference](key0) +[manul](key1) +[validation](key2) +
-- double beep in bunch [cheque](key1) [states](key0) when [pressing](key0) keys
-- [cheque](key1) [states](key0) [pressing](key0)
-- [cheque](key1) +[states](key0) +[pressing](key0) +
-- [cheque](key1) index set during a cheque detail display state doesn't seem to be initialised between cheque deposit transactions.
-- [cheque](key1)
-- [cheque](key1) +
-- bunch [cheque](key1) accept state - rejected cheque reasons functionality missing
-- [cheque](key1)
-- [cheque](key1) +
-- [scpm](key1) & cpm: for [pci](key0) compliance, [mask](key0) the codeline when the cheque is displayed
-- [scpm](key1) [pci](key0) [mask](key0)
-- [scpm](key1) +[pci](key0) +[mask](key0) +
-- scpm: change the [summary](key0) display state to support the display of only up to 9 [cheque](key1) details
-- [summary](key0) [cheque](key1)
-- [summary](key0) +[cheque](key1) +
-- scpm: update the detail display state, [summary](key0) display state and [ndcrenderer](key0) to support [visual](key1) indication to cardholders when a cheque is going to be returned
-- [summary](key0) [ndcrenderer](key0) [visual](key1)
-- [summary](key0) +[ndcrenderer](key0) +[visual](key1) +
-- scpm: update all bunch cheque [states](key0) to [handle](key0) the situation where there may be no [cheques](key1) inserted into the device.
-- [states](key0) [handle](key0) [cheques](key1)
-- [states](key0) +[handle](key0) +[cheques](key1) +
-- add support for the [timeout](key0) state to the bunch [cheque](key1) [states](key0)
-- [timeout](key0) [cheque](key1) [states](key0)
-- [timeout](key0) +[cheque](key1) +[states](key0) +
-- bunch [cheque](key1) accept state - [refused](key0) reasons [dictionary](key0) not displayed
-- [cheque](key1) [refused](key0) [dictionary](key0)
-- [cheque](key1) +[refused](key0) +[dictionary](key0) +
-- [bunchchequehandling](key0) state [endorses](key1) with the screen number instead of screen [contents](key2)
-- [bunchchequehandling](key0) [endorses](key1) [contents](key2)
-- [bunchchequehandling](key0) +[endorses](key1) +[contents](key2) +
-- imagemark - bunch cheque handling [exports](key0) imagemark file [irrespective](key1) of the [registry](key2) value that is used to configure it
-- [exports](key0) [irrespective](key1) [registry](key2)
-- [exports](key0) +[irrespective](key1) +[registry](key2) +
-- express recovery - 24v [reset](key0) for [cheque](key1) processing
-- [reset](key0) [cheque](key1)
-- [reset](key0) +[cheque](key1) +
-- bunch cheque [summary](key0) state - when more than 'max [items'](key0) [cheques](key1) are entered the cheque summary state displays a 'phantom' cheque
-- [summary](key0) [items'](key0) [cheques](key1)
-- [summary](key0) +[items'](key0) +[cheques](key1) +
-- bunch [cheque](key1) accept state - 'escrow full error screen' displayed when number of [cheques](key1) entered is same as 'max [items'](key0)
-- [cheque](key1) [cheques](key1) [items'](key0)
-- [cheque](key1) +[cheques](key1) +[items'](key0) +
-- bunch [cheque](key1) close state - [cheques](key1) [retracted](key1) regardless of cheque retain/return flag.
-- [cheque](key1) [cheques](key1) [retracted](key1)
-- [cheque](key1) +[cheques](key1) +[retracted](key1) +
-- scpm: integrate [imagemarkrecorder](key0) into andc [bunchchequehandlingstate](key1) for cheque deposit [recording](key2) - linkage with payment system solutions (passport)
-- [imagemarkrecorder](key0) [bunchchequehandlingstate](key1) [recording](key2)
-- [imagemarkrecorder](key0) +[bunchchequehandlingstate](key1) +[recording](key2) +
-- bunch [cheque](key1) accept state - please wait for device screen '000' results in 'more time' screen being displayed.
-- [cheque](key1)
-- [cheque](key1) +
-- scpm: support for [printing](key1) multiple cheque images in a [transaction](key2) receipt, in [native](key0) ndc bunch cheque deposit sol
-- [printing](key1) [transaction](key2) [native](key0)
-- [printing](key1) +[transaction](key2) +[native](key0) +
-- pci-dss - where a [electronic](key0) [payments](key1) system is used ensure cheque images are stored [encrypted](key2)
-- [electronic](key0) [payments](key1) [encrypted](key2)
-- [electronic](key0) +[payments](key1) +[encrypted](key2) +
-- scpm: make information available to be used in [dbs](key0) exception reports, for [offline](key1) bunch [cheque](key1) deposit
-- [dbs](key0) [offline](key1) [cheque](key1)
-- [dbs](key0) +[offline](key1) +[cheque](key1) +
-- scpm: provide ability for an exit to rotate/scale a [cheque](key1) image for subsequently [printing](key1) on a [receipt](key2)
-- [cheque](key1) [printing](key1) [receipt](key2)
-- [cheque](key1) +[printing](key1) +[receipt](key2) +
-- scpm: support for [printing](key1) a [transaction](key2) receipt, in [offline](key1) bunch cheque deposit
-- [printing](key1) [transaction](key2) [offline](key1)
-- [printing](key1) +[transaction](key2) +[offline](key1) +
-- scpm: [bunchchequehandling](key0) state
-- [bunchchequehandling](key0)
-- [bunchchequehandling](key0) +
-- second cheque image is printing as [garbage](key0) via a [rawdata](key1) print on [universal](key2) machines with 203dpi (there is no issue on a personas printer)
-- [garbage](key0) [rawdata](key1) [universal](key2)
-- [garbage](key0) +[rawdata](key1) +[universal](key2) +
-- [second](key0) cheque image is [printing](key1) with very bigger size using [forms](key1) when trying to print two cheque images on the receipt
-- [second](key0) [printing](key1) [forms](key1)
-- [second](key0) +[printing](key1) +[forms](key1) +
-- first cheque image [printing](key1) as [blackended](key0) with [transaction](key2) reply has p01 followed by p00.
-- [printing](key1) [blackended](key0) [transaction](key2)
-- [printing](key1) +[blackended](key0) +[transaction](key2) +
-- cpm deposit with [vg](key0) enabled-when i [pressed](key1)  1on [pinpad](key1)  to select deposit cheque option the orientation is going to amount entry state.
-- [vg](key0) [pressed](key1) [pinpad](key1)
-- [vg](key0) +[pressed](key1) +[pinpad](key1) +
-- quality of cheque image print [via](key0) a [receipt](key2) [forms](key1) print is poor
-- [via](key0) [receipt](key2) [forms](key1)
-- [via](key0) +[receipt](key2) +[forms](key1) +
-- (st1) [cheque](key1) image shown [vertically](key0) on cheque confirmation screen
-- [cheque](key1) [vertically](key0)
-- [cheque](key1) +[vertically](key0) +
-- the same cheque image are printing on [journal](key0) printer when [forms](key1) printing [feature](key1) and  ej with hard copy option are enabled
-- [journal](key0) [forms](key1) [feature](key1)
-- [journal](key0) +[forms](key1) +[feature](key1) +
-- ''alwaysprintchequesonback'' and ''codelineheight'' [registry](key2) keys are not available in universalprinters.reg
-- [registry](key2)
-- [registry](key2) +
-- [picture](key0) is not taken in the [cheque](key1) capture [flow](key0) point by camera.
-- [picture](key0) [cheque](key1) [flow](key0)
-- [picture](key0) +[cheque](key1) +[flow](key0) +
-- screen displyed after [clrdepos](key0) and [clrbins](key1) is still showing the [cheques](key1) deposited counters not the 0's
-- [clrdepos](key0) [clrbins](key1) [cheques](key1)
-- [clrdepos](key0) +[clrbins](key1) +[cheques](key1) +
-- (st1- cpm) q2e ( device error) [status](key1) [message](key0) is received for every successful cheque [transaction](key2)
-- [status](key1) [message](key0) [transaction](key2)
-- [status](key1) +[message](key0) +[transaction](key2) +
-- (st1 - [cpm](key0) ): [cheque](key1) is not getting [endorsed](key1)
-- [cpm](key0) [cheque](key1) [endorsed](key1)
-- [cpm](key0) +[cheque](key1) +[endorsed](key1) +
-- (st1 - cpm) [cheque](key1) is not getting captured
-- [cheque](key1)
-- [cheque](key1) +
-- [receipt](key2) is not delivered for some values of chequesizenormal/chequesizerotated (dynamic [forms](key1) = 1)
-- [receipt](key2) [forms](key1)
-- [receipt](key2) +[forms](key1) +
-- when chequesizerotated/chequesizenormal are set to 10, no image is printed on [receipt](key2) for codeline 1 and 2 (dynamicforms = 0)
-- [receipt](key2)
-- [receipt](key2) +
-- by default, [cheque](key1) image is [printing](key1) on [journal](key0)
-- [cheque](key1) [printing](key1) [journal](key0)
-- [cheque](key1) +[printing](key1) +[journal](key0) +
-- (cpm):cheque is getting deposited when we send the cpm_r13a ( invalid message)
-- [cpm](key0) [forms](key1) installed in the wrong [place](key0) (endorse data is not getting printed on the cheque)
-- [cpm](key0) [forms](key1) [place](key0)
-- [cpm](key0) +[forms](key1) +[place](key0) +
-- tar 378972: aa-ndc : add information for [printing](key1) cheque image on [receipt](key2) to ref [manual](key0)
-- [printing](key1) [receipt](key2) [manual](key0)
-- [printing](key1) +[receipt](key2) +[manual](key0) +
-- [application](key0) getting closed after inserting the [cheque](key1)
-- [application](key0) [cheque](key1)
-- [application](key0) +[cheque](key1) +
-- tar 376710 : init depos clears a [cheque](key1) jam, but [leaves](key0) device [status](key1) as fatal
-- [cheque](key1) [leaves](key0) [status](key1)
-- [cheque](key1) +[leaves](key0) +[status](key1) +
-- tar 373126: cheque image is [unreadable](key0) on [usb](key1) receipt [printer](key2)
-- [unreadable](key0) [usb](key1) [printer](key2)
-- [unreadable](key0) +[usb](key1) +[printer](key2) +
-- scpm: full bunch [cheque](key1) [message](key0) [interface](key1) with host change (ndc host control)
-- [cheque](key1) [message](key0) [interface](key1)
-- [cheque](key1) +[message](key0) +[interface](key1) +
-- scpm: [displaychequesummary](key0) state
-- [displaychequesummary](key0)
-- [displaychequesummary](key0) +
-- scpm: [chequedetaildisplay](key0) state
-- [chequedetaildisplay](key0)
-- [chequedetaildisplay](key0) +
-- scpm: [bunchchequeaccept](key0) state
-- [bunchchequeaccept](key0)
-- [bunchchequeaccept](key0) +
-- quality of cheque image print on [legacy](key0) [personas](key1) thermal [printers](key2) is not as good as in aandc 3.2
-- [legacy](key0) [personas](key1) [printers](key2)
-- [legacy](key0) +[personas](key1) +[printers](key2) +
-- re-evaluate the [limit](key0) of [chequesizerotated](key1) for [vertical](key2) cheque image printing
-- [limit](key0) [chequesizerotated](key1) [vertical](key2)
-- [limit](key0) +[chequesizerotated](key1) +[vertical](key2) +
-- request for option on [cheque](key1) accept to never accept cheque without valid [micr](key0)
-- [cheque](key1) [micr](key0)
-- [cheque](key1) +[micr](key0) +
-- add a possibility to [cpm](key0) close state to [leave](key0) returned [cheque](key1) in the ejected position
-- [cpm](key0) [leave](key0) [cheque](key1)
-- [cpm](key0) +[leave](key0) +[cheque](key1) +
-- [scpm](key1) - multiple [cheque](key1) [application](key0) changes
-- [scpm](key1) [cheque](key1) [application](key0)
-- [scpm](key1) +[cheque](key1) +[application](key0) +
-- [vertical](key2) [printing](key1) of a more readable cheque image on [receipt](key2) as a configurable option in addition to the current horizontal printing
-- [vertical](key2) [printing](key1) [receipt](key2)
-- [vertical](key2) +[printing](key1) +[receipt](key2) +
-- amount entry on same screen as [cheque](key1) image display
-- [cheque](key1)
-- [cheque](key1) +
-- 2st - 2 [sided](key0) [thermal](key1) - support cheque image printing on the [reverse](key2) - local configuration
-- [sided](key0) [thermal](key1) [reverse](key2)
-- [sided](key0) +[thermal](key1) +[reverse](key2) +
-- support for image based cheque [clearing](key0) systems - [linkage](key0) with [payment](key2) system solutions (passport)
-- [clearing](key0) [linkage](key0) [payment](key2)
-- [clearing](key0) +[linkage](key0) +[payment](key2) +
-- there is no documentation regarding the [new](key1) [cheque](key1) print functionality
-- [new](key1) [cheque](key1)
-- [new](key1) +[cheque](key1) +
-- cpm: b20 reject due to no [endorse](key0) data is sent only when the [cheque](key1) is sent to a bin
-- [endorse](key0) [cheque](key1)
-- [endorse](key0) +[cheque](key1) +
-- cpm - cheque accept state retries also [decremented](key0) when [internal](key1) [timeout](key0) occurs
-- [decremented](key0) [internal](key1) [timeout](key0)
-- [decremented](key0) +[internal](key1) +[timeout](key0) +
-- [cpm](key0) - no error [message](key0) is sent when there is a [cheque](key1) already in the device
-- [cpm](key0) [message](key0) [cheque](key1)
-- [cpm](key0) +[message](key0) +[cheque](key1) +
-- [cpm](key0) - when cheque [jammed](key1) inside (no access), incorrect device [status](key1) returned
-- [cpm](key0) [jammed](key1) [status](key1)
-- [cpm](key0) +[jammed](key1) +[status](key1) +
-- cpm - when cheque not taken after eject timeout, [flow](key0) [continues](key0) [wrongly](key1)
-- [flow](key0) [continues](key0) [wrongly](key1)
-- [flow](key0) +[continues](key0) +[wrongly](key1) +
-- [cpm](key0) - after [hardware](key0) [timer](key1) expires, the cheque acceptor worker re-enables the cheque entry
-- [cpm](key0) [hardware](key0) [timer](key1)
-- [cpm](key0) +[hardware](key0) +[timer](key1) +
-- cpm  - the cheque registry value missing in the receipt printer [section](key0) of the printer [registy](key1) configuration [files](key2)
-- [section](key0) [registy](key1) [files](key2)
-- [section](key0) +[registy](key1) +[files](key2) +
-- tar 332741 - require the [beeping](key0) for upon [cheque](key1) insertion to be disabled earlier
-- [beeping](key0) [cheque](key1)
-- [beeping](key0) +[cheque](key1) +
-- tar 347289 - [cpm](key0) no longer accepting [cheques](key1) with no [micr](key0) after final retry
-- [cpm](key0) [cheques](key1) [micr](key0)
-- [cpm](key0) +[cheques](key1) +[micr](key0) +
-- tar 347293: aa-ndc docs state exception state to be taken when accepting non-micr [cheques](key1)
-- [cheques](key1)
-- [cheques](key1) +
-- support [cpm](key0) [cheque](key1) image print (including [rear](key0) image)
-- [cpm](key0) [cheque](key1) [rear](key0)
-- [cpm](key0) +[cheque](key1) +[rear](key0) +
-- when [cheque](key1) is captured, [local](key0) [endorse](key0) is required
-- [cheque](key1) [local](key0) [endorse](key0)
-- [cheque](key1) +[local](key0) +[endorse](key0) +
-- tar 255036 - support [cpm](key0) [cheque](key1) image print
-- [cpm](key0) [cheque](key1)
-- [cpm](key0) +[cheque](key1) +
-- tar 177235 - incorrectly inserted [cheques](key1) are [accepted](key0)
-- [cheques](key1) [accepted](key0)
-- [cheques](key1) +[accepted](key0) +
-- capture the [cheque](key1) if it [fails](key1) to be returned to the cardholder, and print a [receipt](key2) for the cardholder
-- [cheque](key1) [fails](key1) [receipt](key2)
-- [cheque](key1) +[fails](key1) +[receipt](key2) +
-- [test](key0) case 5.6.2.2 : [cpm](key0) [transaction](key2) doesnot show the cheque image
-- [test](key0) [cpm](key0) [transaction](key2)
-- [test](key0) +[cpm](key0) +[transaction](key2) +
-- option for [cheque](key1) image print to be added to [cpm](key0) cheque accept state
-- [cheque](key1) [cpm](key0)
-- [cheque](key1) +[cpm](key0) +
-- andc 4.01.01: bunch cheque [status](key1) reporting to [journal](key0) with single digit transaction [serial](key0) number
-- [status](key1) [journal](key0) [serial](key0)
-- [status](key1) +[journal](key0) +[serial](key0) +
-- [chequeacceptstatushandler](key0) reports q2j(refused [cheques](key1) are accessible to the customer) instead of q6j( (jam no customer access).) at " cheques [jammed](key1) in transport on entry � no access" scenario.
-- [chequeacceptstatushandler](key0) [cheques](key1) [jammed](key1)
-- [chequeacceptstatushandler](key0) +[cheques](key1) +[jammed](key1) +
-- [endorse](key0) [cheques](key1) which are being [retracted](key1) on scpm
-- [endorse](key0) [cheques](key1) [retracted](key1)
-- [endorse](key0) +[cheques](key1) +[retracted](key1) +
-- ci583612: ndc display [manager](key0) [frontchequeimage](key1) path value not [passed](key2) through dmitrdata
-- [manager](key0) [frontchequeimage](key1) [passed](key2)
-- [manager](key0) +[frontchequeimage](key1) +[passed](key2) +
-- [cheque](key1): identify whether cheque is [face](key0) up or down
-- [cheque](key1) [face](key0)
-- [cheque](key1) +[face](key0) +
-- bunch [cheque](key1) components: improve pd according [new](key1) pd collection [guidelines](key0)
-- [cheque](key1) [new](key1) [guidelines](key0)
-- [cheque](key1) +[new](key1) +[guidelines](key0) +
-- [voice](key0) [guidance](key1) transaction reply data not processed by [bna](key2) and cheque deposit replies
-- [voice](key0) [guidance](key1) [bna](key2)
-- [voice](key0) +[guidance](key1) +[bna](key2) +
-- [application](key0) escaping at close state, while doing a bunch cheque transaction with bins missing and [pramote](key0) [enabled](key2)
-- [application](key0) [pramote](key0) [enabled](key2)
-- [application](key0) +[pramote](key0) +[enabled](key2) +
-- ci583612: ndc display [manager](key0) [frontchequeimage](key1) path value not [passed](key2) through dmitrdata
-- [manager](key0) [frontchequeimage](key1) [passed](key2)
-- [manager](key0) +[frontchequeimage](key1) +[passed](key2) +
-- tar 438634 - request to improve quality of [scpm](key1) [cheque](key1) image displayed by aandc
-- [scpm](key1) [cheque](key1)
-- [scpm](key1) +[cheque](key1) +
-- ci 583612  ndc display [manager](key0) [frontchequeimage](key1) path value not [passed](key2) through dmitrdata
-- [manager](key0) [frontchequeimage](key1) [passed](key2)
-- [manager](key0) +[frontchequeimage](key1) +[passed](key2) +
-- add support for [endorsing](key0) returned [[cheque](key1)s](key1) (scpm) - single cheque processor
-- [endorsing](key0) [cheques](key1) [cheque](key1)
-- [endorsing](key0) +[cheques](key1) +[cheque](key1) +
-- add support for [endorsing](key0) returned [[cheque](key1)s](key1) (scpm) - bunch cheque processor
-- [endorsing](key0) [cheques](key1) [cheque](key1)
-- [endorsing](key0) +[cheques](key1) +[cheque](key1) +
-- improve scaling of displayed [cheque](key1) images
-- [cheque](key1)
-- [cheque](key1) +
-- request for bunch [cheque](key1) amount display to be more configurable
-- [cheque](key1)
-- [cheque](key1) +
-- tar 574600: [cheque](key1) amount display control [sequences](key0) do not provide [consistent](key1) results
-- [cheque](key1) [sequences](key0) [consistent](key1)
-- [cheque](key1) +[sequences](key0) +[consistent](key1) +
-- tar 574600: [cheque](key1) amount display control [sequences](key0) do not provide [consistent](key1) results
-- [cheque](key1) [sequences](key0) [consistent](key1)
-- [cheque](key1) +[sequences](key0) +[consistent](key1) +
-- tar 469338 - [cheque](key1) detail display state [transparent](key0) background code issue for amount entry
-- [cheque](key1) [transparent](key0)
-- [cheque](key1) +[transparent](key0) +
-- tar 466954:  [cheque](key1) details [overlay](key0) screen not displayed correctly if screen number < 100
-- [cheque](key1) [overlay](key0)
-- [cheque](key1) +[overlay](key0) +
-- [cheques](key1) [jammed](key1) in transport and [sdm](key0) reports q4j only
-- [cheques](key1) [jammed](key1) [sdm](key0)
-- [cheques](key1) +[jammed](key1) +[sdm](key0) +
-- [application](key0) is getting hang in [cheques](key1) accept state
-- [application](key0) [cheques](key1)
-- [application](key0) +[cheques](key1) +
-- bunch cheque should generate unsolicited [messages](key1) for wfs_sys [events](key0) generated due to operations in other processes even though there is no [outstanding](key1) wfs command in aandc
-- [messages](key1) [events](key0) [outstanding](key1)
-- [messages](key1) +[events](key0) +[outstanding](key1) +
-- [sdm](key0) - cash in [aer](key0) needs to be called before cheque aer to avoid clearing of [notes](key1) during cheque recovery
-- [sdm](key0) [aer](key0) [notes](key1)
-- [sdm](key0) +[aer](key0) +[notes](key1) +
-- sdm - cheque [aer](key0) might clear [notes](key1) in device when sdm is configured for cheque and cash [transactions](key2)
-- [aer](key0) [notes](key1) [transactions](key2)
-- [aer](key0) +[notes](key1) +[transactions](key2) +
-- scaling the cheque image before [passing](key0) the image to [parascript](key1) [engine](key2) for better recoginition of amount declared on the cheque
-- [passing](key0) [parascript](key1) [engine](key2)
-- [passing](key0) +[parascript](key1) +[engine](key2) +
-- ip tar 463167: state z004 number of [cheques](key1) [refused](key0) can't be displayed.
-- [cheques](key1) [refused](key0)
-- [cheques](key1) +[refused](key0) +
-- [application](key0) is getting crash/ giving [hardware](key0) error when try to deposit cheque with [scpm](key1)
-- [application](key0) [hardware](key0) [scpm](key1)
-- [application](key0) +[hardware](key0) +[scpm](key1) +
-- tar 462108 - exception raised when [nested](key0) screen in bunch [cheque](key1) accept state
-- [nested](key0) [cheque](key1)
-- [nested](key0) +[cheque](key1) +
-- tar 462108 - exception raised when [nested](key0) screen in bunch [cheque](key1) accept state
-- [nested](key0) [cheque](key1)
-- [nested](key0) +[cheque](key1) +
-- displays - bunch [cheque](key1) detail display doesn't [handle](key0) [transparent](key0) text when entering amount.
-- [cheque](key1) [handle](key0) [transparent](key0)
-- [cheque](key1) +[handle](key0) +[transparent](key0) +
-- pa-dss - [cheque](key1) processing - ensure cheque images in the upload directory are [securely](key0) deleted at the end of the [transaction](key2)
-- [cheque](key1) [securely](key0) [transaction](key2)
-- [cheque](key1) +[securely](key0) +[transaction](key2) +
-- in [cheque](key1) detail display state entered amount is not echoed on the screen
-- [cheque](key1)
-- [cheque](key1) +
-- [scalable](key0) [cheque](key1) image display [fails](key1)
-- [scalable](key0) [cheque](key1) [fails](key1)
-- [scalable](key0) +[cheque](key1) +[fails](key1) +
-- the [application](key0) is waiting infinite time after taking the [cheques](key1) into [scpm](key1) device in bunch cheque acceptance state, with alpha numeric states.
-- [application](key0) [cheques](key1) [scpm](key1)
-- [application](key0) +[cheques](key1) +[scpm](key1) +
-- [scpm](key1) : [cheques](key1) with valid codeline also getting rejected when 'refusenonvalidcheques' [property](key0) is set to 'true' in advancendc.accfg file.
-- [scpm](key1) [cheques](key1) [property](key0)
-- [scpm](key1) +[cheques](key1) +[property](key0) +
-- [sst](key0) config: itemprocessing1 should be used as [bunchcheque](key1) [axfs](key2) alias
-- [sst](key0) [bunchcheque](key1) [axfs](key2)
-- [sst](key0) +[bunchcheque](key1) +[axfs](key2) +
-- [scpm](key1) - [cheque](key1) images remain in folder after a powerfail/reset
-- [scpm](key1) [cheque](key1)
-- [scpm](key1) +[cheque](key1) +
-- tar 444775:  [cheque](key1) [retract](key0) causes two conflicting entries in [journal](key0)
-- [cheque](key1) [retract](key0) [journal](key0)
-- [cheque](key1) +[retract](key0) +[journal](key0) +
-- ip tar 430376 - ip [states](key0) that return [cheque](key1) key can be [toggled](key0) where it cannot
-- [states](key0) [cheque](key1) [toggled](key0)
-- [states](key0) +[cheque](key1) +[toggled](key0) +
-- tar 444775:  [cheque](key1) [retract](key0) causes two conflicting entries in [journal](key0)
-- [cheque](key1) [retract](key0) [journal](key0)
-- [cheque](key1) +[retract](key0) +[journal](key0) +
-- tar 444775:  [cheque](key1) [retract](key0) causes two conflicting entries in [journal](key0)
-- [cheque](key1) [retract](key0) [journal](key0)
-- [cheque](key1) +[retract](key0) +[journal](key0) +
-- tar 423770 - add more screen not being displayed on [cheque](key1) [summary](key0) screen
-- [cheque](key1) [summary](key0)
-- [cheque](key1) +[summary](key0) +
-- tar423770 - add more screen not being displayed on [cheque](key1) [summary](key0) screen
-- [cheque](key1) [summary](key0)
-- [cheque](key1) +[summary](key0) +
-- [cpm](key0) - [opteva](key0) - [cheque](key1) processor functionality not working ( also wn ccdm)
-- [cpm](key0) [opteva](key0) [cheque](key1)
-- [cpm](key0) +[opteva](key0) +[cheque](key1) +
-- ip gr1t: andc ref man [states](key0) that return [cheque](key1) key can be [toggled](key0) where it cannot
-- [states](key0) [cheque](key1) [toggled](key0)
-- [states](key0) +[cheque](key1) +[toggled](key0) +
-- tar 422692:  aa-ndc : [cpm](key0) [cheque](key1) [jam](key0) reported as fatal with no error recovery attempted
-- [cpm](key0) [cheque](key1) [jam](key0)
-- [cpm](key0) +[cheque](key1) +[jam](key0) +
-- update the [tracing](key0) of bunchchequeacceptstate next state numbers in [stdata](key1) window of [debuglog](key2)
-- [tracing](key0) [stdata](key1) [debuglog](key2)
-- [tracing](key0) +[stdata](key1) +[debuglog](key2) +
-- bunch cheque accept state: add a [new](key1) next state parameter to the [bunchchequeacceptstate](key0) to distinguish between accepting all [cheques](key1) and where some cheques have been returned
-- [new](key1) [bunchchequeacceptstate](key0) [cheques](key1)
-- [new](key1) +[bunchchequeacceptstate](key0) +[cheques](key1) +
-- scpm and [cic](key0) - any data [objects](key1) i.e. [chequedetail](key2) - should be available cross process not just in aandc process
-- [cic](key0) [objects](key1) [chequedetail](key2)
-- [cic](key0) +[objects](key1) +[chequedetail](key2) +
-- [unsole](key0) message are not coming while [last](key1) transaction are [failed](key2) and still cheque are in the dpm.
-- [unsole](key0) [last](key1) [failed](key2)
-- [unsole](key0) +[last](key1) +[failed](key2) +
-- provide support for [offline](key1) single [cheque](key1) deposit in advance ndc
-- [offline](key1) [cheque](key1)
-- [offline](key1) +[cheque](key1) +
-- add [promote](key0) [flowpoints](key1) for cpm/scpm [chequeinserted](key2) and chequedeposited
-- [promote](key0) [flowpoints](key1) [chequeinserted](key2)
-- [promote](key0) +[flowpoints](key1) +[chequeinserted](key2) +
-- bunch [cheque](key1) [auto](key0) recovery [hangs](key1) where no service provider.
-- [cheque](key1) [auto](key0) [hangs](key1)
-- [cheque](key1) +[auto](key0) +[hangs](key1) +
-- scpm: [bunchchequeflows](key0) [dispose](key1) [implementation](key2) in bunchchequeacceptflow does not free resources.
-- [bunchchequeflows](key0) [dispose](key1) [implementation](key2)
-- [bunchchequeflows](key0) +[dispose](key1) +[implementation](key2) +
-- wrong unsol message is being sent to host when [unacceptable](key0) cheque was [jammed](key1) during [retract](key0)
-- [unacceptable](key0) [jammed](key1) [retract](key0)
-- [unacceptable](key0) +[jammed](key1) +[retract](key0) +
-- additional config detail required regarding support for single [cheque](key1) [scpm](key1) - tar 404360
-- [cheque](key1) [scpm](key1)
-- [cheque](key1) +[scpm](key1) +
-- scpm: [imagemark](key0) can store front image twice (before and after endorse) if [cheque](key1) inserted [upside](key0) down
-- [imagemark](key0) [cheque](key1) [upside](key0)
-- [imagemark](key0) +[cheque](key1) +[upside](key0) +
-- scpm: no capture [journalling](key1) when [cheques](key1) are cleared using [auto](key0) error recovery
-- [journalling](key1) [cheques](key1) [auto](key0)
-- [journalling](key1) +[cheques](key1) +[auto](key0) +
-- scpm: screen for wait for [cheques](key1) not shown when multiple [bunches](key0) returned in close state
-- [cheques](key1) [bunches](key0)
-- [cheques](key1) +[bunches](key0) +
-- bunch [cheque](key1) [handling](key2) state screen 'wait for more returned [cheques'](key0) screen not displayed
-- [cheque](key1) [handling](key2) [cheques'](key0)
-- [cheque](key1) +[handling](key2) +[cheques'](key0) +
-- scpm: when no is selected on the [timeout](key0) screen, [propose](key0) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key0)
-- [timeout](key0) [propose](key0) [bunchchequeacceptstate](key0)
-- [timeout](key0) +[propose](key0) +[bunchchequeacceptstate](key0) +
-- [siu](key0) [session](key1) being opened even though there is no bunch [cheque](key1) device
-- [siu](key0) [session](key1) [cheque](key1)
-- [siu](key0) +[session](key1) +[cheque](key1) +
-- scpm: close state can be improved in the way it [retains](key0) cheques to allow status [handler](key0) to be [simplified](key1)
-- [retains](key0) [handler](key0) [simplified](key1)
-- [retains](key0) +[handler](key0) +[simplified](key1) +
-- [scpm](key1) - [cheque](key1) images remain in folder after a powerfail/reset
-- [scpm](key1) [cheque](key1)
-- [scpm](key1) +[cheque](key1) +
-- scpm & cpm: for [pci](key0) compliance, consider [masking](key0) even other [areas](key1) on the cheque
-- [pci](key0) [masking](key0) [areas](key1)
-- [pci](key0) +[masking](key0) +[areas](key1) +
-- scpm: update the return [cheque](key1) [fdk](key1) option to behave as a [toggle](key0)
-- [cheque](key1) [fdk](key1) [toggle](key0)
-- [cheque](key1) +[fdk](key1) +[toggle](key0) +
-- [cheque](key1) accept fault display only supports up to 3 bins.
-- [cheque](key1)
-- [cheque](key1) +
-- wrong [unsol](key0) reported when error occurs while [retracting](key0) an [unacceptable](key0) cheque
-- [unsol](key0) [retracting](key0) [unacceptable](key0)
-- [unsol](key0) +[retracting](key0) +[unacceptable](key0) +
-- require scpm sp update to allow cheques to be [endorsed](key1) during [retract](key0) while doing [transaction](key2) if there are cheques in the escrow/transport
-- [endorsed](key1) [retract](key0) [transaction](key2)
-- [endorsed](key1) +[retract](key0) +[transaction](key2) +
-- scpm: support [uniquely](key0) [endorsing](key0) each cheque in a bunch in the [bunchchequehandling](key0) state, for offline bunch cheque deposit
-- [uniquely](key0) [endorsing](key0) [bunchchequehandling](key0)
-- [uniquely](key0) +[endorsing](key0) +[bunchchequehandling](key0) +
-- scpm: support for [printing](key1) multiple cheque images in a [transaction](key2) receipt, in [offline](key1) bunch cheque deposit
-- [printing](key1) [transaction](key2) [offline](key1)
-- [printing](key1) +[transaction](key2) +[offline](key1) +
-- [unsole](key0) message are not coming while [last](key1) transaction are [failed](key2) and still cheque are in the dpm.
-- [unsole](key0) [last](key1) [failed](key2)
-- [unsole](key0) +[last](key1) +[failed](key2) +
-- correct  [unsol](key0) [message](key0) is not reporting to the host when do transaction on [dpm](key0) with short cheque
-- [unsol](key0) [message](key0) [dpm](key0)
-- [unsol](key0) +[message](key0) +[dpm](key0) +
-- p00 data is not [printing](key1) on the [receipt](key2) when the cheque deposit [transaction](key2) without image lifting.
-- [printing](key1) [receipt](key2) [transaction](key2)
- - [printing](key1) +[receipt](key2) +[transaction](key2) +
-- tar 376710 : init depos clears a [cheque](key1) jam, but [leaves](key0) device [status](key1) as fatal
-- [cheque](key1) [leaves](key0) [status](key1)
-- [cheque](key1) +[leaves](key0) +[status](key1) +
-- tar 373126: cheque image is [unreadable](key0) on [usb](key1) receipt [printer](key2)
-- [unreadable](key0) [usb](key1) [printer](key2)
-- [unreadable](key0) +[usb](key1) +[printer](key2) +
-- [cheque](key1) image scaling - current scaling function in aandc seems to lose significant cheque detail. [ricardo](key0) has customization that [performs](key1) a better job.
-- [cheque](key1) [ricardo](key0) [performs](key1)
-- [cheque](key1) +[ricardo](key0) +[performs](key1) +
-- [supervisor](key0) -  [cheque](key1) processor clear bins display show pre-clear counts.
-- [supervisor](key0) [cheque](key1)
-- [supervisor](key0) +[cheque](key1) +
-- [opteva](key0) - [cheque](key1) processor functionality not working ( also wn ccdm)
-- [opteva](key0) [cheque](key1)
-- [opteva](key0) +[cheque](key1) +
-- no beep to [warn](key0) the customer that a [cheque](key1) has been returned after cancel
-- [warn](key0) [cheque](key1)
-- [warn](key0) +[cheque](key1) +
-- scpm & cin: when no is selected on the [timeout](key0) screen, [propose](key0) the cancel exit is taken (instead of the timeout exit) from the [bunchchequeacceptstate](key0)
-- [timeout](key0) [propose](key0) [bunchchequeacceptstate](key0)
-- [timeout](key0) +[propose](key0) +[bunchchequeacceptstate](key0) +
-- [ichqaccptsrv aimodule]: need a [property](key0) for [endorsement](key0) while [retracting](key0) the cheques.
-- [property](key0) [endorsement](key0) [retracting](key0)
-- [property](key0) +[endorsement](key0) +[retracting](key0) +
-- bunchchequeacceptservice: [endorse](key0) [cheques](key1) which are being [retracted](key1) on scpm
-- [endorse](key0) [cheques](key1) [retracted](key1)
-- [endorse](key0) +[cheques](key1) +[retracted](key1) +
-- [itemacceptservice](key0) component should support equivalent functionality as was provided with [bunchcheque](key1) and cash accept services
-- [itemacceptservice](key0) [bunchcheque](key1)
-- [itemacceptservice](key0) +[bunchcheque](key1) +
-- [iitemacceptservice](key0) interface should support equivalent functionality as was provided with [bunchcheque](key1) and cash accept service [interfaces](key1)
-- [iitemacceptservice](key0) [bunchcheque](key1) [interfaces](key1)
-- [iitemacceptservice](key0) +[bunchcheque](key1) +[interfaces](key1) +
-- bunchchqaccptsrv: [cheques](key1) [jam](key0) during [scancheques](key1) operation without service recovery action.
-- [cheques](key1) [jam](key0) [scancheques](key1)
-- [cheques](key1) +[jam](key0) +[scancheques](key1) +
-- scpm: [imagemark](key0) can store front image twice (before and after endorse) if [cheque](key1) inserted [upside](key0) down
-- [imagemark](key0) [cheque](key1) [upside](key0)
-- [imagemark](key0) +[cheque](key1) +[upside](key0) +
+- [scpm](key1) - [imagemark](key2) [creates](key3) the [detail](key4) for [retracted](key5) cheques also when we do the [transaction](key6) with [accept](key7) and [reject](key8) cheques [together](key9)
+- [scpm](key1) [imagemark](key2) [creates](key3) [detail](key4) [retracted](key5) [transaction](key6) [accept](key7) [reject](key8) [together](key9) 
+- [scpm](key1) +[imagemark](key2) +[creates](key3) +[detail](key4) +[retracted](key5) +[transaction](key6) +[accept](key7) +[reject](key8) +[together](key9) +
+- [scpm](key1) - it [build](key0) [13](key1) : the images of returned cheques are not printed on the [receipt](key2)
+- [scpm](key1) [build](key0) [13](key1) [receipt](key2) 
+- [scpm](key1) +[build](key0) +[13](key1) +[receipt](key2) +
+- [scpm:](key0) [trans](key1) request [message](key2) needs to send the [total](key3) [amount](key4) of individual cheques when [using](key5) the single cheque message [interface](key6)
+- [scpm:](key0) [trans](key1) [message](key2) [total](key3) [amount](key4) [using](key5) [interface](key6) 
+- [scpm:](key0) +[trans](key1) +[message](key2) +[total](key3) +[amount](key4) +[using](key5) +[interface](key6) +
+- [memory](key0) [leak](key1) in [transaction](key6) request [data](key2) for [bunch](key3) cheque [accept](key7) data
+- [memory](key0) [leak](key1) [transaction](key6) [data](key2) [bunch](key3) [accept](key7) 
+- [memory](key0) +[leak](key1) +[transaction](key6) +[data](key2) +[bunch](key3) +[accept](key7) +
+- [scpm:](key0) cheque at [exit/sensor](key0) [blocked](key1) at [accept](key7) [state](key2) when the [bunchchequeacceptservice](key3) is in [chequesleft](key4) state does not report any [unsol](key5)
+- [scpm:](key0) [exit/sensor](key0) [blocked](key1) [accept](key7) [state](key2) [bunchchequeacceptservice](key3) [chequesleft](key4) [unsol](key5) 
+- [scpm:](key0) +[exit/sensor](key0) +[blocked](key1) +[accept](key7) +[state](key2) +[bunchchequeacceptservice](key3) +[chequesleft](key4) +[unsol](key5) +
+- [bunchchqaccptsrv:](key0) cheques [jam](key1) [during](key2) [scancheques](key3) operation without [service](key4) [recovery](key5) [action.](key6)
+- [bunchchqaccptsrv:](key0) [jam](key1) [during](key2) [scancheques](key3) [service](key4) [recovery](key5) [action.](key6) 
+- [bunchchqaccptsrv:](key0) +[jam](key1) +[during](key2) +[scancheques](key3) +[service](key4) +[recovery](key5) +[action.](key6) +
+- [scpm:](key0) [wrong](key0) [unsol](key5) [message](key2) is sent when [shutter](key1) is [jammed](key2) open after [bunch](key3) inserted and cheques still in [infeed](key3) [transport](key4)
+- [scpm:](key0) [wrong](key0) [unsol](key5) [message](key2) [shutter](key1) [jammed](key2) [bunch](key3) [infeed](key3) [transport](key4) 
+- [scpm:](key0) +[wrong](key0) +[unsol](key5) +[message](key2) +[shutter](key1) +[jammed](key2) +[bunch](key3) +[infeed](key3) +[transport](key4) +
+- out of range [testing](key0) for [bunch](key3) cheque [state](key2) [table](key1) [parameters](key2)
+- [testing](key0) [bunch](key3) [state](key2) [table](key1) [parameters](key2) 
+- [testing](key0) +[bunch](key3) +[state](key2) +[table](key1) +[parameters](key2) +
+- [scpm:](key0) [powerfail](key0) - [reset](key1) not done when cheques in [stacker](key2) at [sod](key3) and reset was done [during](key2) [transaction](key6)
+- [scpm:](key0) [powerfail](key0) [reset](key1) [stacker](key2) [sod](key3) [during](key2) [transaction](key6) 
+- [scpm:](key0) +[powerfail](key0) +[reset](key1) +[stacker](key2) +[sod](key3) +[during](key2) +[transaction](key6) +
+- when [alphanumeric](key0) [state](key2) [entry](key1) is [enabled,](key2) cheque [detail](key4) [display](key3) state [goes](key4) to [default](key5) [close](key6) from any of its [exits](key7)
+- [alphanumeric](key0) [state](key2) [entry](key1) [enabled,](key2) [detail](key4) [display](key3) [goes](key4) [default](key5) [close](key6) [exits](key7) 
+- [alphanumeric](key0) +[state](key2) +[entry](key1) +[enabled,](key2) +[detail](key4) +[display](key3) +[goes](key4) +[default](key5) +[close](key6) +[exits](key7) +
+- [scpm:](key0) [receipt](key2) [contains](key0) [pathname](key1) to incorrect cheque [bmp](key2) instead of cheque image
+- [scpm:](key0) [receipt](key2) [contains](key0) [pathname](key1) [bmp](key2) 
+- [scpm:](key0) +[receipt](key2) +[contains](key0) +[pathname](key1) +[bmp](key2) +
+- [chequemanagement.h](key0) doesnt include a [preprocessor](key1) [definition](key2) to protect against multiple includes, resulting in the [redifinition](key3) of [symbols](key4)
+- [chequemanagement.h](key0) [preprocessor](key1) [definition](key2) [redifinition](key3) [symbols](key4) 
+- [chequemanagement.h](key0) +[preprocessor](key1) +[definition](key2) +[redifinition](key3) +[symbols](key4) +
+- [[state](key2)data](key0) [debug](key1) [log](key2) for [bunch](key3) cheque [accept](key7) state does not [match](key3) [fs](key4)
+- [statedata](key0) [debug](key1) [log](key2) [bunch](key3) [accept](key7) [state](key2) [match](key3) [fs](key4) 
+- [statedata](key0) +[debug](key1) +[log](key2) +[bunch](key3) +[accept](key7) +[state](key2) +[match](key3) +[fs](key4) +
+- cheque [depositing](key0) to [bin1](key1) when [left](key2) in [transport](key4)
+- [depositing](key0) [bin1](key1) [left](key2) [transport](key4) 
+- [depositing](key0) +[bin1](key1) +[left](key2) +[transport](key4) +
+- [ueh](key0) on [start-up](key1) on a [cpm4](key2) ( and also seen ueh on start-up on a single cheque [scpm](key1) )
+- [ueh](key0) [start-up](key1) [cpm4](key2) [scpm](key1) 
+- [ueh](key0) +[start-up](key1) +[cpm4](key2) +[scpm](key1) +
+- [c07](key0) in [resrvd.def](key1) does not [reflect](key2) the [change](key3) of [path](key4) for cheque images
+- [c07](key0) [resrvd.def](key1) [reflect](key2) [change](key3) [path](key4) 
+- [c07](key0) +[resrvd.def](key1) +[reflect](key2) +[change](key3) +[path](key4) +
+- [potential](key0) [memory](key0) [leak](key1) in [bunchchequeid,](key1) [executereset()](key2)
+- [potential](key0) [memory](key0) [leak](key1) [bunchchequeid,](key1) [executereset()](key2) 
+- [potential](key0) +[memory](key0) +[leak](key1) +[bunchchequeid,](key1) +[executereset()](key2) +
+- [application](key0) [crash](key1) when [tried](key2) to get [amount](key4) [using](key5) [managed](key3) [cpp](key4) cheque [details](key5) [wrapper](key6)
+- [application](key0) [crash](key1) [tried](key2) [amount](key4) [using](key5) [managed](key3) [cpp](key4) [details](key5) [wrapper](key6) 
+- [application](key0) +[crash](key1) +[tried](key2) +[amount](key4) +[using](key5) +[managed](key3) +[cpp](key4) +[details](key5) +[wrapper](key6) +
+- when [bunch](key3) cheque [accept](key7) [state](key2) [enable](key0) image processing [parameter](key1) is set to any [value](key2) other than [000,](key3) an [exception](key4) occurs
+- [bunch](key3) [accept](key7) [state](key2) [enable](key0) [parameter](key1) [value](key2) [000,](key3) [exception](key4) 
+- [bunch](key3) +[accept](key7) +[state](key2) +[enable](key0) +[parameter](key1) +[value](key2) +[000,](key3) +[exception](key4) +
+- proceed key in the cheque [detail](key4) [display](key3) [state](key2) does not [exit](key0) the state in operation [modes](key1) [2&3](key2) if more cheques can be [displayed](key3) and [zero](key4) [amount](key4) is allowed
+- [detail](key4) [display](key3) [state](key2) [exit](key0) [modes](key1) [2&3](key2) [displayed](key3) [zero](key4) [amount](key4) 
+- [detail](key4) +[display](key3) +[state](key2) +[exit](key0) +[modes](key1) +[2&3](key2) +[displayed](key3) +[zero](key4) +[amount](key4) +
+- [scpm](key1) [it7](key0) - [amount](key4) [entry](key1) in cheque [detail](key4) [display](key3) [state](key2) does not function correctly
+- [scpm](key1) [it7](key0) [amount](key4) [entry](key1) [detail](key4) [display](key3) [state](key2) 
+- [scpm](key1) +[it7](key0) +[amount](key4) +[entry](key1) +[detail](key4) +[display](key3) +[state](key2) +
+- [wrong](key0) [unsolicited](key0) [message](key2) is sent to host when cheque is inserted with wrong [orientation](key1) in [dpm.](key2)
+- [wrong](key0) [unsolicited](key0) [message](key2) [orientation](key1) [dpm.](key2) 
+- [wrong](key0) +[unsolicited](key0) +[message](key2) +[orientation](key1) +[dpm.](key2) +
+- an [access](key0) [violation](key1) occurs when [ssdsndcdata.[dll](key8)](key2) and [ssdsndcfield.dlls](key3) [use](key4) [new](key5) [.net](key6) [ssdschequeacceptmanagement](key7) dll
+- [access](key0) [violation](key1) [ssdsndcdata.dll](key2) [ssdsndcfield.dlls](key3) [use](key4) [new](key5) [.net](key6) [ssdschequeacceptmanagement](key7) [dll](key8) 
+- [access](key0) +[violation](key1) +[ssdsndcdata.dll](key2) +[ssdsndcfield.dlls](key3) +[use](key4) +[new](key5) +[.net](key6) +[ssdschequeacceptmanagement](key7) +[dll](key8) +
+- [accept](key7) [state](key2) to [support](key0) [marking](key1) cheques to be returned at the end of the [transaction,](key2) [based](key3) on [failing](key4) [codeline](key5) [validation](key6)
+- [accept](key7) [state](key2) [support](key0) [marking](key1) [transaction,](key2) [based](key3) [failing](key4) [codeline](key5) [validation](key6) 
+- [accept](key7) +[state](key2) +[support](key0) +[marking](key1) +[transaction,](key2) +[based](key3) +[failing](key4) +[codeline](key5) +[validation](key6) +
+- [scpm:](key0) when cheque [accept](key7) [state](key2) [takes](key0) [device](key1) [error](key2) [exit](key0) no error [unsol](key5) is sent
+- [scpm:](key0) [accept](key7) [state](key2) [takes](key0) [device](key1) [error](key2) [exit](key0) [unsol](key5) 
+- [scpm:](key0) +[accept](key7) +[state](key2) +[takes](key0) +[device](key1) +[error](key2) +[exit](key0) +[unsol](key5) +
+- [scpm:](key0) after [retract](key0) from [exit](key0) [slot](key[1](key3)) all cheques reported in [bin](key2) 1 even if some were [taken](key4)
+- [scpm:](key0) [retract](key0) [exit](key0) [slot](key1) [bin](key2) [1](key3) [taken](key4) 
+- [scpm:](key0) +[retract](key0) +[exit](key0) +[slot](key1) +[bin](key2) +[1](key3) +[taken](key4) +
+- [scpm:](key0) [temporary](key0) cheque images for [receipt](key2) [printing](key1) are not being [deleted](key2) in the [close](key6) [state](key2)
+- [scpm:](key0) [temporary](key0) [receipt](key2) [printing](key1) [deleted](key2) [close](key6) [state](key2) 
+- [scpm:](key0) +[temporary](key0) +[receipt](key2) +[printing](key1) +[deleted](key2) +[close](key6) +[state](key2) +
+- [memory](key0) [leaks](key0) found in cheque [details](key5) [wrapper](key6)
+- [memory](key0) [leaks](key0) [details](key5) [wrapper](key6) 
+- [memory](key0) +[leaks](key0) +[details](key5) +[wrapper](key6) +
+- [scpm:](key0) when all cheques are marked to be returned a [trans](key1) reply specifying a [chequeid](key0) moves no cheques but sends [ready9](key1)
+- [scpm:](key0) [trans](key1) [chequeid](key0) [ready9](key1) 
+- [scpm:](key0) +[trans](key1) +[chequeid](key0) +[ready9](key1) +
+- cheque image [display](key3) with full [path](key4) to [picture](key0) [file](key1) does not display [correctly.](key2)
+- [display](key3) [path](key4) [picture](key0) [file](key1) [correctly.](key2) 
+- [display](key3) +[path](key4) +[picture](key0) +[file](key1) +[correctly.](key2) +
+- [scpm](key1) [it4](key0) - [modify](key1) init [depos](key2) [&](key3) [supv](key4) [exit](key0) initialisation to [ensure](key5) the [bunchchequeacceptservice](key3) is not [left](key2) in a bad [state](key2)
+- [scpm](key1) [it4](key0) [modify](key1) [depos](key2) [&](key3) [supv](key4) [exit](key0) [ensure](key5) [bunchchequeacceptservice](key3) [left](key2) [state](key2) 
+- [scpm](key1) +[it4](key0) +[modify](key1) +[depos](key2) +[&](key3) +[supv](key4) +[exit](key0) +[ensure](key5) +[bunchchequeacceptservice](key3) +[left](key2) +[state](key2) +
+- [scpm:](key0) address [code](key0) [review](key1) [comments](key2) on cheque [accept](key7) [status](key3) [handling](key4)
+- [scpm:](key0) [code](key0) [review](key1) [comments](key2) [accept](key7) [status](key3) [handling](key4) 
+- [scpm:](key0) +[code](key0) +[review](key1) +[comments](key2) +[accept](key7) +[status](key3) +[handling](key4) +
+- [scpm:](key0) [timeout](key0) [exit](key0) [taken](key4) from cheque [accept](key7) [state](key2) when no [pressed](key1) on timeout screen
+- [scpm:](key0) [timeout](key0) [exit](key0) [taken](key4) [accept](key7) [state](key2) [pressed](key1) 
+- [scpm:](key0) +[timeout](key0) +[exit](key0) +[taken](key4) +[accept](key7) +[state](key2) +[pressed](key1) +
+- [scpm:](key0) [retract](key0) [message](key2) not sent for [rejected](key0) cheques
+- [scpm:](key0) [retract](key0) [message](key2) [rejected](key0) 
+- [scpm:](key0) +[retract](key0) +[message](key2) +[rejected](key0) +
+- [scpm:](key0) [q6j](key0) [unsol](key5) sent after [bunch](key3) [entered](key1) with one [refused](key2) cheque being [expelled](key3) or [taken](key4)
+- [scpm:](key0) [q6j](key0) [unsol](key5) [bunch](key3) [entered](key1) [refused](key2) [expelled](key3) [taken](key4) 
+- [scpm:](key0) +[q6j](key0) +[unsol](key5) +[bunch](key3) +[entered](key1) +[refused](key2) +[expelled](key3) +[taken](key4) +
+- [scpm:](key0) [summarystate,](key0) to allow [cyclical](key1) [navigation](key2) if there are more cheques to [display](key3) than will [fit](key3) on a single [screen.](key4)
+- [scpm:](key0) [summarystate,](key0) [cyclical](key1) [navigation](key2) [display](key3) [fit](key3) [screen.](key4) 
+- [scpm:](key0) +[summarystate,](key0) +[cyclical](key1) +[navigation](key2) +[display](key3) +[fit](key3) +[screen.](key4) +
+- [scpm](key1) [it5](key0) - when [cancel](key1) [mask](key2) [=](key3) [000](key4) in [bunch](key3) cheque [accept](key7) [state,](key5) cancel key on [pinpad](key6) is not [enabled](key7)
+- [scpm](key1) [it5](key0) [cancel](key1) [mask](key2) [=](key3) [000](key4) [bunch](key3) [accept](key7) [state,](key5) [pinpad](key6) [enabled](key7) 
+- [scpm](key1) +[it5](key0) +[cancel](key1) +[mask](key2) +[=](key3) +[000](key4) +[bunch](key3) +[accept](key7) +[state,](key5) +[pinpad](key6) +[enabled](key7) +
+- [scpm](key1) [it5](key0) - numeric key [1-9](key0) active when [cancel](key1) [mask](key2) [(&](key1) [display)](key2) in [bunch](key3) cheque [accept](key7) [state](key2)
+- [scpm](key1) [it5](key0) [1-9](key0) [cancel](key1) [mask](key2) [(&](key1) [display)](key2) [bunch](key3) [accept](key7) [state](key2) 
+- [scpm](key1) +[it5](key0) +[1-9](key0) +[cancel](key1) +[mask](key2) +[(&](key1) +[display)](key2) +[bunch](key3) +[accept](key7) +[state](key2) +
+- [scpm:](key0) [bunch](key3) cheque [flows](key0) are [journalling](key1) [u0058](key2) screen without [dynamic](key3) [data.](key4)
+- [scpm:](key0) [bunch](key3) [flows](key0) [journalling](key1) [u0058](key2) [dynamic](key3) [data.](key4) 
+- [scpm:](key0) +[bunch](key3) +[flows](key0) +[journalling](key1) +[u0058](key2) +[dynamic](key3) +[data.](key4) +
+- [bunchchequehandling](key0) [flow](key1) [unit](key2) [test](key3) [fails](key4) [using](key5) [payment](key5) [processor.](key6) 
+- [bunchchequehandling](key0) [flow](key1) [unit](key2) [test](key3) [fails](key4) [using](key5) [payment](key5) [processor.](key6) 
+- [bunchchequehandling](key0) +[flow](key1) +[unit](key2) +[test](key3) +[fails](key4) +[using](key5) +[payment](key5) +[processor.](key6) +
+- [scpm](key1) - issue with image [printing](key1) of cheques returned in [transaction](key6) reply function
+- [scpm](key1) [printing](key1) [transaction](key6) 
+- [scpm](key1) +[printing](key1) +[transaction](key6) +
+- [scpm](key1) [it5](key0) - [unexpected](key0) [behaviour](key1) when returned cheque [taken](key4) just as it is being [retracted](key5)
+- [scpm](key1) [it5](key0) [unexpected](key0) [behaviour](key1) [taken](key4) [retracted](key5) 
+- [scpm](key1) +[it5](key0) +[unexpected](key0) +[behaviour](key1) +[taken](key4) +[retracted](key5) +
+- [q3n](key0) [unsol](key5) is not [observed](key1) on [reboot](key2) when cheque is still in [transport](key4)
+- [q3n](key0) [unsol](key5) [observed](key1) [reboot](key2) [transport](key4) 
+- [q3n](key0) +[unsol](key5) +[observed](key1) +[reboot](key2) +[transport](key4) +
+- [scpm:](key0) when [jam](key1) occurs [[clear](key2)ing](key0) cheques at [[sod](key3),](key1) [unsol](key5) msg is not clear that it is a sod [scenario](key3)
+- [scpm:](key0) [jam](key1) [clearing](key0) [sod,](key1) [unsol](key5) [clear](key2) [sod](key3) [scenario](key3) 
+- [scpm:](key0) +[jam](key1) +[clearing](key0) +[sod,](key1) +[unsol](key5) +[clear](key2) +[sod](key3) +[scenario](key3) +
+- [scpm:](key0) for [pci](key0) [compliance](key1) the [bunchchequeacceptservice](key3) and [imagemarkdepositrecorder](key2) [archive/backup](key3) [directories](key4) need to be [encrypted](key5)
+- [scpm:](key0) [pci](key0) [compliance](key1) [bunchchequeacceptservice](key3) [imagemarkdepositrecorder](key2) [archive/backup](key3) [directories](key4) [encrypted](key5) 
+- [scpm:](key0) +[pci](key0) +[compliance](key1) +[bunchchequeacceptservice](key3) +[imagemarkdepositrecorder](key2) +[archive/backup](key3) +[directories](key4) +[encrypted](key5) +
+- [scpm:](key0) [re-work](key0) [clearing](key0) the [scannedcheques](key1) [array](key2) for better [synchronisation](key3) with [statushandler](key4)
+- [scpm:](key0) [re-work](key0) [clearing](key0) [scannedcheques](key1) [array](key2) [synchronisation](key3) [statushandler](key4) 
+- [scpm:](key0) +[re-work](key0) +[clearing](key0) +[scannedcheques](key1) +[array](key2) +[synchronisation](key3) +[statushandler](key4) +
+- [scpm](key1) fxcop issues in [bunchchequetransactionreply](key0) [code](key0)
+- [scpm](key1) [bunchchequetransactionreply](key0) [code](key0) 
+- [scpm](key1) +[bunchchequetransactionreply](key0) +[code](key0) +
+- [scpm](key1) - cheque id [000](key4) is [accepted](key0) even when it is present in the [second](key1) cheque [group](key2) in [buffer](key3) b
+- [scpm](key1) [000](key4) [accepted](key0) [second](key1) [group](key2) [buffer](key3) 
+- [scpm](key1) +[000](key4) +[accepted](key0) +[second](key1) +[group](key2) +[buffer](key3) +
+- [scpm](key1) [it4](key0) - cheque at [exit/sensor](key0) [blocked](key1) at [accept](key7) [state](key2) does not report any [unsol](key5)
+- [scpm](key1) [it4](key0) [exit/sensor](key0) [blocked](key1) [accept](key7) [state](key2) [unsol](key5) 
+- [scpm](key1) +[it4](key0) +[exit/sensor](key0) +[blocked](key1) +[accept](key7) +[state](key2) +[unsol](key5) +
+- [scpm:](key0) [status](key3) [handler](key0) does not send [retract](key0) [unsol](key5) from [close](key6) [state](key2) in [case](key1) when cheques are [retained](key2) from [stacker](key2)
+- [scpm:](key0) [status](key3) [handler](key0) [retract](key0) [unsol](key5) [close](key6) [state](key2) [case](key1) [retained](key2) [stacker](key2) 
+- [scpm:](key0) +[status](key3) +[handler](key0) +[retract](key0) +[unsol](key5) +[close](key6) +[state](key2) +[case](key1) +[retained](key2) +[stacker](key2) +
+- [scpm](key1) it - [timeout](key0) and [cancel](key1) [unsols](key0) are only reported in [bunch](key3) cheque [accept](key7) [state](key2)
+- [scpm](key1) [timeout](key0) [cancel](key1) [unsols](key0) [bunch](key3) [accept](key7) [state](key2) 
+- [scpm](key1) +[timeout](key0) +[cancel](key1) +[unsols](key0) +[bunch](key3) +[accept](key7) +[state](key2) +
+- [ensure](key5) that [retracted](key5) cheques are stored into [bin2](key0) by [default](key5)
+- [ensure](key5) [retracted](key5) [bin2](key0) [default](key5) 
+- [ensure](key5) +[retracted](key5) +[bin2](key0) +[default](key5) +
+- [scpm:](key0) [status](key3) [handler](key0) to include [journalling](key1) for cheque [capture](key0) with [u0058/u0059](key1) screens
+- [scpm:](key0) [status](key3) [handler](key0) [journalling](key1) [capture](key0) [u0058/u0059](key1) 
+- [scpm:](key0) +[status](key3) +[handler](key0) +[journalling](key1) +[capture](key0) +[u0058/u0059](key1) +
+- issue with [customer](key0) [entered](key1) [amount](key4) [field](key1) in cheque [details](key5) [wrapper](key6)
+- [customer](key0) [entered](key1) [amount](key4) [field](key1) [details](key5) [wrapper](key6) 
+- [customer](key0) +[entered](key1) +[amount](key4) +[field](key1) +[details](key5) +[wrapper](key6) +
+- [scpm:](key0) [c11](key0) [reject](key8) [message](key2) sent after every cheque related [trans](key1) reply
+- [scpm:](key0) [c11](key0) [reject](key8) [message](key2) [trans](key1) 
+- [scpm:](key0) +[c11](key0) +[reject](key8) +[message](key2) +[trans](key1) +
+- [scpm:](key0) [update](key0) the [[display](key3)chequesummarystate](key1) to [support](key0) display [based](key3) on screen [paging](key2)
+- [scpm:](key0) [update](key0) [displaychequesummarystate](key1) [support](key0) [display](key3) [based](key3) [paging](key2) 
+- [scpm:](key0) +[update](key0) +[displaychequesummarystate](key1) +[support](key0) +[display](key3) +[based](key3) +[paging](key2) +
+- [scpm:](key0) [suppress](key0) cheque [unsol](key5) [messages](key1) for [offline](key2) cheque [deposit](key3) [transactions](key4)
+- [scpm:](key0) [suppress](key0) [unsol](key5) [messages](key1) [offline](key2) [deposit](key3) [transactions](key4) 
+- [scpm:](key0) +[suppress](key0) +[unsol](key5) +[messages](key1) +[offline](key2) +[deposit](key3) +[transactions](key4) +
+- [scpm:](key0) add [timeout](key0) [exit](key0) to [bunch](key3) cheque [handling](key4) [flow](key1) for cheques not [taken](key4) and not [retracted.](key0)
+- [scpm:](key0) [timeout](key0) [exit](key0) [bunch](key3) [handling](key4) [flow](key1) [taken](key4) [retracted.](key0) 
+- [scpm:](key0) +[timeout](key0) +[exit](key0) +[bunch](key3) +[handling](key4) +[flow](key1) +[taken](key4) +[retracted.](key0) +
+- [wrong](key0) screen [displayed](key3) when [retracting](key0) cheques in [bunch](key3) cheque [handling](key4) [state](key2) with [media](key1) [control](key2) set to [000](key4)
+- [wrong](key0) [displayed](key3) [retracting](key0) [bunch](key3) [handling](key4) [state](key2) [media](key1) [control](key2) [000](key4) 
+- [wrong](key0) +[displayed](key3) +[retracting](key0) +[bunch](key3) +[handling](key4) +[state](key2) +[media](key1) +[control](key2) +[000](key4) +
+- next and previous screens are [[display](key3)ed](key3) in cheque [summary](key0) display [state](key2) when [fdk](key1) [masks](key2) are [000](key4) and more cheques than can be displayed is [entered](key1) 
+- [displayed](key3) [summary](key0) [display](key3) [state](key2) [fdk](key1) [masks](key2) [000](key4) [entered](key1) 
+- [displayed](key3) +[summary](key0) +[display](key3) +[state](key2) +[fdk](key1) +[masks](key2) +[000](key4) +[entered](key1) +
+- [expose](key0) more [via](key1) the [chequedetails](key2) [wrapper](key6)
+- [expose](key0) [via](key1) [chequedetails](key2) [wrapper](key6) 
+- [expose](key0) +[via](key1) +[chequedetails](key2) +[wrapper](key6) +
+- [scpm:](key0)  [handling](key4) and [close](key6) [[state](key2)s](key0) need to be able to [exit](key0) the state in the [case](key1) when cheques are [configured](key1) to be returned and not [retracted,](key2) but the cheques are not [taken](key4)
+- [scpm:](key0) [handling](key4) [close](key6) [states](key0) [exit](key0) [state](key2) [case](key1) [configured](key1) [retracted,](key2) [taken](key4) 
+- [scpm:](key0) +[handling](key4) +[close](key6) +[states](key0) +[exit](key0) +[state](key2) +[case](key1) +[configured](key1) +[retracted,](key2) +[taken](key4) +
+- cheque [accept](key7) [state](key2) - [cancel](key1) key not [enabled](key7) when [device](key1) [re-enabled](key0) for cheque input
+- [accept](key7) [state](key2) [cancel](key1) [enabled](key7) [device](key1) [re-enabled](key0) 
+- [accept](key7) +[state](key2) +[cancel](key1) +[enabled](key7) +[device](key1) +[re-enabled](key0) +
+- [bunch](key3) cheque [accept](key7) - [enable](key0) image processing [state](key2) [parameter](key1) [ignored.](key0)
+- [bunch](key3) [accept](key7) [enable](key0) [state](key2) [parameter](key1) [ignored.](key0) 
+- [bunch](key3) +[accept](key7) +[enable](key0) +[state](key2) +[parameter](key1) +[ignored.](key0) +
+- [scpm](key1) [close](key6) [state](key2) - does not [operate](key0) correctly when cheques [left](key2) in [exit](key0) [slot](key1) in previous operation
+- [scpm](key1) [close](key6) [state](key2) [operate](key0) [left](key2) [exit](key0) [slot](key1) 
+- [scpm](key1) +[close](key6) +[state](key2) +[operate](key0) +[left](key2) +[exit](key0) +[slot](key1) +
+- cheque [depositing](key0) to [bin1](key1) when [left](key2) in [transport](key4)
+- [depositing](key0) [bin1](key1) [left](key2) [transport](key4) 
+- [depositing](key0) +[bin1](key1) +[left](key2) +[transport](key4) +
+- setting [endorse](key0) [data](key2) directly on a cheque [item](key1) incorrectly copies the [internal](key2) cheque [objects](key3) rather than [referencing](key4) the [real](key5) objects
+- [endorse](key0) [data](key2) [item](key1) [internal](key2) [objects](key3) [referencing](key4) [real](key5) 
+- [endorse](key0) +[data](key2) +[item](key1) +[internal](key2) +[objects](key3) +[referencing](key4) +[real](key5) +
+- [reference](key0) [manul](key1) should provide [detail](key4) on cheque [accept](key7) [state](key2) [codeline](key5) [validation](key6)
+- [reference](key0) [manul](key1) [detail](key4) [accept](key7) [state](key2) [codeline](key5) [validation](key6) 
+- [reference](key0) +[manul](key1) +[detail](key4) +[accept](key7) +[state](key2) +[codeline](key5) +[validation](key6) +
+- [double](key0) [beep](key1) in [bunch](key3) cheque [states](key0) when [pressing](key2) keys
+- [double](key0) [beep](key1) [bunch](key3) [states](key0) [pressing](key2) 
+- [double](key0) +[beep](key1) +[bunch](key3) +[states](key0) +[pressing](key2) +
+- cheque index set [during](key2) a cheque [detail](key4) [display](key3) [state](key2) doesn't seem to be initialised [between](key0) cheque [deposit](key3) [transactions.](key1)
+- [during](key2) [detail](key4) [display](key3) [state](key2) [between](key0) [deposit](key3) [transactions.](key1) 
+- [during](key2) +[detail](key4) +[display](key3) +[state](key2) +[between](key0) +[deposit](key3) +[transactions.](key1) +
+- [bunch](key3) cheque [accept](key7) [state](key2) - [rejected](key0) cheque reasons functionality missing
+- [bunch](key3) [accept](key7) [state](key2) [rejected](key0) 
+- [bunch](key3) +[accept](key7) +[state](key2) +[rejected](key0) +
+- [scpm](key1) [&](key3) [cpm:](key0) for [pci](key0) [compliance,](key1) [mask](key2) the [codeline](key5) when the cheque is [displayed](key3)
+- [scpm](key1) [&](key3) [cpm:](key0) [pci](key0) [compliance,](key1) [mask](key2) [codeline](key5) [displayed](key3) 
+- [scpm](key1) +[&](key3) +[cpm:](key0) +[pci](key0) +[compliance,](key1) +[mask](key2) +[codeline](key5) +[displayed](key3) +
+- [scpm:](key0) [change](key3) the [summary](key0) [display](key3) [state](key2) to [support](key0) the display of only up to [9](key0) cheque [details](key5)
+- [scpm:](key0) [change](key3) [summary](key0) [display](key3) [state](key2) [support](key0) [9](key0) [details](key5) 
+- [scpm:](key0) +[change](key3) +[summary](key0) +[display](key3) +[state](key2) +[support](key0) +[9](key0) +[details](key5) +
+- [scpm:](key0) [update](key0) the [detail](key4) [display](key3) [[state](key2),](key5) [summary](key0) display state and [ndcrenderer](key0) to [support](key0) [visual](key1) indication to [cardholders](key2) when a cheque is going to be returned
+- [scpm:](key0) [update](key0) [detail](key4) [display](key3) [state,](key5) [summary](key0) [state](key2) [ndcrenderer](key0) [support](key0) [visual](key1) [cardholders](key2) 
+- [scpm:](key0) +[update](key0) +[detail](key4) +[display](key3) +[state,](key5) +[summary](key0) +[state](key2) +[ndcrenderer](key0) +[support](key0) +[visual](key1) +[cardholders](key2) +
+- [scpm:](key0) [update](key0) all [bunch](key3) cheque [states](key0) to [handle](key0) the situation where there may be no cheques inserted into the [device.](key1)
+- [scpm:](key0) [update](key0) [bunch](key3) [states](key0) [handle](key0) [device.](key1) 
+- [scpm:](key0) +[update](key0) +[bunch](key3) +[states](key0) +[handle](key0) +[device.](key1) +
+- add [support](key0) for the [timeout](key0) [state](key2) to the [bunch](key3) cheque [states](key0)
+- [support](key0) [timeout](key0) [state](key2) [bunch](key3) [states](key0) 
+- [support](key0) +[timeout](key0) +[state](key2) +[bunch](key3) +[states](key0) +
+- [bunch](key3) cheque [accept](key7) [state](key2) - [refused](key2) reasons [dictionary](key0) not [displayed](key3)
+- [bunch](key3) [accept](key7) [state](key2) [refused](key2) [dictionary](key0) [displayed](key3) 
+- [bunch](key3) +[accept](key7) +[state](key2) +[refused](key2) +[dictionary](key0) +[displayed](key3) +
+- [bunchchequehandling](key0) [state](key2) [endorses](key0) with the screen number instead of screen [contents](key1)
+- [bunchchequehandling](key0) [state](key2) [endorses](key0) [contents](key1) 
+- [bunchchequehandling](key0) +[state](key2) +[endorses](key0) +[contents](key1) +
+- [imagemark](key2) - [bunch](key3) cheque [handling](key4) [exports](key0) imagemark [file](key1) [irrespective](key1) of the [registry](key2) [value](key2) that is [used](key3) to [configure](key4) it
+- [imagemark](key2) [bunch](key3) [handling](key4) [exports](key0) [file](key1) [irrespective](key1) [registry](key2) [value](key2) [used](key3) [configure](key4) 
+- [imagemark](key2) +[bunch](key3) +[handling](key4) +[exports](key0) +[file](key1) +[irrespective](key1) +[registry](key2) +[value](key2) +[used](key3) +[configure](key4) +
+- express [recovery](key5) - [24v](key0) [reset](key1) for cheque processing
+- [recovery](key5) [24v](key0) [reset](key1) 
+- [recovery](key5) +[24v](key0) +[reset](key1) +
+- [bunch](key3) cheque [summary](key0) [state](key2) - when more than ['max](key0) [items'](key1) cheques are [entered](key1) the cheque summary state [displays](key2) a ['phantom'](key3) cheque
+- [bunch](key3) [summary](key0) [state](key2) ['max](key0) [items'](key1) [entered](key1) [displays](key2) ['phantom'](key3) 
+- [bunch](key3) +[summary](key0) +[state](key2) +['max](key0) +[items'](key1) +[entered](key1) +[displays](key2) +['phantom'](key3) +
+- [bunch](key3) cheque [accept](key7) [state](key2) - ['escrow](key0) full [error](key2) [screen'](key1) [displayed](key3) when number of cheques [entered](key1) is same as ['max](key0) [items'](key1) 
+- [bunch](key3) [accept](key7) [state](key2) ['escrow](key0) [error](key2) [screen'](key1) [displayed](key3) [entered](key1) ['max](key0) [items'](key1) 
+- [bunch](key3) +[accept](key7) +[state](key2) +['escrow](key0) +[error](key2) +[screen'](key1) +[displayed](key3) +[entered](key1) +['max](key0) +[items'](key1) +
+- [bunch](key3) cheque [close](key6) [state](key2) - cheques [retracted](key5) regardless of cheque [retain/return](key0) [flag.](key1)
+- [bunch](key3) [close](key6) [state](key2) [retracted](key5) [retain/return](key0) [flag.](key1) 
+- [bunch](key3) +[close](key6) +[state](key2) +[retracted](key5) +[retain/return](key0) +[flag.](key1) +
+- [scpm:](key0) [integrate](key0) [imagemarkrecorder](key1) into andc [bunchchequehandlingstate](key2) for cheque [deposit](key3) [recording](key3) - [linkage](key4) with [payment](key5) [system](key5) solutions [(passport)](key6)
+- [scpm:](key0) [integrate](key0) [imagemarkrecorder](key1) [bunchchequehandlingstate](key2) [deposit](key3) [recording](key3) [linkage](key4) [payment](key5) [system](key5) [(passport)](key6) 
+- [scpm:](key0) +[integrate](key0) +[imagemarkrecorder](key1) +[bunchchequehandlingstate](key2) +[deposit](key3) +[recording](key3) +[linkage](key4) +[payment](key5) +[system](key5) +[(passport)](key6) +
+- [bunch](key3) cheque [accept](key7) [state](key2) - please [wait](key0) for [device](key1) screen ['000'](key1) results in ['more](key2) [time'](key3) screen being [displayed.](key4)
+- [bunch](key3) [accept](key7) [state](key2) [wait](key0) [device](key1) ['000'](key1) ['more](key2) [time'](key3) [displayed.](key4) 
+- [bunch](key3) +[accept](key7) +[state](key2) +[wait](key0) +[device](key1) +['000'](key1) +['more](key2) +[time'](key3) +[displayed.](key4) +
+- [scpm:](key0) [support](key0) for [printing](key1) multiple cheque images in a [transaction](key6) [receipt,](key0) in [native](key1) ndc [bunch](key3) cheque [deposit](key3) sol
+- [scpm:](key0) [support](key0) [printing](key1) [transaction](key6) [receipt,](key0) [native](key1) [bunch](key3) [deposit](key3) 
+- [scpm:](key0) +[support](key0) +[printing](key1) +[transaction](key6) +[receipt,](key0) +[native](key1) +[bunch](key3) +[deposit](key3) +
+- [pci-dss](key0) - where a [electronic](key1) [payments](key2) [system](key5) is [used](key3) [ensure](key5) cheque images are stored [encrypted](key5)
+- [pci-dss](key0) [electronic](key1) [payments](key2) [system](key5) [used](key3) [ensure](key5) [encrypted](key5) 
+- [pci-dss](key0) +[electronic](key1) +[payments](key2) +[system](key5) +[used](key3) +[ensure](key5) +[encrypted](key5) +
+- [scpm:](key0) make information [available](key0) to be [used](key3) in [dbs](key1) [exception](key4) reports, for [offline](key2) [bunch](key3) cheque [deposit](key3)
+- [scpm:](key0) [available](key0) [used](key3) [dbs](key1) [exception](key4) [offline](key2) [bunch](key3) [deposit](key3) 
+- [scpm:](key0) +[available](key0) +[used](key3) +[dbs](key1) +[exception](key4) +[offline](key2) +[bunch](key3) +[deposit](key3) +
+- [scpm:](key0) provide ability for an [exit](key0) to [rotate/scale](key0) a cheque image for [subsequently](key1) [printing](key1) on a [receipt](key2)
+- [scpm:](key0) [exit](key0) [rotate/scale](key0) [subsequently](key1) [printing](key1) [receipt](key2) 
+- [scpm:](key0) +[exit](key0) +[rotate/scale](key0) +[subsequently](key1) +[printing](key1) +[receipt](key2) +
+- [scpm:](key0) [support](key0) for [printing](key1) a [transaction](key6) [receipt,](key0) in [offline](key2) [bunch](key3) cheque [deposit](key3)
+- [scpm:](key0) [support](key0) [printing](key1) [transaction](key6) [receipt,](key0) [offline](key2) [bunch](key3) [deposit](key3) 
+- [scpm:](key0) +[support](key0) +[printing](key1) +[transaction](key6) +[receipt,](key0) +[offline](key2) +[bunch](key3) +[deposit](key3) +
+- [scpm:](key0) [bunchchequehandling](key0) [state](key2)
+- [scpm:](key0) [bunchchequehandling](key0) [state](key2) 
+- [scpm:](key0) +[bunchchequehandling](key0) +[state](key2) +
+- [second](key1) cheque image is [printing](key1) as [garbage](key0) [via](key1) a [rawdata](key1) print on [universal](key2) [machines](key3) with [203dpi](key4) [(there](key5) is no issue on a [personas](key6) [printer)](key7)
+- [second](key1) [printing](key1) [garbage](key0) [via](key1) [rawdata](key1) [universal](key2) [machines](key3) [203dpi](key4) [(there](key5) [personas](key6) [printer)](key7) 
+- [second](key1) +[printing](key1) +[garbage](key0) +[via](key1) +[rawdata](key1) +[universal](key2) +[machines](key3) +[203dpi](key4) +[(there](key5) +[personas](key6) +[printer)](key7) +
+- [second](key1) cheque image is [printing](key1) with very [bigger](key0) size [using](key5) [forms](key1) when [trying](key2) to print [two](key3) cheque images on the [receipt](key2)
+- [second](key1) [printing](key1) [bigger](key0) [using](key5) [forms](key1) [trying](key2) [two](key3) [receipt](key2) 
+- [second](key1) +[printing](key1) +[bigger](key0) +[using](key5) +[forms](key1) +[trying](key2) +[two](key3) +[receipt](key2) +
+- first cheque image [printing](key1) as [blackended](key0) with [transaction](key6) reply has [p01](key1) followed by [p00.](key2)
+- [printing](key1) [blackended](key0) [transaction](key6) [p01](key1) [p00.](key2) 
+- [printing](key1) +[blackended](key0) +[transaction](key6) +[p01](key1) +[p00.](key2) +
+- [cpm](key0) [deposit](key3) with [vg](key1) [enabled-when](key2) i [pressed](key1)  [1on](key3) [pinpad](key6)  to select deposit cheque option the [orientation](key1) is going to [amount](key4) [entry](key1) [state.](key4)
+- [cpm](key0) [deposit](key3) [vg](key1) [enabled-when](key2) [pressed](key1) [1on](key3) [pinpad](key6) [orientation](key1) [amount](key4) [entry](key1) [state.](key4) 
+- [cpm](key0) +[deposit](key3) +[vg](key1) +[enabled-when](key2) +[pressed](key1) +[1on](key3) +[pinpad](key6) +[orientation](key1) +[amount](key4) +[entry](key1) +[state.](key4) +
+- [quality](key0) of cheque image print [via](key1) a [receipt](key2) [forms](key1) print is poor
+- [quality](key0) [via](key1) [receipt](key2) [forms](key1) 
+- [quality](key0) +[via](key1) +[receipt](key2) +[forms](key1) +
+- [(st1)](key0) cheque image shown [vertically](key1) on cheque [confirmation](key2) screen
+- [(st1)](key0) [vertically](key1) [confirmation](key2) 
+- [(st1)](key0) +[vertically](key1) +[confirmation](key2) +
+- the same cheque image are [printing](key1) on [journal](key0) [printer](key1) when [forms](key1) printing [feature](key2) and  [ej](key3) with hard copy option are [enabled](key7)
+- [printing](key1) [journal](key0) [printer](key1) [forms](key1) [feature](key2) [ej](key3) [enabled](key7) 
+- [printing](key1) +[journal](key0) +[printer](key1) +[forms](key1) +[feature](key2) +[ej](key3) +[enabled](key7) +
+- [''alwaysprintchequesonback''](key0) and [''codelineheight''](key1) [registry](key2) keys are not [available](key0) in [universalprinters.reg](key2)
+- [''alwaysprintchequesonback''](key0) [''codelineheight''](key1) [registry](key2) [available](key0) [universalprinters.reg](key2) 
+- [''alwaysprintchequesonback''](key0) +[''codelineheight''](key1) +[registry](key2) +[available](key0) +[universalprinters.reg](key2) +
+- [picture](key0) is not [taken](key4) in the cheque [capture](key0) [flow](key1) point by [camera.](key0)
+- [picture](key0) [taken](key4) [capture](key0) [flow](key1) [camera.](key0) 
+- [picture](key0) +[taken](key4) +[capture](key0) +[flow](key1) +[camera.](key0) +
+- screen [displyed](key0) after [clrdepos](key1) and [clrbins](key2) is still [showing](key3) the cheques [deposited](key4) [counters](key5) not the [0's](key6)
+- [displyed](key0) [clrdepos](key1) [clrbins](key2) [showing](key3) [deposited](key4) [counters](key5) [0's](key6) 
+- [displyed](key0) +[clrdepos](key1) +[clrbins](key2) +[showing](key3) +[deposited](key4) +[counters](key5) +[0's](key6) +
+- [(st1-](key0) [cpm)](key1) [q2e](key2) ( [device](key1) [error)](key3) [status](key3) [message](key2) is received for every successful cheque [transaction](key6)
+- [(st1-](key0) [cpm)](key1) [q2e](key2) [device](key1) [error)](key3) [status](key3) [message](key2) [transaction](key6) 
+- [(st1-](key0) +[cpm)](key1) +[q2e](key2) +[device](key1) +[error)](key3) +[status](key3) +[message](key2) +[transaction](key6) +
+- [(st1](key0) - [cpm](key0) [):](key1) cheque is not getting [endorsed](key2)
+- [(st1](key0) [cpm](key0) [):](key1) [endorsed](key2) 
+- [(st1](key0) +[cpm](key0) +[):](key1) +[endorsed](key2) +
+- [(st1](key0) - [cpm)](key1) cheque is not getting [captured](key0)
+- [(st1](key0) [cpm)](key1) [captured](key0) 
+- [(st1](key0) +[cpm)](key1) +[captured](key0) +
+- [receipt](key2) is not [delivered](key0) for some [values](key[1)](key4) of [chequesizenormal/chequesizerotated](key2) [(dynamic](key3) [forms](key1) [=](key3) 1)
+- [receipt](key2) [delivered](key0) [values](key1) [chequesizenormal/chequesizerotated](key2) [(dynamic](key3) [forms](key1) [=](key3) [1)](key4) 
+- [receipt](key2) +[delivered](key0) +[values](key1) +[chequesizenormal/chequesizerotated](key2) +[(dynamic](key3) +[forms](key1) +[=](key3) +[1)](key4) +
+- when [chequesizerotated/chequesizenormal](key[0)](key4) are set to [[1](key3)0,](key1) no image is printed on [receipt](key[2](key2)) for [codeline](key5) 1 and 2 [(dynamicforms](key3) [=](key3) 0)
+- [chequesizerotated/chequesizenormal](key0) [10,](key1) [receipt](key2) [codeline](key5) [1](key3) [2](key2) [(dynamicforms](key3) [=](key3) [0)](key4) 
+- [chequesizerotated/chequesizenormal](key0) +[10,](key1) +[receipt](key2) +[codeline](key5) +[1](key3) +[2](key2) +[(dynamicforms](key3) +[=](key3) +[0)](key4) +
+- by [default,](key0) cheque image is [printing](key1) on [journal](key0)
+- [default,](key0) [printing](key1) [journal](key0) 
+- [default,](key0) +[printing](key1) +[journal](key0) +
+- [(cpm):cheque](key0) is getting [deposited](key4) when we send the [cpm_r13a](key1) ( invalid [message)](key2)
+- [(cpm):cheque](key0) [deposited](key4) [cpm_r13a](key1) [message)](key2) 
+- [(cpm):cheque](key0) +[deposited](key4) +[cpm_r13a](key1) +[message)](key2) +
+- [cpm](key0) [forms](key1) installed in the [wrong](key0) [place](key0) [(endorse](key1) [data](key2) is not getting printed on the [cheque)](key2)
+- [cpm](key0) [forms](key1) [wrong](key0) [place](key0) [(endorse](key1) [data](key2) [cheque)](key2) 
+- [cpm](key0) +[forms](key1) +[wrong](key0) +[place](key0) +[(endorse](key1) +[data](key2) +[cheque)](key2) +
+- tar [378972:](key0) [aa-ndc](key1) : add information for [printing](key1) cheque image on [receipt](key2) to [ref](key2) [manual](key3)
+- [378972:](key0) [aa-ndc](key1) [printing](key1) [receipt](key2) [ref](key2) [manual](key3) 
+- [378972:](key0) +[aa-ndc](key1) +[printing](key1) +[receipt](key2) +[ref](key2) +[manual](key3) +
+- [application](key0) getting [closed](key0) after inserting the cheque
+- [application](key0) [closed](key0) 
+- [application](key0) +[closed](key0) +
+- tar [376710](key0) : init [depos](key2) [clears](key1) a cheque [jam,](key2) but [leaves](key3) [device](key1) [status](key3) as [fatal](key4)
+- [376710](key0) [depos](key2) [clears](key1) [jam,](key2) [leaves](key3) [device](key1) [status](key3) [fatal](key4) 
+- [376710](key0) +[depos](key2) +[clears](key1) +[jam,](key2) +[leaves](key3) +[device](key1) +[status](key3) +[fatal](key4) +
+- tar [373126:](key0) cheque image is [unreadable](key1) on [usb](key2) [receipt](key2) [printer](key1)
+- [373126:](key0) [unreadable](key1) [usb](key2) [receipt](key2) [printer](key1) 
+- [373126:](key0) +[unreadable](key1) +[usb](key2) +[receipt](key2) +[printer](key1) +
+- [scpm:](key0) full [bunch](key3) cheque [message](key2) [interface](key6) with host [change](key3) [(ndc](key0) host [control)](key1)
+- [scpm:](key0) [bunch](key3) [message](key2) [interface](key6) [change](key3) [(ndc](key0) [control)](key1) 
+- [scpm:](key0) +[bunch](key3) +[message](key2) +[interface](key6) +[change](key3) +[(ndc](key0) +[control)](key1) +
+- [scpm:](key0) [displaychequesummary](key0) [state](key2)
+- [scpm:](key0) [displaychequesummary](key0) [state](key2) 
+- [scpm:](key0) +[displaychequesummary](key0) +[state](key2) +
+- [scpm:](key0) [chequedetaildisplay](key0) [state](key2)
+- [scpm:](key0) [chequedetaildisplay](key0) [state](key2) 
+- [scpm:](key0) +[chequedetaildisplay](key0) +[state](key2) +
+- [scpm:](key0) [bunchchequeaccept](key0) [state](key2)
+- [scpm:](key0) [bunchchequeaccept](key0) [state](key2) 
+- [scpm:](key0) +[bunchchequeaccept](key0) +[state](key2) +
+- [quality](key0) of cheque image print on [legacy](key0) [personas](key6) [thermal](key1) [printers](key2) is not as good as in [aandc](key3) [3.2](key4)
+- [quality](key0) [legacy](key0) [personas](key6) [thermal](key1) [printers](key2) [aandc](key3) [3.2](key4) 
+- [quality](key0) +[legacy](key0) +[personas](key6) +[thermal](key1) +[printers](key2) +[aandc](key3) +[3.2](key4) +
+- [re-evaluate](key0) the [limit](key1) of [chequesizerotated](key2) for [vertical](key3) cheque image [printing](key1)
+- [re-evaluate](key0) [limit](key1) [chequesizerotated](key2) [vertical](key3) [printing](key1) 
+- [re-evaluate](key0) +[limit](key1) +[chequesizerotated](key2) +[vertical](key3) +[printing](key1) +
+- request for option on cheque [accept](key7) to never accept cheque without valid [micr](key0)
+- [accept](key7) [micr](key0) 
+- [accept](key7) +[micr](key0) +
+- add a possibility to [cpm](key0) [close](key6) [state](key2) to [leave](key0) returned cheque in the [ejected](key1) position
+- [cpm](key0) [close](key6) [state](key2) [leave](key0) [ejected](key1) 
+- [cpm](key0) +[close](key6) +[state](key2) +[leave](key0) +[ejected](key1) +
+- [scpm](key1) - multiple cheque [application](key0) [changes](key0)
+- [scpm](key1) [application](key0) [changes](key0) 
+- [scpm](key1) +[application](key0) +[changes](key0) +
+- [vertical](key3) [printing](key1) of a more readable cheque image on [receipt](key2) as a [configurable](key0) option in addition to the [current](key1) [horizontal](key2) printing
+- [vertical](key3) [printing](key1) [receipt](key2) [configurable](key0) [current](key1) [horizontal](key2) 
+- [vertical](key3) +[printing](key1) +[receipt](key2) +[configurable](key0) +[current](key1) +[horizontal](key2) +
+- [amount](key4) [entry](key1) on same screen as cheque image [display](key3)
+- [amount](key4) [entry](key1) [display](key3) 
+- [amount](key4) +[entry](key1) +[display](key3) +
+- [[2](key2)st](key0) - 2 [sided](key1) [thermal](key1) - [support](key0) cheque image [printing](key1) on the [reverse](key2) - [local](key3) [configuration](key4)
+- [2st](key0) [2](key2) [sided](key1) [thermal](key1) [support](key0) [printing](key1) [reverse](key2) [local](key3) [configuration](key4) 
+- [2st](key0) +[2](key2) +[sided](key1) +[thermal](key1) +[support](key0) +[printing](key1) +[reverse](key2) +[local](key3) +[configuration](key4) +
+- [support](key0) for image [based](key3) cheque [clearing](key0) [[system](key5)s](key0) - [linkage](key4) with [payment](key5) system solutions [(passport)](key6)
+- [support](key0) [based](key3) [clearing](key0) [systems](key0) [linkage](key4) [payment](key5) [system](key5) [(passport)](key6) 
+- [support](key0) +[based](key3) +[clearing](key0) +[systems](key0) +[linkage](key4) +[payment](key5) +[system](key5) +[(passport)](key6) +
+- there is no [documentation](key0) regarding the [new](key5) cheque print functionality
+- [documentation](key0) [new](key5) 
+- [documentation](key0) +[new](key5) +
+- [cpm:](key0) [b20](key0) [reject](key8) due to no [endorse](key0) [data](key2) is sent only when the cheque is sent to a [bin](key2)
+- [cpm:](key0) [b20](key0) [reject](key8) [endorse](key0) [data](key2) [bin](key2) 
+- [cpm:](key0) +[b20](key0) +[reject](key8) +[endorse](key0) +[data](key2) +[bin](key2) +
+- [cpm](key0) - cheque [accept](key7) [state](key2) retries also [decremented](key0) when [internal](key2) [timeout](key0) occurs
+- [cpm](key0) [accept](key7) [state](key2) [decremented](key0) [internal](key2) [timeout](key0) 
+- [cpm](key0) +[accept](key7) +[state](key2) +[decremented](key0) +[internal](key2) +[timeout](key0) +
+- [cpm](key0) - no [error](key2) [message](key2) is sent when there is a cheque already in the [device](key1)
+- [cpm](key0) [error](key2) [message](key2) [device](key1) 
+- [cpm](key0) +[error](key2) +[message](key2) +[device](key1) +
+- [cpm](key0) - when cheque [jammed](key2) inside [(no](key0) [access),](key1) incorrect [device](key1) [status](key3) returned
+- [cpm](key0) [jammed](key2) [(no](key0) [access),](key1) [device](key1) [status](key3) 
+- [cpm](key0) +[jammed](key2) +[(no](key0) +[access),](key1) +[device](key1) +[status](key3) +
+- [cpm](key0) - when cheque not [taken](key4) after [eject](key0) [timeout,](key1) [flow](key1) [continues](key2) [wrongly](key3)
+- [cpm](key0) [taken](key4) [eject](key0) [timeout,](key1) [flow](key1) [continues](key2) [wrongly](key3) 
+- [cpm](key0) +[taken](key4) +[eject](key0) +[timeout,](key1) +[flow](key1) +[continues](key2) +[wrongly](key3) +
+- [cpm](key0) - after [hardware](key0) [timer](key1) [expires,](key2) the cheque [acceptor](key3) [worker](key4) [re-enables](key5) the cheque [entry](key1)
+- [cpm](key0) [hardware](key0) [timer](key1) [expires,](key2) [acceptor](key3) [worker](key4) [re-enables](key5) [entry](key1) 
+- [cpm](key0) +[hardware](key0) +[timer](key1) +[expires,](key2) +[acceptor](key3) +[worker](key4) +[re-enables](key5) +[entry](key1) +
+- [cpm](key0)  - the cheque [registry](key2) [value](key2) missing in the [receipt](key2) [printer](key1) [section](key0) of the printer [registy](key1) [configuration](key4) [files](key2)
+- [cpm](key0) [registry](key2) [value](key2) [receipt](key2) [printer](key1) [section](key0) [registy](key1) [configuration](key4) [files](key2) 
+- [cpm](key0) +[registry](key2) +[value](key2) +[receipt](key2) +[printer](key1) +[section](key0) +[registy](key1) +[configuration](key4) +[files](key2) +
+- tar [332741](key0) - require the [beeping](key1) for upon cheque insertion to be [disabled](key2) earlier
+- [332741](key0) [beeping](key1) [disabled](key2) 
+- [332741](key0) +[beeping](key1) +[disabled](key2) +
+- tar [347289](key0) - [cpm](key0) no longer [accepting](key1) cheques with no [micr](key0) after final retry
+- [347289](key0) [cpm](key0) [accepting](key1) [micr](key0) 
+- [347289](key0) +[cpm](key0) +[accepting](key1) +[micr](key0) +
+- tar [347293:](key0) [aa-ndc](key1) [docs](key1) [state](key2) [exception](key4) state to be [taken](key4) when [accepting](key1) [non-micr](key2) cheques
+- [347293:](key0) [aa-ndc](key1) [docs](key1) [state](key2) [exception](key4) [taken](key4) [accepting](key1) [non-micr](key2) 
+- [347293:](key0) +[aa-ndc](key1) +[docs](key1) +[state](key2) +[exception](key4) +[taken](key4) +[accepting](key1) +[non-micr](key2) +
+- [support](key0) [cpm](key0) cheque image print [(including](key0) [rear](key1) [image)](key2)
+- [support](key0) [cpm](key0) [(including](key0) [rear](key1) [image)](key2) 
+- [support](key0) +[cpm](key0) +[(including](key0) +[rear](key1) +[image)](key2) +
+- when cheque is [captured,](key0) [local](key3) [endorse](key0) is required
+- [captured,](key0) [local](key3) [endorse](key0) 
+- [captured,](key0) +[local](key3) +[endorse](key0) +
+- tar [255036](key0) - [support](key0) [cpm](key0) cheque image print
+- [255036](key0) [support](key0) [cpm](key0) 
+- [255036](key0) +[support](key0) +[cpm](key0) +
+- tar [177235](key0) - incorrectly inserted cheques are [accepted](key0)
+- [177235](key0) [accepted](key0) 
+- [177235](key0) +[accepted](key0) +
+- [capture](key0) the cheque if it [fails](key4) to be returned to the [[cardholder](key1),](key0) and print a [receipt](key2) for the cardholder
+- [capture](key0) [fails](key4) [cardholder,](key0) [receipt](key2) [cardholder](key1) 
+- [capture](key0) +[fails](key4) +[cardholder,](key0) +[receipt](key2) +[cardholder](key1) +
+- [test](key3) [case](key1) [5.6.2.2](key0) : [cpm](key0) [transaction](key6) doesnot show the cheque image
+- [test](key3) [case](key1) [5.6.2.2](key0) [cpm](key0) [transaction](key6) 
+- [test](key3) +[case](key1) +[5.6.2.2](key0) +[cpm](key0) +[transaction](key6) +
+- option for cheque image print to be added to [cpm](key0) cheque [accept](key7) [state](key2)
+- [cpm](key0) [accept](key7) [state](key2) 
+- [cpm](key0) +[accept](key7) +[state](key2) +
+- andc [4.01.01:](key0) [bunch](key3) cheque [status](key3) reporting to [journal](key0) with single [digit](key1) [transaction](key6) [serial](key2) number
+- [4.01.01:](key0) [bunch](key3) [status](key3) [journal](key0) [digit](key1) [transaction](key6) [serial](key2) 
+- [4.01.01:](key0) +[bunch](key3) +[status](key3) +[journal](key0) +[digit](key1) +[transaction](key6) +[serial](key2) +
+- [chequeacceptstatushandler](key0) reports [q2j(refused](key1) cheques are [accessible](key2) to the [[customer](key0))](key3) instead of [q6j(](key4) [(jam](key5) no customer [access).)](key6) at ["](key7) cheques [jammed](key2) in [transport](key4) on [entry](key1) [â¿](key8) no [access"](key9) [scenario.](key10)
+- [chequeacceptstatushandler](key0) [q2j(refused](key1) [accessible](key2) [customer)](key3) [q6j(](key4) [(jam](key5) [customer](key0) [access).)](key6) ["](key7) [jammed](key2) [transport](key4) [entry](key1) [â¿](key8) [access"](key9) [scenario.](key10) 
+- [chequeacceptstatushandler](key0) +[q2j(refused](key1) +[accessible](key2) +[customer)](key3) +[q6j(](key4) +[(jam](key5) +[customer](key0) +[access).)](key6) +["](key7) +[jammed](key2) +[transport](key4) +[entry](key1) +[â¿](key8) +[access"](key9) +[scenario.](key10) +
+- [endorse](key0) cheques which are being [retracted](key5) on [scpm](key1)
+- [endorse](key0) [retracted](key5) [scpm](key1) 
+- [endorse](key0) +[retracted](key5) +[scpm](key1) +
+- [ci583612:](key0) ndc [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) not [passed](key3) through [dmitrdata](key4)
+- [ci583612:](key0) [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) [passed](key3) [dmitrdata](key4) 
+- [ci583612:](key0) +[display](key3) +[manager](key1) +[frontchequeimage](key2) +[path](key4) +[value](key2) +[passed](key3) +[dmitrdata](key4) +
+- [cheque:](key0) identify whether cheque is [face](key1) up or down 
+- [cheque:](key0) [face](key1) 
+- [cheque:](key0) +[face](key1) +
+- [bunch](key3) cheque [components:](key0) improve [pd](key1) according [new](key5) pd [collection](key2) [guidelines](key3)
+- [bunch](key3) [components:](key0) [pd](key1) [new](key5) [collection](key2) [guidelines](key3) 
+- [bunch](key3) +[components:](key0) +[pd](key1) +[new](key5) +[collection](key2) +[guidelines](key3) +
+- [voice](key0) [guidance](key1) [transaction](key6) reply [data](key2) not processed by [bna](key2) and cheque [deposit](key3) replies
+- [voice](key0) [guidance](key1) [transaction](key6) [data](key2) [bna](key2) [deposit](key3) 
+- [voice](key0) +[guidance](key1) +[transaction](key6) +[data](key2) +[bna](key2) +[deposit](key3) +
+- [application](key0) [escaping](key0) at [close](key6) [state,](key5) while doing a [bunch](key3) cheque [transaction](key6) with [bins](key1) missing and [pramote](key2) [enabled](key7)
+- [application](key0) [escaping](key0) [close](key6) [state,](key5) [bunch](key3) [transaction](key6) [bins](key1) [pramote](key2) [enabled](key7) 
+- [application](key0) +[escaping](key0) +[close](key6) +[state,](key5) +[bunch](key3) +[transaction](key6) +[bins](key1) +[pramote](key2) +[enabled](key7) +
+- [ci583612:](key0) ndc [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) not [passed](key3) through [dmitrdata](key4)
+- [ci583612:](key0) [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) [passed](key3) [dmitrdata](key4) 
+- [ci583612:](key0) +[display](key3) +[manager](key1) +[frontchequeimage](key2) +[path](key4) +[value](key2) +[passed](key3) +[dmitrdata](key4) +
+- tar [438634](key0) - request to improve [quality](key0) of [scpm](key1) cheque image [displayed](key3) by [aandc](key3)
+- [438634](key0) [quality](key0) [scpm](key1) [displayed](key3) [aandc](key3) 
+- [438634](key0) +[quality](key0) +[scpm](key1) +[displayed](key3) +[aandc](key3) +
+- ci [583612](key0)  ndc [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) not [passed](key3) through [dmitrdata](key4)
+- [583612](key0) [display](key3) [manager](key1) [frontchequeimage](key2) [path](key4) [value](key2) [passed](key3) [dmitrdata](key4) 
+- [583612](key0) +[display](key3) +[manager](key1) +[frontchequeimage](key2) +[path](key4) +[value](key2) +[passed](key3) +[dmitrdata](key4) +
+- add [support](key0) for [endorsing](key0) returned cheques [(scpm)](key1) - single cheque processor
+- [support](key0) [endorsing](key0) [(scpm)](key1) 
+- [support](key0) +[endorsing](key0) +[(scpm)](key1) +
+- add [support](key0) for [endorsing](key0) returned cheques [(scpm)](key1) - [bunch](key3) cheque processor
+- [support](key0) [endorsing](key0) [(scpm)](key1) [bunch](key3) 
+- [support](key0) +[endorsing](key0) +[(scpm)](key1) +[bunch](key3) +
+- improve [scaling](key0) of [displayed](key3) cheque images
+- [scaling](key0) [displayed](key3) 
+- [scaling](key0) +[displayed](key3) +
+- request for [bunch](key3) cheque [amount](key4) [display](key3) to be more [configurable](key0)
+- [bunch](key3) [amount](key4) [display](key3) [configurable](key0) 
+- [bunch](key3) +[amount](key4) +[display](key3) +[configurable](key0) +
+- tar [574600:](key0) cheque [amount](key4) [display](key3) [control](key2) [sequences](key1) do not provide [consistent](key2) results
+- [574600:](key0) [amount](key4) [display](key3) [control](key2) [sequences](key1) [consistent](key2) 
+- [574600:](key0) +[amount](key4) +[display](key3) +[control](key2) +[sequences](key1) +[consistent](key2) +
+- tar [574600:](key0) cheque [amount](key4) [display](key3) [control](key2) [sequences](key1) do not provide [consistent](key2) results
+- [574600:](key0) [amount](key4) [display](key3) [control](key2) [sequences](key1) [consistent](key2) 
+- [574600:](key0) +[amount](key4) +[display](key3) +[control](key2) +[sequences](key1) +[consistent](key2) +
+- tar [469338](key0) - cheque [detail](key4) [display](key3) [state](key2) [transparent](key1) [background](key2) [code](key0) issue for [amount](key4) [entry](key1)
+- [469338](key0) [detail](key4) [display](key3) [state](key2) [transparent](key1) [background](key2) [code](key0) [amount](key4) [entry](key1) 
+- [469338](key0) +[detail](key4) +[display](key3) +[state](key2) +[transparent](key1) +[background](key2) +[code](key0) +[amount](key4) +[entry](key1) +
+- tar [466954:](key0)  cheque [details](key5) [overlay](key1) screen not [displayed](key3) correctly if screen number [<](key2) [100](key3)
+- [466954:](key0) [details](key5) [overlay](key1) [displayed](key3) [<](key2) [100](key3) 
+- [466954:](key0) +[details](key5) +[overlay](key1) +[displayed](key3) +[<](key2) +[100](key3) +
+- cheques [jammed](key2) in [transport](key4) and [sdm](key0) reports [q4j](key1) only
+- [jammed](key2) [transport](key4) [sdm](key0) [q4j](key1) 
+- [jammed](key2) +[transport](key4) +[sdm](key0) +[q4j](key1) +
+- [application](key0) is getting [hang](key0) in cheques [accept](key7) [state](key2)
+- [application](key0) [hang](key0) [accept](key7) [state](key2) 
+- [application](key0) +[hang](key0) +[accept](key7) +[state](key2) +
+- [bunch](key3) cheque should generate [unsolicited](key0) [messages](key1) for [[wfs](key3)_sys](key0) [events](key1) generated due to operations in other processes even though there is no [outstanding](key2) wfs [command](key4) in [aandc](key3)
+- [bunch](key3) [unsolicited](key0) [messages](key1) [wfs_sys](key0) [events](key1) [outstanding](key2) [wfs](key3) [command](key4) [aandc](key3) 
+- [bunch](key3) +[unsolicited](key0) +[messages](key1) +[wfs_sys](key0) +[events](key1) +[outstanding](key2) +[wfs](key3) +[command](key4) +[aandc](key3) +
+- [sdm](key0) - [cash](key0) in [aer](key1) needs to be called [before](key2) cheque aer to [avoid](key3) [clearing](key0) of [notes](key4) [during](key2) cheque [recovery](key5)
+- [sdm](key0) [cash](key0) [aer](key1) [before](key2) [avoid](key3) [clearing](key0) [notes](key4) [during](key2) [recovery](key5) 
+- [sdm](key0) +[cash](key0) +[aer](key1) +[before](key2) +[avoid](key3) +[clearing](key0) +[notes](key4) +[during](key2) +[recovery](key5) +
+- [sdm](key0) - cheque [aer](key1) might [clear](key2) [notes](key4) in [device](key1) when sdm is [configured](key1) for cheque and [cash](key0) [transactions](key4)
+- [sdm](key0) [aer](key1) [clear](key2) [notes](key4) [device](key1) [configured](key1) [cash](key0) [transactions](key4) 
+- [sdm](key0) +[aer](key1) +[clear](key2) +[notes](key4) +[device](key1) +[configured](key1) +[cash](key0) +[transactions](key4) +
+- [scaling](key0) the cheque image [before](key2) [passing](key0) the image to [parascript](key1) [engine](key2) for better [recoginition](key3) of [amount](key4) declared on the cheque
+- [scaling](key0) [before](key2) [passing](key0) [parascript](key1) [engine](key2) [recoginition](key3) [amount](key4) 
+- [scaling](key0) +[before](key2) +[passing](key0) +[parascript](key1) +[engine](key2) +[recoginition](key3) +[amount](key4) +
+- ip tar [463167:](key0) [state](key2) [z004](key1) number of cheques [refused](key2) can't be [displayed.](key4)
+- [463167:](key0) [state](key2) [z004](key1) [refused](key2) [displayed.](key4) 
+- [463167:](key0) +[state](key2) +[z004](key1) +[refused](key2) +[displayed.](key4) +
+- [application](key0) is getting [crash/](key0) giving [hardware](key0) [error](key2) when try to [deposit](key3) cheque with [scpm](key1)
+- [application](key0) [crash/](key0) [hardware](key0) [error](key2) [deposit](key3) [scpm](key1) 
+- [application](key0) +[crash/](key0) +[hardware](key0) +[error](key2) +[deposit](key3) +[scpm](key1) +
+- tar [462108](key0) - [exception](key4) raised when [nested](key1) screen in [bunch](key3) cheque [accept](key7) [state](key2)
+- [462108](key0) [exception](key4) [nested](key1) [bunch](key3) [accept](key7) [state](key2) 
+- [462108](key0) +[exception](key4) +[nested](key1) +[bunch](key3) +[accept](key7) +[state](key2) +
+- tar [462108](key0) - [exception](key4) raised when [nested](key1) screen in [bunch](key3) cheque [accept](key7) [state](key2)
+- [462108](key0) [exception](key4) [nested](key1) [bunch](key3) [accept](key7) [state](key2) 
+- [462108](key0) +[exception](key4) +[nested](key1) +[bunch](key3) +[accept](key7) +[state](key2) +
+- [[display](key3)s](key2) - [bunch](key3) cheque [detail](key4) display doesn't [handle](key0) [transparent](key1) [text](key0) when [entering](key1) [amount.](key2)
+- [displays](key2) [bunch](key3) [detail](key4) [display](key3) [handle](key0) [transparent](key1) [text](key0) [entering](key1) [amount.](key2) 
+- [displays](key2) +[bunch](key3) +[detail](key4) +[display](key3) +[handle](key0) +[transparent](key1) +[text](key0) +[entering](key1) +[amount.](key2) +
+- [pa-dss](key0) - cheque processing - [ensure](key5) cheque images in the [upload](key1) [directory](key2) are [securely](key3) [deleted](key2) at the end of the [transaction](key6)
+- [pa-dss](key0) [ensure](key5) [upload](key1) [directory](key2) [securely](key3) [deleted](key2) [transaction](key6) 
+- [pa-dss](key0) +[ensure](key5) +[upload](key1) +[directory](key2) +[securely](key3) +[deleted](key2) +[transaction](key6) +
+- in cheque [detail](key4) [display](key3) [state](key2) [entered](key1) [amount](key4) is not [echoed](key0) on the screen
+- [detail](key4) [display](key3) [state](key2) [entered](key1) [amount](key4) [echoed](key0) 
+- [detail](key4) +[display](key3) +[state](key2) +[entered](key1) +[amount](key4) +[echoed](key0) +
+- [scalable](key0) cheque image [display](key3) [fails](key4)
+- [scalable](key0) [display](key3) [fails](key4) 
+- [scalable](key0) +[display](key3) +[fails](key4) +
+- the [application](key0) is [waiting](key0) infinite [time](key1) after [taking](key2) the cheques into [scpm](key1) [device](key1) in [bunch](key3) cheque [acceptance](key3) [state,](key5) with [alpha](key4) numeric [states.](key5)
+- [application](key0) [waiting](key0) [time](key1) [taking](key2) [scpm](key1) [device](key1) [bunch](key3) [acceptance](key3) [state,](key5) [alpha](key4) [states.](key5) 
+- [application](key0) +[waiting](key0) +[time](key1) +[taking](key2) +[scpm](key1) +[device](key1) +[bunch](key3) +[acceptance](key3) +[state,](key5) +[alpha](key4) +[states.](key5) +
+- [scpm](key1) : cheques with valid [codeline](key5) also getting [rejected](key0) when ['refusenonvalidcheques'](key0) [property](key1) is set to ['true'](key2) in [advancendc.accfg](key3) [file.](key4)
+- [scpm](key1) [codeline](key5) [rejected](key0) ['refusenonvalidcheques'](key0) [property](key1) ['true'](key2) [advancendc.accfg](key3) [file.](key4) 
+- [scpm](key1) +[codeline](key5) +[rejected](key0) +['refusenonvalidcheques'](key0) +[property](key1) +['true'](key2) +[advancendc.accfg](key3) +[file.](key4) +
+- [sst](key0) [config:](key1) [itemprocessing1](key2) should be [used](key3) as [bunchcheque](key3) [axfs](key4) [alias](key5) 
+- [sst](key0) [config:](key1) [itemprocessing1](key2) [used](key3) [bunchcheque](key3) [axfs](key4) [alias](key5) 
+- [sst](key0) +[config:](key1) +[itemprocessing1](key2) +[used](key3) +[bunchcheque](key3) +[axfs](key4) +[alias](key5) +
+- [scpm](key1) - cheque images remain in folder after a [powerfail/reset](key0)
+- [scpm](key1) [powerfail/reset](key0) 
+- [scpm](key1) +[powerfail/reset](key0) +
+- tar [444775:](key0)  cheque [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) in [journal](key0)
+- [444775:](key0) [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) [journal](key0) 
+- [444775:](key0) +[retract](key0) +[causes](key1) +[two](key3) +[conflicting](key2) +[entries](key3) +[journal](key0) +
+- ip tar [430376](key0) - ip [states](key0) that return cheque key can be [toggled](key1) where it [cannot](key2)
+- [430376](key0) [states](key0) [toggled](key1) [cannot](key2) 
+- [430376](key0) +[states](key0) +[toggled](key1) +[cannot](key2) +
+- tar [444775:](key0)  cheque [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) in [journal](key0)
+- [444775:](key0) [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) [journal](key0) 
+- [444775:](key0) +[retract](key0) +[causes](key1) +[two](key3) +[conflicting](key2) +[entries](key3) +[journal](key0) +
+- tar [444775:](key0)  cheque [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) in [journal](key0)
+- [444775:](key0) [retract](key0) [causes](key1) [two](key3) [conflicting](key2) [entries](key3) [journal](key0) 
+- [444775:](key0) +[retract](key0) +[causes](key1) +[two](key3) +[conflicting](key2) +[entries](key3) +[journal](key0) +
+- tar [423770](key0) - add more screen not being [displayed](key3) on cheque [summary](key0) screen
+- [423770](key0) [displayed](key3) [summary](key0) 
+- [423770](key0) +[displayed](key3) +[summary](key0) +
+- [tar423770](key0) - add more screen not being [displayed](key3) on cheque [summary](key0) screen
+- [tar423770](key0) [displayed](key3) [summary](key0) 
+- [tar423770](key0) +[displayed](key3) +[summary](key0) +
+- [cpm](key0) - [opteva](key0) - cheque processor functionality not working ( also wn [ccdm)](key1)
+- [cpm](key0) [opteva](key0) [ccdm)](key1) 
+- [cpm](key0) +[opteva](key0) +[ccdm)](key1) +
+- ip [gr1t:](key0) andc [ref](key2) [man](key1) [states](key0) that return cheque key can be [toggled](key1) where it [cannot](key2)
+- [gr1t:](key0) [ref](key2) [man](key1) [states](key0) [toggled](key1) [cannot](key2) 
+- [gr1t:](key0) +[ref](key2) +[man](key1) +[states](key0) +[toggled](key1) +[cannot](key2) +
+- tar [422692:](key0)  [aa-ndc](key1) : [cpm](key0) cheque [jam](key1) reported as [fatal](key4) with no [error](key2) [recovery](key5) [attempted](key1)
+- [422692:](key0) [aa-ndc](key1) [cpm](key0) [jam](key1) [fatal](key4) [error](key2) [recovery](key5) [attempted](key1) 
+- [422692:](key0) +[aa-ndc](key1) +[cpm](key0) +[jam](key1) +[fatal](key4) +[error](key2) +[recovery](key5) +[attempted](key1) +
+- [update](key0) the [tracing](key0) of [bunchchequeaccept[state](key2)](key1) next state numbers in [stdata](key2) [window](key3) of [debuglog](key4)
+- [update](key0) [tracing](key0) [bunchchequeacceptstate](key1) [state](key2) [stdata](key2) [window](key3) [debuglog](key4) 
+- [update](key0) +[tracing](key0) +[bunchchequeacceptstate](key1) +[state](key2) +[stdata](key2) +[window](key3) +[debuglog](key4) +
+- [bunch](key3) cheque [accept](key7) [[state](key2):](key0) add a [new](key5) next state [parameter](key1) to the [bunchchequeacceptstate](key1) to [distinguish](key1) [between](key0) [accepting](key1) all cheques and where some cheques have been returned
+- [bunch](key3) [accept](key7) [state:](key0) [new](key5) [state](key2) [parameter](key1) [bunchchequeacceptstate](key1) [distinguish](key1) [between](key0) [accepting](key1) 
+- [bunch](key3) +[accept](key7) +[state:](key0) +[new](key5) +[state](key2) +[parameter](key1) +[bunchchequeacceptstate](key1) +[distinguish](key1) +[between](key0) +[accepting](key1) +
+- [scpm](key1) and [cic](key0) - any [data](key2) [objects](key3) [i.e.](key1) [chequedetail](key2) - should be [available](key0) [cross](key3) process not just in [aandc](key3) process
+- [scpm](key1) [cic](key0) [data](key2) [objects](key3) [i.e.](key1) [chequedetail](key2) [available](key0) [cross](key3) [aandc](key3) 
+- [scpm](key1) +[cic](key0) +[data](key2) +[objects](key3) +[i.e.](key1) +[chequedetail](key2) +[available](key0) +[cross](key3) +[aandc](key3) +
+- [unsole](key0) [message](key2) are not coming while [last](key1) [transaction](key6) are [failed](key2) and still cheque are in the [dpm.](key2)
+- [unsole](key0) [message](key2) [last](key1) [transaction](key6) [failed](key2) [dpm.](key2) 
+- [unsole](key0) +[message](key2) +[last](key1) +[transaction](key6) +[failed](key2) +[dpm.](key2) +
+- provide [support](key0) for [offline](key2) single cheque [deposit](key3) in advance ndc
+- [support](key0) [offline](key2) [deposit](key3) 
+- [support](key0) +[offline](key2) +[deposit](key3) +
+- add [promote](key0) [flowpoints](key1) for [cpm/scpm](key2) [chequeinserted](key3) and [chequedeposited](key4)
+- [promote](key0) [flowpoints](key1) [cpm/scpm](key2) [chequeinserted](key3) [chequedeposited](key4) 
+- [promote](key0) +[flowpoints](key1) +[cpm/scpm](key2) +[chequeinserted](key3) +[chequedeposited](key4) +
+- [bunch](key3) cheque [auto](key0) [recovery](key5) [hangs](key1) where no [service](key4) [provider.](key2)
+- [bunch](key3) [auto](key0) [recovery](key5) [hangs](key1) [service](key4) [provider.](key2) 
+- [bunch](key3) +[auto](key0) +[recovery](key5) +[hangs](key1) +[service](key4) +[provider.](key2) +
+- [scpm:](key0) [bunchchequeflows](key0) [dispose](key1) [implementation](key2) in [bunchchequeacceptflow](key3) does not free [resources.](key4)
+- [scpm:](key0) [bunchchequeflows](key0) [dispose](key1) [implementation](key2) [bunchchequeacceptflow](key3) [resources.](key4) 
+- [scpm:](key0) +[bunchchequeflows](key0) +[dispose](key1) +[implementation](key2) +[bunchchequeacceptflow](key3) +[resources.](key4) +
+- [wrong](key0) [unsol](key5) [message](key2) is being sent to host when [unacceptable](key0) cheque was [jammed](key2) [during](key2) [retract](key0)
+- [wrong](key0) [unsol](key5) [message](key2) [unacceptable](key0) [jammed](key2) [during](key2) [retract](key0) 
+- [wrong](key0) +[unsol](key5) +[message](key2) +[unacceptable](key0) +[jammed](key2) +[during](key2) +[retract](key0) +
+- additional [config](key0) [detail](key4) required regarding [support](key0) for single cheque [scpm](key1) - tar [404360](key1) 
+- [config](key0) [detail](key4) [support](key0) [scpm](key1) [404360](key1) 
+- [config](key0) +[detail](key4) +[support](key0) +[scpm](key1) +[404360](key1) +
+- [scpm:](key0) [imagemark](key2) can store front image [twice](key0) [(before](key1) and after [endorse)](key2) if cheque inserted [upside](key3) down
+- [scpm:](key0) [imagemark](key2) [twice](key0) [(before](key1) [endorse)](key2) [upside](key3) 
+- [scpm:](key0) +[imagemark](key2) +[twice](key0) +[(before](key1) +[endorse)](key2) +[upside](key3) +
+- [scpm:](key0) no [capture](key0) [journalling](key1) when cheques are [cleared](key0) [using](key5) [auto](key0) [error](key2) [recovery](key5)
+- [scpm:](key0) [capture](key0) [journalling](key1) [cleared](key0) [using](key5) [auto](key0) [error](key2) [recovery](key5) 
+- [scpm:](key0) +[capture](key0) +[journalling](key1) +[cleared](key0) +[using](key5) +[auto](key0) +[error](key2) +[recovery](key5) +
+- [scpm:](key0) screen for [wait](key0) for cheques not shown when multiple [bunches](key0) returned in [close](key6) [state](key2)
+- [scpm:](key0) [wait](key0) [bunches](key0) [close](key6) [state](key2) 
+- [scpm:](key0) +[wait](key0) +[bunches](key0) +[close](key6) +[state](key2) +
+- [bunch](key3) cheque [handling](key4) [state](key2) screen ['wait](key0) for more returned [cheques'](key1) screen not [displayed](key3)
+- [bunch](key3) [handling](key4) [state](key2) ['wait](key0) [cheques'](key1) [displayed](key3) 
+- [bunch](key3) +[handling](key4) +[state](key2) +['wait](key0) +[cheques'](key1) +[displayed](key3) +
+- [scpm:](key0) when no is selected on the [timeout](key0) screen, [propose](key0) the [cancel](key1) [exit](key0) is [taken](key4) [(instead](key1) of the timeout [exit)](key2) from the [bunchchequeacceptstate](key1)
+- [scpm:](key0) [timeout](key0) [propose](key0) [cancel](key1) [exit](key0) [taken](key4) [(instead](key1) [exit)](key2) [bunchchequeacceptstate](key1) 
+- [scpm:](key0) +[timeout](key0) +[propose](key0) +[cancel](key1) +[exit](key0) +[taken](key4) +[(instead](key1) +[exit)](key2) +[bunchchequeacceptstate](key1) +
+- [siu](key0) [session](key1) being opened even though there is no [bunch](key3) cheque [device](key1)
+- [siu](key0) [session](key1) [bunch](key3) [device](key1) 
+- [siu](key0) +[session](key1) +[bunch](key3) +[device](key1) +
+- [scpm:](key0) [close](key6) [state](key2) can be improved in the way it [retains](key0) cheques to allow [status](key3) [handler](key0) to be [simplified](key1)
+- [scpm:](key0) [close](key6) [state](key2) [retains](key0) [status](key3) [handler](key0) [simplified](key1) 
+- [scpm:](key0) +[close](key6) +[state](key2) +[retains](key0) +[status](key3) +[handler](key0) +[simplified](key1) +
+- [scpm](key1) - cheque images remain in folder after a [powerfail/reset](key0)
+- [scpm](key1) [powerfail/reset](key0) 
+- [scpm](key1) +[powerfail/reset](key0) +
+- [scpm](key1) [&](key3) [cpm:](key0) for [pci](key0) [compliance,](key1) [consider](key0) [masking](key1) even other [areas](key2) on the cheque
+- [scpm](key1) [&](key3) [cpm:](key0) [pci](key0) [compliance,](key1) [consider](key0) [masking](key1) [areas](key2) 
+- [scpm](key1) +[&](key3) +[cpm:](key0) +[pci](key0) +[compliance,](key1) +[consider](key0) +[masking](key1) +[areas](key2) +
+- [scpm:](key0) [update](key0) the return cheque [fdk](key1) option to [behave](key0) as a [toggle](key1)
+- [scpm:](key0) [update](key0) [fdk](key1) [behave](key0) [toggle](key1) 
+- [scpm:](key0) +[update](key0) +[fdk](key1) +[behave](key0) +[toggle](key1) +
+- cheque [accept](key7) [fault](key0) [display](key[3](key2)) only [supports](key1) up to 3 [bins.](key3)
+- [accept](key7) [fault](key0) [display](key3) [supports](key1) [3](key2) [bins.](key3) 
+- [accept](key7) +[fault](key0) +[display](key3) +[supports](key1) +[3](key2) +[bins.](key3) +
+- [wrong](key0) [unsol](key5) reported when [error](key2) occurs while [retracting](key0) an [unacceptable](key0) cheque
+- [wrong](key0) [unsol](key5) [error](key2) [retracting](key0) [unacceptable](key0) 
+- [wrong](key0) +[unsol](key5) +[error](key2) +[retracting](key0) +[unacceptable](key0) +
+- require [scpm](key1) sp [update](key0) to allow cheques to be [endorsed](key2) [during](key2) [retract](key0) while doing [transaction](key6) if there are cheques in the [escrow/transport](key0)
+- [scpm](key1) [update](key0) [endorsed](key2) [during](key2) [retract](key0) [transaction](key6) [escrow/transport](key0) 
+- [scpm](key1) +[update](key0) +[endorsed](key2) +[during](key2) +[retract](key0) +[transaction](key6) +[escrow/transport](key0) +
+- [scpm:](key0) [support](key0) [uniquely](key0) [endorsing](key0) each cheque in a [bunch](key3) in the [bunchchequehandling](key0) [state,](key5) for [offline](key2) bunch cheque [deposit](key3)
+- [scpm:](key0) [support](key0) [uniquely](key0) [endorsing](key0) [bunch](key3) [bunchchequehandling](key0) [state,](key5) [offline](key2) [deposit](key3) 
+- [scpm:](key0) +[support](key0) +[uniquely](key0) +[endorsing](key0) +[bunch](key3) +[bunchchequehandling](key0) +[state,](key5) +[offline](key2) +[deposit](key3) +
+- [scpm:](key0) [support](key0) for [printing](key1) multiple cheque images in a [transaction](key6) [receipt,](key0) in [offline](key2) [bunch](key3) cheque [deposit](key3)
+- [scpm:](key0) [support](key0) [printing](key1) [transaction](key6) [receipt,](key0) [offline](key2) [bunch](key3) [deposit](key3) 
+- [scpm:](key0) +[support](key0) +[printing](key1) +[transaction](key6) +[receipt,](key0) +[offline](key2) +[bunch](key3) +[deposit](key3) +
+- [unsole](key0) [message](key2) are not coming while [last](key1) [transaction](key6) are [failed](key2) and still cheque are in the [dpm.](key2)
+- [unsole](key0) [message](key2) [last](key1) [transaction](key6) [failed](key2) [dpm.](key2) 
+- [unsole](key0) +[message](key2) +[last](key1) +[transaction](key6) +[failed](key2) +[dpm.](key2) +
+- correct  [unsol](key5) [message](key2) is not reporting to the host when do [transaction](key6) on [dpm](key0) with short cheque
+- [unsol](key5) [message](key2) [transaction](key6) [dpm](key0) 
+- [unsol](key5) +[message](key2) +[transaction](key6) +[dpm](key0) +
+- [p00](key0) [data](key2) is not [printing](key1) on the [receipt](key2) when the cheque [deposit](key3) [transaction](key6) without image [lifting.](key1)
+- [p00](key0) [data](key2) [printing](key1) [receipt](key2) [deposit](key3) [transaction](key6) [lifting.](key1) 
+- [p00](key0) +[data](key2) +[printing](key1) +[receipt](key2) +[deposit](key3) +[transaction](key6) +[lifting.](key1) +
+- tar [376710](key0) : init [depos](key2) [clears](key1) a cheque [jam,](key2) but [leaves](key3) [device](key1) [status](key3) as [fatal](key4)
+- [376710](key0) [depos](key2) [clears](key1) [jam,](key2) [leaves](key3) [device](key1) [status](key3) [fatal](key4) 
+- [376710](key0) +[depos](key2) +[clears](key1) +[jam,](key2) +[leaves](key3) +[device](key1) +[status](key3) +[fatal](key4) +
+- tar [373126:](key0) cheque image is [unreadable](key1) on [usb](key2) [receipt](key2) [printer](key1)
+- [373126:](key0) [unreadable](key1) [usb](key2) [receipt](key2) [printer](key1) 
+- [373126:](key0) +[unreadable](key1) +[usb](key2) +[receipt](key2) +[printer](key1) +
+- cheque image [scaling](key0) - [current](key1) scaling function in [aandc](key3) seems to [lose](key0) [significant](key1) cheque [detail.](key2) [ricardo](key3) has [customization](key4) that [performs](key5) a better [job.](key6)
+- [scaling](key0) [current](key1) [aandc](key3) [lose](key0) [significant](key1) [detail.](key2) [ricardo](key3) [customization](key4) [performs](key5) [job.](key6) 
+- [scaling](key0) +[current](key1) +[aandc](key3) +[lose](key0) +[significant](key1) +[detail.](key2) +[ricardo](key3) +[customization](key4) +[performs](key5) +[job.](key6) +
+- [supervisor](key0) -  cheque processor [clear](key2) [bins](key1) [display](key3) show [pre-clear](key1) [counts.](key2)
+- [supervisor](key0) [clear](key2) [bins](key1) [display](key3) [pre-clear](key1) [counts.](key2) 
+- [supervisor](key0) +[clear](key2) +[bins](key1) +[display](key3) +[pre-clear](key1) +[counts.](key2) +
+- [opteva](key0) - cheque processor functionality not working ( also wn [ccdm)](key1)
+- [opteva](key0) [ccdm)](key1) 
+- [opteva](key0) +[ccdm)](key1) +
+- no [beep](key1) to [warn](key0) the [customer](key0) that a cheque has been returned after [cancel](key1)
+- [beep](key1) [warn](key0) [customer](key0) [cancel](key1) 
+- [beep](key1) +[warn](key0) +[customer](key0) +[cancel](key1) +
+- [scpm](key1) [&](key3) [cin:](key0) when no is selected on the [timeout](key0) screen, [propose](key0) the [cancel](key1) [exit](key0) is [taken](key4) [(instead](key1) of the timeout [exit)](key2) from the [bunchchequeacceptstate](key1)
+- [scpm](key1) [&](key3) [cin:](key0) [timeout](key0) [propose](key0) [cancel](key1) [exit](key0) [taken](key4) [(instead](key1) [exit)](key2) [bunchchequeacceptstate](key1) 
+- [scpm](key1) +[&](key3) +[cin:](key0) +[timeout](key0) +[propose](key0) +[cancel](key1) +[exit](key0) +[taken](key4) +[(instead](key1) +[exit)](key2) +[bunchchequeacceptstate](key1) +
+- [[ichqaccptsrv](key0) [aimodule]:](key1) need a [property](key1) for [endorsement](key2) while [retracting](key0) the [cheques.](key3)
+- [[ichqaccptsrv](key0) [aimodule]:](key1) [property](key1) [endorsement](key2) [retracting](key0) [cheques.](key3) 
+- [[ichqaccptsrv](key0) +[aimodule]:](key1) +[property](key1) +[endorsement](key2) +[retracting](key0) +[cheques.](key3) +
+- [bunchchequeacceptservice:](key0) [endorse](key0) cheques which are being [retracted](key5) on [scpm](key1)
+- [bunchchequeacceptservice:](key0) [endorse](key0) [retracted](key5) [scpm](key1) 
+- [bunchchequeacceptservice:](key0) +[endorse](key0) +[retracted](key5) +[scpm](key1) +
+- [item[accept](key7)service](key0) [component](key1) should [support](key0) [equivalent](key2) functionality as was provided with [bunchcheque](key3) and [cash](key0) accept [services](key3)
+- [itemacceptservice](key0) [component](key1) [support](key0) [equivalent](key2) [bunchcheque](key3) [cash](key0) [accept](key7) [services](key3) 
+- [itemacceptservice](key0) +[component](key1) +[support](key0) +[equivalent](key2) +[bunchcheque](key3) +[cash](key0) +[accept](key7) +[services](key3) +
+- [iitem[accept](key7)[service](key4)](key0) [interface](key6) should [support](key0) [equivalent](key2) functionality as was provided with [bunchcheque](key3) and [cash](key0) accept service [interfaces](key1)
+- [iitemacceptservice](key0) [interface](key6) [support](key0) [equivalent](key2) [bunchcheque](key3) [cash](key0) [accept](key7) [service](key4) [interfaces](key1) 
+- [iitemacceptservice](key0) +[interface](key6) +[support](key0) +[equivalent](key2) +[bunchcheque](key3) +[cash](key0) +[accept](key7) +[service](key4) +[interfaces](key1) +
+- [bunchchqaccptsrv:](key0) cheques [jam](key1) [during](key2) [scancheques](key3) operation without [service](key4) [recovery](key5) [action.](key6)
+- [bunchchqaccptsrv:](key0) [jam](key1) [during](key2) [scancheques](key3) [service](key4) [recovery](key5) [action.](key6) 
+- [bunchchqaccptsrv:](key0) +[jam](key1) +[during](key2) +[scancheques](key3) +[service](key4) +[recovery](key5) +[action.](key6) +
+- [scpm:](key0) [imagemark](key2) can store front image [twice](key0) [(before](key1) and after [endorse)](key2) if cheque inserted [upside](key3) down
+- [scpm:](key0) [imagemark](key2) [twice](key0) [(before](key1) [endorse)](key2) [upside](key3) 
+- [scpm:](key0) +[imagemark](key2) +[twice](key0) +[(before](key1) +[endorse)](key2) +[upside](key3) +
 
 ## synonyms:cheques
 - BunchCheques

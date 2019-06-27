@@ -6,7 +6,8 @@ import requests
 import json
 
 def test_nlu_interpreter():
-    training_data = load_data("data/nlu_data.md") # the training data
+    #training_data = load_data("data/nlu_data.md") # the training data
+    training_data = load_data("data/training_data.json")  # the training data
     trainer = Trainer(config.load("nlu_config.yml")) #the config file
     #trainer=Trainer(config.load("new_nlu_config.json"))
     interpreter = trainer.train(training_data)

@@ -1,0 +1,13 @@
+{
+  "cpm": "cheque",
+  "scpm": "cheque",
+  "bunchcheque": "cheque",
+  "bunch cheque": "cheque",
+  "retracted": "retract",
+  "retraction": "retract",
+  "timeout": "retract",
+  "timeup": "retract",
+  "picture": "imagemark",
+  "display": "imagemark",
+  "image": "imagemark"
+}

@@ -60,8 +60,12 @@ def test_bot():
 
         else:
             print("Bot :  Sry i dint get you")
+from rasa_nlu.training_data import load_data
 
-
+training_data = load_data("training_data.json")
+def synnonym(word):
+    synms=training_data.entity_synonyms
+    pass
 
 def chat():
     try:
@@ -110,8 +114,8 @@ def chat():
 #    chat()
 
 #to load bot and run in script
-test_bot()
-
+#test_bot()
+synnonym("cheque")
 
 
 

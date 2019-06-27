@@ -15,14 +15,14 @@ def get_response(query,entities):
     # # use process.extract(.. limits = 3) to get multiple close matches
 
 
-    matched_questions=process.extract(query,questions,limit=2)
+    matched_questions=process.extract(query,questions,limit=3)
 
     issue_key=""
     for qas in matched_questions:
         if(qas[1]>50): #qas is question and ans .
             matched_row = faq_data2.loc[faq_data2['Summary'] == qas[0],]
             issue_key += str(matched_row['Issue key'].values[0])
-            issue_key+=", "
+            issue_key+=","
 
     matched_questions = process.extract(entities, questions, limit=2)
 
@@ -59,4 +59,4 @@ def get_response(query,entities):
     #
 
 
-get_response(query="BUNCH CHEQUE DEVICE ERROR WHILE PERFORMING DEPOSIT",entities="")
+#get_response(query="BUNCH CHEQUE DEVICE ERROR WHILE PERFORMING DEPOSIT",entities="")

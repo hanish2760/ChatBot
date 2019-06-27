@@ -1,0 +1,24 @@
+ NLP, or Natural Language Processing is a blanket term used to describe a machine’s ability to ingest what is said to it,
+ break it down, comprehend its meaning, determine appropriate action, and respond back in a language the user will 
+understand.
+
+
+PROPOSED SYSTEM:
+
+In the proposed system, the Rasa NLU tries to understand user input and responds.
+It is done by interpreting the user intention and extracting entities which are used to generate the response.
+
+
+(if necessarey add about fuzzy wuzzy)
+
+TECHNOLOGIES USED:
+
+ML,python,rasa NLU.
+
+BENEFITS:
+
+It understands the user input even if it is not properly ordered and synonyms of given word.
+
+
+
+
